@@ -1,8 +1,11 @@
 # exploring_uranus
 
 Deliverables
+
     source code
+    
     video/demonstration
+    
     max 40 page report
     
 Timeline
