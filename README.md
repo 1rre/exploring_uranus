@@ -1,4 +1,4 @@
-# exploring_uranus ¯\_(ツ)_/¯
+# exploring_uranus ¯\\_(ツ)_/¯
 
 Deliverables
 
