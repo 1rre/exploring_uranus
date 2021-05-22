@@ -1,0 +1,12 @@
+= EE Rover Vision Log
+
+== Initial Investigation
+
+=== Starting out
+To ensure the setup was working, I cloned https://github.com/edstott/EEE2Rover/[the sample project] and compiled it on Quartus. After having issues with different versions of Quartus Lite locally & Quartus Standard over the college VPN, I found that Quartus 17.1 Lite worked well.
+
+=== Reading Pixel Values
+Rather than screenshotting the output of the VGA to USB adapter, I decided to create a system which would print out the pixel value of the central pixel of the camera. This would be indicated by a crosshair. The Verilog and C code to do this can be found link:initial_investigation/crosshair[here].
+
+=== Image Processing
+I had some ideas about image processing, however I decided to first test these methods on images stored on my PC before writing them in C/Verilog & performing the adjustments live. The first processor I wrote was an link:initial_investigation/imgproc/EdgeDetect.scala[edge detector], which used a Sobel filter to detect drastic changes in pixel value in an image.
