@@ -80,15 +80,6 @@ wire         sop, eop, in_valid, out_ready;
 
 reg line_complete;
 
-
-`define WHITE {8'd255, 8'd255, 8'd255}
-`define YELLOW {8'd255, 8'd255, 8'd0}
-`define MAGENTA {8'd255, 8'd0, 8'd255}
-`define RED {8'd255, 8'd0, 8'd0}
-`define CYAN {8'd0, 8'd255, 8'd255}
-`define GREEN {8'd0, 8'd255, 8'd0}
-`define BLUE {8'd0, 8'd0, 8'd255}
-
 wire [7:0] r_sel, g_sel, b_sel;
 
 assign r_sel = {mode[3],mode[2],mode[1],mode[1],mode[1],mode[1],mode[1],mode[1]};

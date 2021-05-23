@@ -1,5 +1,5 @@
 I/O Assignment Analysis report for DE10_LITE_D8M_VIP
-Sun May 23 17:40:31 2021
+Sun May 23 18:07:28 2021
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; I/O Assignment Analysis Summary                                              ;
 +--------------------------------+---------------------------------------------+
-; I/O Assignment Analysis Status ; Successful - Sun May 23 17:40:31 2021       ;
+; I/O Assignment Analysis Status ; Successful - Sun May 23 18:07:28 2021       ;
 ; Quartus Prime Version          ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                  ; DE10_LITE_D8M_VIP                           ;
 ; Top-level Entity Name          ; DE10_LITE_D8M_VIP                           ;
@@ -88,7 +88,6 @@ refer to the applicable agreement for further details.
 ; Fitter Messages ;
 +-----------------+
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
-    Info (16304): Mode behavior is affected by advanced setting Restructure Multiplexers (default for this mode is Off)
     Info (16304): Mode behavior is affected by advanced setting Physical Synthesis Effort Level (default for this mode is Normal)
     Info (16304): Mode behavior is affected by advanced setting Placement Effort Multiplier (default for this mode is 4.0)
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -101,7 +100,6 @@ Info (15535): Implemented PLL "Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altp
     Info (15099): Implementing clock multiplication of 2, clock division of 1, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[2] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
     Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[3] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
     Info (15099): Implementing clock multiplication of 2, clock division of 5, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[4] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
-Warning (171002): Current optimization assignments may cause the Fitter to introduce hold timing violations on connections clocked by global signals
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device 10M08DAF484I7G is compatible
@@ -145,14 +143,15 @@ Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP
 Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/I2C_VCM_Config.v Line: 61
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|comb~2
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|comb~1
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/I2C_VCM_Config.v Line: 61
 Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|comb~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|rVS File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 40
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|SUM[17]~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|STEP_UP[0]~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|always0~1
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|rSUM[31]~101 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
 Info (176353): Automatically promoted node pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|GHVD5181:\cycloneiii_ZNXJ5711_gen_0:cycloneiii_ZNXJ5711_gen_1|TPOO7242_7  File: /home/tm/.quartus/quartus/libraries/megafunctions/pzdyqx.vhd Line: 730
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -168,8 +167,8 @@ Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_au
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[1]~3 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[0]~4 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[7]~5 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[6]~6 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[3]~7 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[3]~6 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[6]~7 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[9]~8 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[8]~9 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176358): Non-global destination nodes limited to 10 nodes
@@ -185,32 +184,33 @@ Info (176353): Automatically promoted node Qsys:u0|altera_reset_controller:rst_c
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|focus_mode File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/TERASIC_AUTO_FOCUS.v Line: 80
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|process_start File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/TERASIC_AUTO_FOCUS.v Line: 79
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_valid File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 15
-        Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[1] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:in_reg|data_valid File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 15
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[8] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[9] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[15] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[16] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
+        Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[17] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node Qsys:u0|altera_reset_controller:rst_controller_002|r_sync_rst  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[6] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[5] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[4] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
         Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|al File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 150
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|al File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 150
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|clk_en File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 175
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sto_condition File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 228
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cmd_stop File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 290
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|clk_en File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 175
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sto_condition File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 228
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cmd_stop File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 290
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|sr[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 176
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[3] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[2] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[1] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[0] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|cr[6] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|cr[5] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|dffpipe_3dc:rdaclr|dffe13a[0]  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/dffpipe_3dc.tdf Line: 33
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|a_graycounter_sh6:rdptr_g1p|_~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/dcfifo_isj1.tdf Line: 65
+        Info (176357): Destination node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|mux_9d7:rdemp_eq_comp_lsb_mux|result_node[0]~5 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/mux_9d7.tdf Line: 29
 Info (176353): Automatically promoted node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|rst_vid_clk_reg2  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/alt_vipitc131_IS2Vid.sv Line: 374
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Warning (15064): PLL "Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|pll7" output port clk[1] feeds output pin "DRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
@@ -308,11 +308,11 @@ Warning (169064): Following 19 pins have no output enable or a GND or VCC output
     Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/DE10_LITE_D8M_VIP.v Line: 60
     Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/DE10_LITE_D8M_VIP.v Line: 61
 Info (11763): Results from the I/O assignment analysis compilation cannot be preserved because I/O assignment analysis was run with Incremental Compilation enabled
-Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1375 megabytes
-    Info: Processing ended: Sun May 23 17:40:31 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1378 megabytes
+    Info: Processing ended: Sun May 23 18:07:28 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -346,8 +346,8 @@ Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 9 warnings
 ; Type                ; Total [A + B]        ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+----------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                      ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 53020 ) ; 0.00 % ( 0 / 53020 )       ; 0.00 % ( 0 / 53020 )     ;
-;     -- Achieved     ; 0.00 % ( 0 / 53020 ) ; 0.00 % ( 0 / 53020 )       ; 0.00 % ( 0 / 53020 )     ;
+;     -- Requested    ; 0.00 % ( 0 / 69421 ) ; 0.00 % ( 0 / 69421 )       ; 0.00 % ( 0 / 69421 )     ;
+;     -- Achieved     ; 0.00 % ( 0 / 69421 ) ; 0.00 % ( 0 / 69421 )       ; 0.00 % ( 0 / 69421 )     ;
 ;                     ;                      ;                            ;                          ;
 ; Routing (by net)    ;                      ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )     ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -372,9 +372,9 @@ Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 9 warnings
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 52549 )  ; N/A                     ; Source File       ; N/A                 ;       ;
-; pzdyqx:nabboc                  ; 0.00 % ( 0 / 204 )    ; N/A                     ; Source File       ; N/A                 ;       ;
-; sld_hub:auto_hub               ; 0.00 % ( 0 / 254 )    ; N/A                     ; Post-Synthesis    ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 68940 )  ; N/A                     ; Source File       ; N/A                 ;       ;
+; pzdyqx:nabboc                  ; 0.00 % ( 0 / 208 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; sld_hub:auto_hub               ; 0.00 % ( 0 / 260 )    ; N/A                     ; Post-Synthesis    ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 13 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -878,80 +878,80 @@ The pin-out file can be found in /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                                                                           ;
-+---------------------------------------------+------------------------+-----------------------+-----------------------+--------------------------------+
-; Statistic                                   ; Top                    ; pzdyqx:nabboc         ; sld_hub:auto_hub      ; hard_block:auto_generated_inst ;
-+---------------------------------------------+------------------------+-----------------------+-----------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                    ; Low                   ; Low                   ; Low                            ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Total logic elements                        ; 42024 / 49760 ( 84 % ) ; 132 / 49760 ( < 1 % ) ; 181 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 18410                  ; 59                    ; 90                    ; 0                              ;
-;     -- Register only                        ; 14069                  ; 3                     ; 18                    ; 0                              ;
-;     -- Combinational with a register        ; 9545                   ; 70                    ; 73                    ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Logic element usage by number of LUT inputs ;                        ;                       ;                       ;                                ;
-;     -- 4 input functions                    ; 21980                  ; 64                    ; 76                    ; 0                              ;
-;     -- 3 input functions                    ; 3733                   ; 18                    ; 45                    ; 0                              ;
-;     -- <=2 input functions                  ; 2242                   ; 47                    ; 42                    ; 0                              ;
-;     -- Register only                        ; 14069                  ; 3                     ; 18                    ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Logic elements by mode                      ;                        ;                       ;                       ;                                ;
-;     -- normal mode                          ; 26551                  ; 124                   ; 154                   ; 0                              ;
-;     -- arithmetic mode                      ; 1404                   ; 5                     ; 9                     ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Total registers                             ; 23614                  ; 73                    ; 91                    ; 0                              ;
-;     -- Dedicated logic registers            ; 23614 / 49760 ( 47 % ) ; 73 / 49760 ( < 1 % )  ; 91 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
-;     -- I/O registers                        ; 0                      ; 0                     ; 0                     ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 2658 / 3110 ( 85 % )   ; 10 / 3110 ( < 1 % )   ; 12 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Virtual pins                                ; 0                      ; 0                     ; 0                     ; 0                              ;
-; I/O pins                                    ; 171                    ; 0                     ; 0                     ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 9 / 288 ( 3 % )        ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
-; Total memory bits                           ; 1093048                ; 0                     ; 0                     ; 0                              ;
-; Total RAM block bits                        ; 1317888                ; 0                     ; 0                     ; 0                              ;
-; JTAG                                        ; 1 / 1 ( 100 % )        ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ;
-; PLL                                         ; 0 / 4 ( 0 % )          ; 0 / 4 ( 0 % )         ; 0 / 4 ( 0 % )         ; 1 / 4 ( 25 % )                 ;
-; M9K                                         ; 143 / 182 ( 78 % )     ; 0 / 182 ( 0 % )       ; 0 / 182 ( 0 % )       ; 0 / 182 ( 0 % )                ;
-; User Flash Memory                           ; 1 / 1 ( 100 % )        ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ;
-; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )        ; 0 / 2 ( 0 % )         ; 0 / 2 ( 0 % )         ; 0 / 2 ( 0 % )                  ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Connections                                 ;                        ;                       ;                       ;                                ;
-;     -- Input Connections                    ; 3940                   ; 73                    ; 140                   ; 2                              ;
-;     -- Registered Input Connections         ; 3674                   ; 34                    ; 101                   ; 0                              ;
-;     -- Output Connections                   ; 302                    ; 6                     ; 211                   ; 3636                           ;
-;     -- Registered Output Connections        ; 7                      ; 4                     ; 211                   ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Internal Connections                        ;                        ;                       ;                       ;                                ;
-;     -- Total Connections                    ; 173258                 ; 603                   ; 1036                  ; 3647                           ;
-;     -- Registered Connections               ; 75137                  ; 320                   ; 737                   ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; External Connections                        ;                        ;                       ;                       ;                                ;
-;     -- Top                                  ; 268                    ; 33                    ; 303                   ; 3638                           ;
-;     -- pzdyqx:nabboc                        ; 33                     ; 0                     ; 46                    ; 0                              ;
-;     -- sld_hub:auto_hub                     ; 303                    ; 46                    ; 2                     ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 3638                   ; 0                     ; 0                     ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Partition Interface                         ;                        ;                       ;                       ;                                ;
-;     -- Input Ports                          ; 82                     ; 11                    ; 87                    ; 2                              ;
-;     -- Output Ports                         ; 109                    ; 4                     ; 104                   ; 5                              ;
-;     -- Bidir Ports                          ; 39                     ; 0                     ; 0                     ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Registered Ports                            ;                        ;                       ;                       ;                                ;
-;     -- Registered Input Ports               ; 0                      ; 3                     ; 3                     ; 0                              ;
-;     -- Registered Output Ports              ; 0                      ; 3                     ; 60                    ; 0                              ;
-;                                             ;                        ;                       ;                       ;                                ;
-; Port Connectivity                           ;                        ;                       ;                       ;                                ;
-;     -- Input Ports driven by GND            ; 0                      ; 0                     ; 3                     ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                      ; 0                     ; 29                    ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                      ; 0                     ; 0                     ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                      ; 0                     ; 0                     ; 0                              ;
-;     -- Input Ports with no Source           ; 0                      ; 0                     ; 68                    ; 0                              ;
-;     -- Output Ports with no Source          ; 0                      ; 0                     ; 0                     ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                      ; 2                     ; 73                    ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                      ; 0                     ; 73                    ; 0                              ;
-+---------------------------------------------+------------------------+-----------------------+-----------------------+--------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                                                                            ;
++---------------------------------------------+-------------------------+-----------------------+-----------------------+--------------------------------+
+; Statistic                                   ; Top                     ; pzdyqx:nabboc         ; sld_hub:auto_hub      ; hard_block:auto_generated_inst ;
++---------------------------------------------+-------------------------+-----------------------+-----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                     ; Low                   ; Low                   ; Low                            ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Total logic elements                        ; 49760 / 49760 ( 100 % ) ; 136 / 49760 ( < 1 % ) ; 188 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 34621                   ; 63                    ; 97                    ; 0                              ;
+;     -- Register only                        ; 13889                   ; 3                     ; 19                    ; 0                              ;
+;     -- Combinational with a register        ; 9725                    ; 70                    ; 72                    ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Logic element usage by number of LUT inputs ;                         ;                       ;                       ;                                ;
+;     -- 4 input functions                    ; 35219                   ; 71                    ; 81                    ; 0                              ;
+;     -- 3 input functions                    ; 6675                    ; 15                    ; 45                    ; 0                              ;
+;     -- <=2 input functions                  ; 2452                    ; 47                    ; 43                    ; 0                              ;
+;     -- Register only                        ; 13889                   ; 3                     ; 19                    ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Logic elements by mode                      ;                         ;                       ;                       ;                                ;
+;     -- normal mode                          ; 42825                   ; 128                   ; 160                   ; 0                              ;
+;     -- arithmetic mode                      ; 1521                    ; 5                     ; 9                     ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Total registers                             ; 23614                   ; 73                    ; 91                    ; 0                              ;
+;     -- Dedicated logic registers            ; 23614 / 49760 ( 47 % )  ; 73 / 49760 ( < 1 % )  ; 91 / 49760 ( < 1 % )  ; 0 / 49760 ( 0 % )              ;
+;     -- I/O registers                        ; 0                       ; 0                     ; 0                     ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Total LABs:  partially or completely used   ; 3110 / 3110 ( 100 % )   ; 9 / 3110 ( < 1 % )    ; 13 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Virtual pins                                ; 0                       ; 0                     ; 0                     ; 0                              ;
+; I/O pins                                    ; 171                     ; 0                     ; 0                     ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 9 / 288 ( 3 % )         ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
+; Total memory bits                           ; 1093048                 ; 0                     ; 0                     ; 0                              ;
+; Total RAM block bits                        ; 1317888                 ; 0                     ; 0                     ; 0                              ;
+; JTAG                                        ; 1 / 1 ( 100 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ;
+; PLL                                         ; 0 / 4 ( 0 % )           ; 0 / 4 ( 0 % )         ; 0 / 4 ( 0 % )         ; 1 / 4 ( 25 % )                 ;
+; M9K                                         ; 143 / 182 ( 78 % )      ; 0 / 182 ( 0 % )       ; 0 / 182 ( 0 % )       ; 0 / 182 ( 0 % )                ;
+; User Flash Memory                           ; 1 / 1 ( 100 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )         ; 0 / 1 ( 0 % )                  ;
+; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )         ; 0 / 2 ( 0 % )         ; 0 / 2 ( 0 % )         ; 0 / 2 ( 0 % )                  ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Connections                                 ;                         ;                       ;                       ;                                ;
+;     -- Input Connections                    ; 3993                    ; 78                    ; 140                   ; 2                              ;
+;     -- Registered Input Connections         ; 3677                    ; 29                    ; 101                   ; 0                              ;
+;     -- Output Connections                   ; 303                     ; 6                     ; 268                   ; 3636                           ;
+;     -- Registered Output Connections        ; 7                       ; 4                     ; 268                   ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Internal Connections                        ;                         ;                       ;                       ;                                ;
+;     -- Total Connections                    ; 235309                  ; 614                   ; 1108                  ; 3647                           ;
+;     -- Registered Connections               ; 117671                  ; 322                   ; 813                   ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; External Connections                        ;                         ;                       ;                       ;                                ;
+;     -- Top                                  ; 270                     ; 33                    ; 355                   ; 3638                           ;
+;     -- pzdyqx:nabboc                        ; 33                      ; 0                     ; 51                    ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 355                     ; 51                    ; 2                     ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 3638                    ; 0                     ; 0                     ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Partition Interface                         ;                         ;                       ;                       ;                                ;
+;     -- Input Ports                          ; 82                      ; 11                    ; 87                    ; 2                              ;
+;     -- Output Ports                         ; 109                     ; 4                     ; 104                   ; 5                              ;
+;     -- Bidir Ports                          ; 39                      ; 0                     ; 0                     ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Registered Ports                            ;                         ;                       ;                       ;                                ;
+;     -- Registered Input Ports               ; 0                       ; 2                     ; 3                     ; 0                              ;
+;     -- Registered Output Ports              ; 0                       ; 3                     ; 60                    ; 0                              ;
+;                                             ;                         ;                       ;                       ;                                ;
+; Port Connectivity                           ;                         ;                       ;                       ;                                ;
+;     -- Input Ports driven by GND            ; 0                       ; 0                     ; 3                     ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                       ; 0                     ; 29                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                       ; 0                     ; 0                     ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                       ; 0                     ; 0                     ; 0                              ;
+;     -- Input Ports with no Source           ; 0                       ; 0                     ; 68                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                       ; 0                     ; 0                     ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                       ; 2                     ; 73                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                       ; 0                     ; 73                    ; 0                              ;
++---------------------------------------------+-------------------------+-----------------------+-----------------------+--------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -978,7 +978,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; MIPI_PIXEL_D[8] ; AA15  ; 4        ; 54           ; 0            ; 28           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; MIPI_PIXEL_D[9] ; AA14  ; 4        ; 51           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; MIPI_PIXEL_HS   ; AA9   ; 3        ; 34           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; MIPI_PIXEL_VS   ; AB10  ; 4        ; 38           ; 0            ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; MIPI_PIXEL_VS   ; AB10  ; 4        ; 38           ; 0            ; 14           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[0]           ; C10   ; 7        ; 51           ; 54           ; 28           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[1]           ; C11   ; 7        ; 51           ; 54           ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[2]           ; D12   ; 7        ; 51           ; 54           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
@@ -1125,7 +1125,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; ARDUINO_IO[9]   ; AA17  ; 4        ; 58           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                                                                                                                                                           ;
 ; ARDUINO_RESET_N ; F16   ; 7        ; 71           ; 54           ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                                                                                                                                                           ;
 ; CAMERA_I2C_SCL  ; AA7   ; 3        ; 29           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|I2C_SCLK~2 (inverted)                                          ;
-; CAMERA_I2C_SDA  ; Y6    ; 3        ; 20           ; 0            ; 28           ; 3                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|I2C_SDAT~2 (inverted)                                          ;
+; CAMERA_I2C_SDA  ; Y6    ; 3        ; 20           ; 0            ; 28           ; 4                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|I2C_SDAT~2 (inverted)                                          ;
 ; DRAM_DQ[0]      ; Y21   ; 5        ; 78           ; 16           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|Qsys_sdram:sdram|oe (inverted)                                                                                                                      ;
 ; DRAM_DQ[10]     ; H21   ; 6        ; 78           ; 29           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|Qsys_sdram:sdram|oe (inverted)                                                                                                                      ;
 ; DRAM_DQ[11]     ; H22   ; 6        ; 78           ; 29           ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; Qsys:u0|Qsys_sdram:sdram|oe (inverted)                                                                                                                      ;
@@ -1610,7 +1610,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; I/O Assignment Analysis Messages ;
 +----------------------------------+
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
-    Info (16304): Mode behavior is affected by advanced setting Restructure Multiplexers (default for this mode is Off)
     Info (16304): Mode behavior is affected by advanced setting Physical Synthesis Effort Level (default for this mode is Normal)
     Info (16304): Mode behavior is affected by advanced setting Placement Effort Multiplier (default for this mode is 4.0)
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -1623,7 +1622,6 @@ Info (15535): Implemented PLL "Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altp
     Info (15099): Implementing clock multiplication of 2, clock division of 1, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[2] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
     Info (15099): Implementing clock multiplication of 1, clock division of 2, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[3] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
     Info (15099): Implementing clock multiplication of 2, clock division of 5, and phase shift of 0 degrees (0 ps) for Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|wire_pll7_clk[4] port File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
-Warning (171002): Current optimization assignments may cause the Fitter to introduce hold timing violations on connections clocked by global signals
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device 10M08DAF484I7G is compatible
@@ -1667,14 +1665,15 @@ Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP
 Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/I2C_VCM_Config.v Line: 61
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|comb~2
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|comb~1
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/I2C_VCM_Config.v Line: 61
 Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|comb~0 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|rVS File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 40
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|SUM[17]~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|STEP_UP[0]~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|always0~1
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|rSUM[31]~101 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/VCM_CTRL_P.v Line: 53
 Info (176353): Automatically promoted node pzdyqx:nabboc|pzdyqx_impl:pzdyqx_impl_inst|GHVD5181:\cycloneiii_ZNXJ5711_gen_0:cycloneiii_ZNXJ5711_gen_1|TPOO7242_7  File: /home/tm/.quartus/quartus/libraries/megafunctions/pzdyqx.vhd Line: 730
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
@@ -1690,8 +1689,8 @@ Info (176353): Automatically promoted node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_au
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[1]~3 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[0]~4 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[7]~5 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[6]~6 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
-        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[3]~7 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[3]~6 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
+        Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[6]~7 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[9]~8 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP[8]~9 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/F_VCM.v Line: 6
         Info (176358): Non-global destination nodes limited to 10 nodes
@@ -1707,32 +1706,33 @@ Info (176353): Automatically promoted node Qsys:u0|altera_reset_controller:rst_c
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|focus_mode File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/TERASIC_AUTO_FOCUS.v Line: 80
         Info (176357): Destination node Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|process_start File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/TERASIC_AUTO_FOCUS.v Line: 79
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_valid File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 15
-        Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[1] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:in_reg|data_valid File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 15
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[8] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[9] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[15] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[16] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
+        Info (176357): Destination node Qsys:u0|EEE_IMGPROC:eee_imgproc_0|STREAM_REG:out_reg|data_out[17] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/ip/EEE_IMGPROC/STREAM_REG.v Line: 17
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node Qsys:u0|altera_reset_controller:rst_controller_002|r_sync_rst  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[6] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[5] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[4] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
         Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|al File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 150
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|al File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 150
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|clk_en File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 175
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sto_condition File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 228
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cmd_stop File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 290
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|clk_en File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 175
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sto_condition File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 228
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cmd_stop File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_bit_ctrl.v Line: 290
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|sr[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 176
-        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[3] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|cr[7] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[2] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[1] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_mipi|i2c_master_top:i2c_master_top_inst|i2c_master_byte_ctrl:byte_controller|dcnt[0] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_byte_ctrl.v Line: 187
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|cr[6] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
+        Info (176357): Destination node Qsys:u0|i2c_opencores:i2c_opencores_camera|i2c_master_top:i2c_master_top_inst|cr[5] File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/i2c_master_top.v Line: 200
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|dffpipe_3dc:rdaclr|dffe13a[0]  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/dffpipe_3dc.tdf Line: 33
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|a_graycounter_sh6:rdptr_g1p|_~0 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/dcfifo_isj1.tdf Line: 65
+        Info (176357): Destination node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|alt_vipitc131_common_fifo:input_fifo|dcfifo:input_fifo|dcfifo_isj1:auto_generated|mux_9d7:rdemp_eq_comp_lsb_mux|result_node[0]~5 File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/mux_9d7.tdf Line: 29
 Info (176353): Automatically promoted node Qsys:u0|alt_vipitc131_IS2Vid:alt_vip_itc_0|rst_vid_clk_reg2  File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/alt_vipitc131_IS2Vid.sv Line: 374
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Warning (15064): PLL "Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_u3t2:sd1|pll7" output port clk[1] feeds output pin "DRAM_CLK~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/db/ip/Qsys/submodules/Qsys_altpll_0.v Line: 150
@@ -1830,10 +1830,10 @@ Warning (169064): Following 19 pins have no output enable or a GND or VCC output
     Info (169065): Pin ARDUINO_IO[15] has a permanently disabled output enable File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/DE10_LITE_D8M_VIP.v Line: 60
     Info (169065): Pin ARDUINO_RESET_N has a permanently disabled output enable File: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/DE10_LITE_D8M_VIP.v Line: 61
 Info (11763): Results from the I/O assignment analysis compilation cannot be preserved because I/O assignment analysis was run with Incremental Compilation enabled
-Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1375 megabytes
-    Info: Processing ended: Sun May 23 17:40:31 2021
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime I/O Assignment Analysis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1378 megabytes
+    Info: Processing ended: Sun May 23 18:07:28 2021
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 

@@ -3848,3 +3848,68 @@ java.io.FileNotFoundException: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/so
 
 !ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:31:49.091
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:52:31.562
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:52:33.139
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:53:00.000
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:53:01.522
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:53:22.329
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:53:24.007
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:57:16.889
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:57:18.179
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-23 17:57:19.124
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:58:36.519
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:58:36.774
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-23 17:58:38.308
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-23 18:03:30.777
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
