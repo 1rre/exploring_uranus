@@ -14,3 +14,11 @@
 	<version>Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition</version>
 </internal_error>
 
+<internal_error>
+	<executable>quartus</executable>
+	<sub_system>MEM</sub_system>
+	<error>*** Fatal Error: Out of memory in module quartus (2788 megabytes used)</error>
+	<date>Mon May 24 14:02:18 2021</date>
+	<version>Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition</version>
+</internal_error>
+

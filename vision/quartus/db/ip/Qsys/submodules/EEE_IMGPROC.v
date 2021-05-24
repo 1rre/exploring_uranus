@@ -101,15 +101,15 @@ assign b_in = b_mul[15:8];
 
 wire [23:0] im_1, im_2;
 
-assign im_1 = {r_in,g_in,b_in};
 
 edge_detect e_d (
-	.px_in(im_1),
+	.px_in({r_in,g_in,b_in}),
 	.x(x),
 	.y(y),
 	.line_sync(line_complete & in_valid),
 	.clk(clk & in_valid),
-	.px_out(im_2)
+	.px_out0(im_1),
+	.px_out1(im_2)
 );
 
 // Switch output pixels depending on mode switch
