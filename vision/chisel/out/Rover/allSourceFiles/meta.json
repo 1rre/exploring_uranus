@@ -1,0 +1,8 @@
+{
+    "value": [
+        "ref:42ac09c7:/home/tm/EIE2/Rover/vision/chisel/Rover/src/main.scala",
+        "ref:fdac9420:/home/tm/EIE2/Rover/vision/chisel/Rover/src/rover/edgedetect/EdgeDetect.scala"
+    ],
+    "valueHash": -148301002,
+    "inputsHash": 1268807368
+}

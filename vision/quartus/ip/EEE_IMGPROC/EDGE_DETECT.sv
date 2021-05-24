@@ -10,22 +10,24 @@ output logic [23:0]
 );
 
 wire in_range;
-assign in_range = x >= 2 && y >= 2;
+assign in_range = x >= 1 && y >= 1;
 
-wire [2:0] red, green, blue;
-wire [7:0] grey;
+wire [7:0] red, green, blue;
 
 wire [23:0] edge_px;
-assign edge_px = {grey,grey,grey};
+assign edge_px = {red,green,blue};
+
 
 assign px_out = in_range? edge_px : px_in;
 
-logic unsigned [2:0] px_buffer[3][640][3];
+reg unsigned [7:0] px_buffer[640][3];
+reg unsigned [7:0] last_px[3];
+wire unsigned [7:0] c_px[3];
 
-reg signed [4:0] dh[3], dv[3];
+reg signed [15:0] dh[3], dv[3];
 
-wire unsigned [4:0] abs_dh[3], abs_dv[3];
-wire unsigned [4:0] abs_d[3];
+wire unsigned [15:0] abs_dh[3], abs_dv[3];
+wire unsigned [15:0] abs_d[3];
 
 assign abs_dh[0] = dh[0]<0? -dh[0] : dh[0];
 assign abs_dh[1] = dh[1]<0? -dh[1] : dh[1];
@@ -34,49 +36,68 @@ assign abs_dv[0] = dv[0]<0? -dv[0] : dv[0];
 assign abs_dv[1] = dv[1]<0? -dv[1] : dv[1];
 assign abs_dv[2] = dv[2]<0? -dv[2] : dv[2];
 
-assign abs_d[0] = (abs_dh[0] + abs_dv[0])>>1;
-assign abs_d[1] = (abs_dh[1] + abs_dv[1])>>1;
-assign abs_d[2] = (abs_dh[2] + abs_dv[2])>>1;
+assign abs_d[0] = (abs_dh[0] &+ abs_dv[0])>>1;
+assign abs_d[1] = (abs_dh[1] &+ abs_dv[1])>>1;
+assign abs_d[2] = (abs_dh[2] &+ abs_dv[2])>>1;
 
-assign red = (abs_d[0]>3'b111)? 3'b111 : abs_d[0][2:0];
-assign green = (abs_d[1]>3'b111)? 3'b111 : abs_d[1][2:0];
-assign blue = (abs_d[2]>3'b111)? 3'b111 : abs_d[2][2:0];
 
-// assign grey = {red|blue|green, 5'h0};
-assign grey = {(red>green)?(red>blue)?red:blue:(green>blue)?green:blue, 5'h0};
+wire unsigned [7:0] r_out, g_out, b_out;
+wire signed [7:0] rq, gq, bq;
 
-wire [7:0] r_in,g_in,b_in;
-assign r_in = px_in[23:16];
-assign g_in = px_in[15:8];
-assign b_in = px_in[7:0];
+assign r_out = (abs_d[0]>8'hff)? 8'hff : abs_d[0][7:0];
+assign b_out = (abs_d[1]>8'hff)? 8'hff : abs_d[1][7:0];
+assign g_out = (abs_d[2]>8'hff)? 8'hff : abs_d[2][7:0];
+
+assign rq = r_out-avg_px[0];
+assign gq = g_out-avg_px[1];
+assign bq = b_out-avg_px[2];
+
+assign red = rq<0?0:rq;
+assign blue = gq<0?0:gq;
+assign green = bq<0?0:bq;
+
+assign c_px[0] = px_in[23:16];
+assign c_px[1] = px_in[15:8];
+assign c_px[2] = px_in[7:0];
+
+reg [7:0] avg_px[3];
+
+wire[7:0] avg_r, avg_g, avg_b;
+
+line_avg avg (
+	.clk(clk),
+	.c_px(px_in),
+	.r_out(avg_r),
+	.g_out(avg_g),
+	.b_out(avg_b)
+);
 
 always @(posedge clk) begin
-  px_buffer[2][x][0] = r_in[7:5];
-  px_buffer[2][x][1] = g_in[7:5];
-  px_buffer[2][x][2] = b_in[7:5];
-  if (x >= 2) begin
-    // Horizontal Differential
-	 for (int i = 0; i < 3; i = i + 1) begin
-	   dh[i] = (
-        (px_buffer[0][x-2][i] - px_buffer[2][x-2][i]) +
-        ((px_buffer[0][x-1][i] - px_buffer[2][x-1][i]) << 1) +
-        (px_buffer[0][x][i] - px_buffer[2][x][i])
-      );
-		dv[i] = (
-		  (px_buffer[0][x-2][i] - px_buffer[0][x][i]) +
-		  ((px_buffer[1][x-2][i] - px_buffer[1][x][i])<<1) +
-		  (px_buffer[2][x-2][i] - px_buffer[2][x][i])
-		);
-		
-	 end
-	 
-
-	 end
-end
-
-always @(posedge line_sync) begin
-	px_buffer[0] = px_buffer[1];
-	px_buffer[1] = px_buffer[2];
+  // Horizontal Differential
+  if (x >= 1) begin
+	 // Red
+    dh[0] = (px_buffer[x-1][0] - c_px[0])<<<3;
+    dv[0] = (px_buffer[x][0] - last_px[0])<<<3;
+	 // Green
+    dh[1] = (px_buffer[x-1][1] - c_px[1])<<<3;
+    dv[1] = (px_buffer[x][1] - last_px[1])<<<3;
+	 // Blue
+    dh[2] = (px_buffer[x-1][2] - c_px[2])<<<3;
+    dv[2] = (px_buffer[x][2] - last_px[2])<<<3;
+  end
+  
+  if (x == 576) begin
+	avg_px[0] = avg_r;
+	avg_px[1] = avg_g;
+	avg_px[2] = avg_b;
+  end
+  
+  px_buffer[x][0] = last_px[0];
+  px_buffer[x][1] = last_px[1];
+  px_buffer[x][2] = last_px[2];
+  last_px[0] = c_px[0];
+  last_px[1] = c_px[1];
+  last_px[2] = c_px[2];
 end
 
 

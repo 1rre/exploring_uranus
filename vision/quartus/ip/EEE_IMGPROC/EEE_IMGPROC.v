@@ -104,11 +104,10 @@ wire [23:0] im_1, im_2;
 assign im_1 = {r_in,g_in,b_in};
 
 edge_detect e_d (
-	.px_in({r_in,g_in,b_in}),
+	.px_in(im_1),
 	.x(x),
 	.y(y),
 	.line_sync(line_complete & in_valid),
-	//.colour_select(colour_select),
 	.clk(clk & in_valid),
 	.px_out(im_2)
 );
@@ -128,9 +127,6 @@ always@(posedge clk) begin
 		packet_video <= (blue[3:0] == 3'h0);
 	end
 	else if (in_valid) begin
-		if (x == 320 && y == 240) begin
-			cross_val = {red,green,blue};
-		end
 		if (x == IMAGE_W-1) begin
 			line_complete <= 1;
 			x <= 11'h0;
@@ -321,7 +317,6 @@ begin
 		if   (s_address == `READ_MSG) s_readdata <= {msg_buf_out};
 		if   (s_address == `READ_ID) s_readdata <= 32'h1234EEE2;
 		if   (s_address == `REG_BBCOL) s_readdata <= {8'h0, bb_col};
-		if   (s_address == `READ_CROSS) s_readdata <= {8'h0, cross_val};
 	end
 	
 	read_d <= s_read;

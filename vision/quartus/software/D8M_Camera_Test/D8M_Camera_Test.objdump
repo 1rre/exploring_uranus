@@ -77,7 +77,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  29 .jdi          000040d8  00000000  00000000  0007b152  2**0
                   CONTENTS, READONLY
- 30 .sopcinfo     000994d0  00000000  00000000  0007f22a  2**0
+ 30 .sopcinfo     00099b73  00000000  00000000  0007f22a  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00020000 l    d  .entry	00000000 .entry
@@ -2548,19 +2548,19 @@ void Focus_Init(void){
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_CTRL, 0);// focus mode : 1: window-screen, 0: full-screen
    2104c:	0007883a 	mov	r3,zero
    21050:	00800134 	movhi	r2,4
-   21054:	10861104 	addi	r2,r2,6212
+   21054:	10840904 	addi	r2,r2,4132
    21058:	10c00035 	stwio	r3,0(r2)
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_W, focus_width);// focus_width
    2105c:	d0a0010b 	ldhu	r2,-32764(gp)
    21060:	10ffffcc 	andi	r3,r2,65535
    21064:	00800134 	movhi	r2,4
-   21068:	10861204 	addi	r2,r2,6216
+   21068:	10840a04 	addi	r2,r2,4136
    2106c:	10c00035 	stwio	r3,0(r2)
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_H, focus_height);// focus_height
    21070:	d0a0018b 	ldhu	r2,-32762(gp)
    21074:	10ffffcc 	andi	r3,r2,65535
    21078:	00800134 	movhi	r2,4
-   2107c:	10861304 	addi	r2,r2,6220
+   2107c:	10840b04 	addi	r2,r2,4140
    21080:	10c00035 	stwio	r3,0(r2)
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_X_START, video_w/2-focus_width/2);//x_start
    21084:	d0a0000b 	ldhu	r2,-32768(gp)
@@ -2573,7 +2573,7 @@ void Focus_Init(void){
    210a0:	10bfffcc 	andi	r2,r2,65535
    210a4:	1887c83a 	sub	r3,r3,r2
    210a8:	00800134 	movhi	r2,4
-   210ac:	10861404 	addi	r2,r2,6224
+   210ac:	10840c04 	addi	r2,r2,4144
    210b0:	10c00035 	stwio	r3,0(r2)
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_Y_START, video_h/2-focus_height/2);// y_start
    210b4:	d0a0008b 	ldhu	r2,-32766(gp)
@@ -2586,7 +2586,7 @@ void Focus_Init(void){
    210d0:	10bfffcc 	andi	r2,r2,65535
    210d4:	1887c83a 	sub	r3,r3,r2
    210d8:	00800134 	movhi	r2,4
-   210dc:	10861504 	addi	r2,r2,6228
+   210dc:	10840d04 	addi	r2,r2,4148
    210e0:	10c00035 	stwio	r3,0(r2)
 
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_SCAL, focus_scal*256 + focus_scal_f); // scan 0 -> 1023 , step: SCAL , to find STEP_UP
@@ -2597,14 +2597,14 @@ void Focus_Init(void){
    210f4:	10803fcc 	andi	r2,r2,255
    210f8:	1887883a 	add	r3,r3,r2
    210fc:	00800134 	movhi	r2,4
-   21100:	10861604 	addi	r2,r2,6232
+   21100:	10840e04 	addi	r2,r2,4152
    21104:	10c00035 	stwio	r3,0(r2)
                                                                           //  scan STEP_UP + - SCAL/2 , step: SCAL_F
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_TH, focus_th);
    21108:	d0a00283 	ldbu	r2,-32758(gp)
    2110c:	10c03fcc 	andi	r3,r2,255
    21110:	00800134 	movhi	r2,4
-   21114:	10861704 	addi	r2,r2,6236
+   21114:	10840f04 	addi	r2,r2,4156
    21118:	10c00035 	stwio	r3,0(r2)
 
   //////////// focus at initial time
@@ -2614,7 +2614,7 @@ void Focus_Init(void){
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_GO, 1);
    21124:	00c00044 	movi	r3,1
    21128:	00800134 	movhi	r2,4
-   2112c:	10861004 	addi	r2,r2,6208
+   2112c:	10840804 	addi	r2,r2,4128
    21130:	10c00035 	stwio	r3,0(r2)
   usleep(2);
    21134:	01000084 	movi	r4,2
@@ -2622,7 +2622,7 @@ void Focus_Init(void){
   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_GO, 0);
    2113c:	0007883a 	mov	r3,zero
    21140:	00800134 	movhi	r2,4
-   21144:	10861004 	addi	r2,r2,6208
+   21144:	10840804 	addi	r2,r2,4128
    21148:	10c00035 	stwio	r3,0(r2)
 }
    2114c:	0001883a 	nop
@@ -2650,7 +2650,7 @@ alt_u16 Focus_Window(int x,int y){
 	   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_CTRL, 1);// focus mode : 1: window-screen, 0: full-screen
    21184:	00c00044 	movi	r3,1
    21188:	00800134 	movhi	r2,4
-   2118c:	10861104 	addi	r2,r2,6212
+   2118c:	10840904 	addi	r2,r2,4132
    21190:	10c00035 	stwio	r3,0(r2)
 
 	   if(( x -  focus_width/2) < 0 ) x_start = 0;
@@ -2735,12 +2735,12 @@ alt_u16 Focus_Window(int x,int y){
 	   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_X_START, x_start);//x_start
    212a8:	e0fffc0b 	ldhu	r3,-16(fp)
    212ac:	00800134 	movhi	r2,4
-   212b0:	10861404 	addi	r2,r2,6224
+   212b0:	10840c04 	addi	r2,r2,4144
    212b4:	10c00035 	stwio	r3,0(r2)
 	   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_FOCUS_Y_START, y_start);//y_start
    212b8:	e0fffc8b 	ldhu	r3,-14(fp)
    212bc:	00800134 	movhi	r2,4
-   212c0:	10861504 	addi	r2,r2,6228
+   212c0:	10840d04 	addi	r2,r2,4148
    212c4:	10c00035 	stwio	r3,0(r2)
 
 	   usleep(10);
@@ -2750,7 +2750,7 @@ alt_u16 Focus_Window(int x,int y){
 	   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_GO, 1);
    212d0:	00c00044 	movi	r3,1
    212d4:	00800134 	movhi	r2,4
-   212d8:	10861004 	addi	r2,r2,6208
+   212d8:	10840804 	addi	r2,r2,4128
    212dc:	10c00035 	stwio	r3,0(r2)
 	   usleep(2);
    212e0:	01000084 	movi	r4,2
@@ -2758,14 +2758,14 @@ alt_u16 Focus_Window(int x,int y){
 	   IOWR(TERASIC_AUTO_FOCUS_0_BASE,REG_GO, 0);
    212e8:	0007883a 	mov	r3,zero
    212ec:	00800134 	movhi	r2,4
-   212f0:	10861004 	addi	r2,r2,6208
+   212f0:	10840804 	addi	r2,r2,4128
    212f4:	10c00035 	stwio	r3,0(r2)
 	   Focus_Released();
    212f8:	00213440 	call	21344 <Focus_Released>
 
 	   end_focus = IORD(TERASIC_AUTO_FOCUS_0_BASE,REG_STATUS)&0x0FFF;
    212fc:	00800134 	movhi	r2,4
-   21300:	10861004 	addi	r2,r2,6208
+   21300:	10840804 	addi	r2,r2,4128
    21304:	10800037 	ldwio	r2,0(r2)
    21308:	1083ffcc 	andi	r2,r2,4095
    2130c:	e0bffd0d 	sth	r2,-12(fp)
@@ -2828,7 +2828,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_ticks_per_second (void)
   while((IORD(TERASIC_AUTO_FOCUS_0_BASE,REG_STATUS)&0x8000) ==0 && alt_nticks() < TimeOut ); // waiting for VCM release I2C bus
    2137c:	0001883a 	nop
    21380:	00800134 	movhi	r2,4
-   21384:	10861004 	addi	r2,r2,6208
+   21384:	10840804 	addi	r2,r2,4128
    21388:	10800037 	ldwio	r2,0(r2)
    2138c:	10a0000c 	andi	r2,r2,32768
    21390:	1000051e 	bne	r2,zero,213a8 <Focus_Released+0x64>
@@ -3120,7 +3120,7 @@ bool MIPI_Init(void){
    216d4:	0140bef4 	movhi	r5,763
    216d8:	297c2004 	addi	r5,r5,-3968
    216dc:	01000134 	movhi	r4,4
-   216e0:	21062004 	addi	r4,r4,6272
+   216e0:	21041804 	addi	r4,r4,4192
    216e4:	00203980 	call	20398 <oc_i2c_init_ex>
    216e8:	e0bfff15 	stw	r2,-4(fp)
 	if (!bSuccess)
@@ -3201,12 +3201,12 @@ int main()
   IOWR(MIPI_PWDN_N_BASE, 0x00, 0x00);
    2177c:	0007883a 	mov	r3,zero
    21780:	00800134 	movhi	r2,4
-   21784:	10862804 	addi	r2,r2,6304
+   21784:	10842004 	addi	r2,r2,4224
    21788:	10c00035 	stwio	r3,0(r2)
   IOWR(MIPI_RESET_N_BASE, 0x00, 0x00);
    2178c:	0007883a 	mov	r3,zero
    21790:	00800134 	movhi	r2,4
-   21794:	10862c04 	addi	r2,r2,6320
+   21794:	10842404 	addi	r2,r2,4240
    21798:	10c00035 	stwio	r3,0(r2)
 
   usleep(2000);
@@ -3215,7 +3215,7 @@ int main()
   IOWR(MIPI_PWDN_N_BASE, 0x00, 0xFF);
    217a4:	00c03fc4 	movi	r3,255
    217a8:	00800134 	movhi	r2,4
-   217ac:	10862804 	addi	r2,r2,6304
+   217ac:	10842004 	addi	r2,r2,4224
    217b0:	10c00035 	stwio	r3,0(r2)
   usleep(2000);
    217b4:	0101f404 	movi	r4,2000
@@ -3223,7 +3223,7 @@ int main()
   IOWR(MIPI_RESET_N_BASE, 0x00, 0xFF);
    217bc:	00c03fc4 	movi	r3,255
    217c0:	00800134 	movhi	r2,4
-   217c4:	10862c04 	addi	r2,r2,6320
+   217c4:	10842404 	addi	r2,r2,4240
    217c8:	10c00035 	stwio	r3,0(r2)
 
   printf("Image Processor ID: %x\n",IORD(0x42000,EEE_IMGPROC_ID));
@@ -3313,7 +3313,7 @@ int main()
        // touch KEY0 to trigger Auto focus
 	   if((IORD(KEY_BASE,0)&0x03) == 0x02){
    21880:	00800134 	movhi	r2,4
-   21884:	10863004 	addi	r2,r2,6336
+   21884:	10842804 	addi	r2,r2,4256
    21888:	10800037 	ldwio	r2,0(r2)
    2188c:	108000cc 	andi	r2,r2,3
    21890:	10800098 	cmpnei	r2,r2,2
@@ -3328,7 +3328,7 @@ int main()
 	   // touch KEY1 to ZOOM
 	         if((IORD(KEY_BASE,0)&0x03) == 0x01){
    218a8:	00800134 	movhi	r2,4
-   218ac:	10863004 	addi	r2,r2,6336
+   218ac:	10842804 	addi	r2,r2,4256
    218b0:	10800037 	ldwio	r2,0(r2)
    218b4:	108000cc 	andi	r2,r2,3
    218b8:	10800058 	cmpnei	r2,r2,1
@@ -3598,7 +3598,7 @@ void MipiBridgeRegWrite(alt_u16 Addr, alt_u16 Value){
    21ba4:	200d883a 	mov	r6,r4
    21ba8:	180b883a 	mov	r5,r3
    21bac:	01000134 	movhi	r4,4
-   21bb0:	21062004 	addi	r4,r4,6272
+   21bb0:	21041804 	addi	r4,r4,4192
    21bb4:	0020bac0 	call	20bac <OC_I2CL_Write>
 }
    21bb8:	0001883a 	nop
@@ -3632,7 +3632,7 @@ alt_u16 MipiBridgeRegRead(alt_u16 Addr){
    21c08:	200d883a 	mov	r6,r4
    21c0c:	180b883a 	mov	r5,r3
    21c10:	01000134 	movhi	r4,4
-   21c14:	21062004 	addi	r4,r4,6272
+   21c14:	21041804 	addi	r4,r4,4192
    21c18:	0020dbc0 	call	20dbc <OC_I2CL_Read>
 
 	tValue = nSWAP16(Value);
@@ -3793,7 +3793,7 @@ alt_u8 OV8865_read_cmos_sensor_8(alt_u16 Addr){
    21db0:	200d883a 	mov	r6,r4
    21db4:	180b883a 	mov	r5,r3
    21db8:	01000134 	movhi	r4,4
-   21dbc:	21061804 	addi	r4,r4,6240
+   21dbc:	21041004 	addi	r4,r4,4160
    21dc0:	0020dbc0 	call	20dbc <OC_I2CL_Read>
 
 	return (Value);
@@ -3831,7 +3831,7 @@ void OV8865_write_cmos_sensor_8(alt_u16 Addr, alt_u8 Value){
    21e1c:	200d883a 	mov	r6,r4
    21e20:	180b883a 	mov	r5,r3
    21e24:	01000134 	movhi	r4,4
-   21e28:	21061804 	addi	r4,r4,6240
+   21e28:	21041004 	addi	r4,r4,4160
    21e2c:	0020bac0 	call	20bac <OC_I2CL_Write>
 }
    21e30:	0001883a 	nop
@@ -3867,7 +3867,7 @@ void OV8865_write_AF(alt_u8 msb, alt_u8 lsb){
    21e88:	200d883a 	mov	r6,r4
    21e8c:	180b883a 	mov	r5,r3
    21e90:	01000134 	movhi	r4,4
-   21e94:	21061804 	addi	r4,r4,6240
+   21e94:	21041004 	addi	r4,r4,4160
    21e98:	00206440 	call	20644 <OC_I2C_Write>
 }
    21e9c:	0001883a 	nop
@@ -3898,7 +3898,7 @@ void OV8865_read_AF(void){
    21ed8:	180d883a 	mov	r6,r3
    21edc:	100b883a 	mov	r5,r2
    21ee0:	01000134 	movhi	r4,4
-   21ee4:	21061804 	addi	r4,r4,6240
+   21ee4:	21041004 	addi	r4,r4,4160
    21ee8:	0020a740 	call	20a74 <OC_I2C_Read_Continue>
    21eec:	e0bffe15 	stw	r2,-8(fp)
 		if (bSuccess)
@@ -3950,7 +3950,7 @@ void OV8865_FOCUS_Move_to(alt_u16 a_u2MovePosition)
    21f6c:	0140bef4 	movhi	r5,763
    21f70:	297c2004 	addi	r5,r5,-3968
    21f74:	01000134 	movhi	r4,4
-   21f78:	21061804 	addi	r4,r4,6240
+   21f78:	21041004 	addi	r4,r4,4160
    21f7c:	00203980 	call	20398 <oc_i2c_init_ex>
    21f80:	e0bffd15 	stw	r2,-12(fp)
 	if (!bSuccess)
@@ -3991,7 +3991,7 @@ void OV8865_FOCUS_Move_to(alt_u16 a_u2MovePosition)
 
 	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);  // Release I2C bus , due to two I2C master shared!
    21fe0:	01000134 	movhi	r4,4
-   21fe4:	21061804 	addi	r4,r4,6240
+   21fe4:	21041004 	addi	r4,r4,4160
    21fe8:	00204d40 	call	204d4 <oc_i2c_uninit>
 
 }
@@ -4020,7 +4020,7 @@ void OV8865SetExposure(alt_u32 exposure){
    22024:	0140bef4 	movhi	r5,763
    22028:	297c2004 	addi	r5,r5,-3968
    2202c:	01000134 	movhi	r4,4
-   22030:	21061804 	addi	r4,r4,6240
+   22030:	21041004 	addi	r4,r4,4160
    22034:	00203980 	call	20398 <oc_i2c_init_ex>
    22038:	e0bffe15 	stw	r2,-8(fp)
 	if (!bSuccess)
@@ -4069,7 +4069,7 @@ void OV8865SetExposure(alt_u32 exposure){
 
 	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);
    220c0:	01000134 	movhi	r4,4
-   220c4:	21061804 	addi	r4,r4,6240
+   220c4:	21041004 	addi	r4,r4,4160
    220c8:	00204d40 	call	204d4 <oc_i2c_uninit>
 }
    220cc:	0001883a 	nop
@@ -4098,7 +4098,7 @@ void OV8865SetGain(alt_u16 gain){
    22108:	0140bef4 	movhi	r5,763
    2210c:	297c2004 	addi	r5,r5,-3968
    22110:	01000134 	movhi	r4,4
-   22114:	21061804 	addi	r4,r4,6240
+   22114:	21041004 	addi	r4,r4,4160
    22118:	00203980 	call	20398 <oc_i2c_init_ex>
    2211c:	e0bffe15 	stw	r2,-8(fp)
 	if (!bSuccess)
@@ -4140,7 +4140,7 @@ void OV8865SetGain(alt_u16 gain){
 
 	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);
    2218c:	01000134 	movhi	r4,4
-   22190:	21061804 	addi	r4,r4,6240
+   22190:	21041004 	addi	r4,r4,4160
    22194:	00204d40 	call	204d4 <oc_i2c_uninit>
 }
    22198:	0001883a 	nop
@@ -4170,7 +4170,7 @@ alt_u32 OV8865ReadExposure(){
    221d0:	0140bef4 	movhi	r5,763
    221d4:	297c2004 	addi	r5,r5,-3968
    221d8:	01000134 	movhi	r4,4
-   221dc:	21061804 	addi	r4,r4,6240
+   221dc:	21041004 	addi	r4,r4,4160
    221e0:	00203980 	call	20398 <oc_i2c_init_ex>
    221e4:	e0bffd15 	stw	r2,-12(fp)
 	if (!bSuccess)
@@ -4205,7 +4205,7 @@ alt_u32 OV8865ReadExposure(){
 
 	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);
    22244:	01000134 	movhi	r4,4
-   22248:	21061804 	addi	r4,r4,6240
+   22248:	21041004 	addi	r4,r4,4160
    2224c:	00204d40 	call	204d4 <oc_i2c_uninit>
 
 	return exposure;
@@ -4254,7 +4254,7 @@ void MIPI_BIN_LEVEL(alt_u8 level){
    222b8:	0140bef4 	movhi	r5,763
    222bc:	297c2004 	addi	r5,r5,-3968
    222c0:	01000134 	movhi	r4,4
-   222c4:	21061804 	addi	r4,r4,6240
+   222c4:	21041004 	addi	r4,r4,4160
    222c8:	00203980 	call	20398 <oc_i2c_init_ex>
    222cc:	e0bffe15 	stw	r2,-8(fp)
 		if (!bSuccess)
@@ -4377,7 +4377,7 @@ void MIPI_BIN_LEVEL(alt_u8 level){
 
 	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);  // Release I2C bus , due to two I2C master shared!
    22408:	01000134 	movhi	r4,4
-   2240c:	21061804 	addi	r4,r4,6240
+   2240c:	21041004 	addi	r4,r4,4160
    22410:	00204d40 	call	204d4 <oc_i2c_uninit>
 
 }
@@ -4413,7 +4413,7 @@ void MipiCameraInit(void)
    22448:	0140bef4 	movhi	r5,763
    2244c:	297c2004 	addi	r5,r5,-3968
    22450:	01000134 	movhi	r4,4
-   22454:	21061804 	addi	r4,r4,6240
+   22454:	21041004 	addi	r4,r4,4160
    22458:	00203980 	call	20398 <oc_i2c_init_ex>
    2245c:	e0bffe15 	stw	r2,-8(fp)
 		if (!bSuccess)
@@ -4568,7 +4568,7 @@ void MipiCameraInit(void)
 
  	oc_i2c_uninit(I2C_OPENCORES_CAMERA_BASE);  // Release I2C bus , due to two I2C master shared!
    22604:	01000134 	movhi	r4,4
-   22608:	21061804 	addi	r4,r4,6240
+   22608:	21041004 	addi	r4,r4,4160
    2260c:	00204d40 	call	204d4 <oc_i2c_uninit>
 
 
@@ -19853,7 +19853,7 @@ void alt_sys_init( void )
    30498:	018000c4 	movi	r6,3
    3049c:	000b883a 	mov	r5,zero
    304a0:	01000134 	movhi	r4,4
-   304a4:	21060804 	addi	r4,r4,6176
+   304a4:	21040004 	addi	r4,r4,4096
    304a8:	0030fd80 	call	30fd8 <alt_avalon_timer_sc_init>
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
    304ac:	01800084 	movi	r6,2
