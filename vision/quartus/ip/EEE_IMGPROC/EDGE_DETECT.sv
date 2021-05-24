@@ -36,9 +36,9 @@ assign abs_dv[0] = dv[0]<0? -dv[0] : dv[0];
 assign abs_dv[1] = dv[1]<0? -dv[1] : dv[1];
 assign abs_dv[2] = dv[2]<0? -dv[2] : dv[2];
 
-assign abs_d[0] = (abs_dh[0] &+ abs_dv[0])>>1;
-assign abs_d[1] = (abs_dh[1] &+ abs_dv[1])>>1;
-assign abs_d[2] = (abs_dh[2] &+ abs_dv[2])>>1;
+assign abs_d[0] = (abs_dh[0] + abs_dv[0])>>1;
+assign abs_d[1] = (abs_dh[1] + abs_dv[1])>>1;
+assign abs_d[2] = (abs_dh[2] + abs_dv[2])>>1;
 
 
 wire unsigned [7:0] r_out, g_out, b_out;
