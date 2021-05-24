@@ -52,9 +52,9 @@ assign rq = r_out-avg_px[0];
 assign gq = g_out-avg_px[1];
 assign bq = b_out-avg_px[2];
 
-assign red = rq<0?0:rq;
-assign blue = gq<0?0:gq;
-assign green = bq<0?0:bq;
+assign red = r_out;//rq<0?0:rq;
+assign blue = b_out;//gq<0?0:gq;
+assign green = g_out;//bq<0?0:bq;
 
 assign c_px[0] = px_in[23:16];
 assign c_px[1] = px_in[15:8];
@@ -63,7 +63,7 @@ assign c_px[2] = px_in[7:0];
 reg [7:0] avg_px[3];
 
 wire[7:0] avg_r, avg_g, avg_b;
-
+/*
 line_avg avg (
 	.clk(clk),
 	.c_px(px_in),
@@ -71,7 +71,7 @@ line_avg avg (
 	.g_out(avg_g),
 	.b_out(avg_b)
 );
-
+*/
 always @(posedge clk) begin
   // Horizontal Differential
   if (x >= 1) begin
