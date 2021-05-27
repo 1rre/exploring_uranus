@@ -25,22 +25,6 @@ case class TestImg(file: String) extends BufferedImage(640,480,Image.SCALE_DEFAU
   def colours = {
     val image = new BufferedImage(640,480,BufferedImage.TYPE_INT_RGB)
 
-    for (y <- 2 until 478; x <- 2 until 638) {
-      var avgR = 0
-      var avgG = 0
-      var avgB = 0
-      for (i <- -2 to 2; j <- -2 to 2) {
-        val c = new Color(getRGB(x+i,y+j))
-        avgR += c.getRed
-        avgG += c.getGreen
-        avgB += c.getBlue
-      }
-      avgR /= 25
-      avgG /= 25
-      avgB /= 25
-      image.setRGB(x,y,new Color(avgR,avgG,avgB).getRGB)
-    }
-
     def scale(c: Color): Color = {
       val r = c.getRed
       val g = c.getGreen
@@ -51,11 +35,15 @@ case class TestImg(file: String) extends BufferedImage(640,480,Image.SCALE_DEFAU
 
     def green = new Color(45,213,92)
     def orange = new Color(154,130,8)
-    def t1 = 32
+    def blue = new Color(1,105,192)
+    def pink = new Color(66,70,108)
+    def black = new Color(0,25,42)
+
+
+    def t1 = 64
     def t2 = 64
 
     def is(c1: Color, c2: Color): Boolean = {
-      
       c1.getRed + c1.getGreen + c1.getBlue > t2 &&
       c2.getRed + c2.getGreen + c2.getBlue > t2 && {
         val a = scale(c1)
@@ -67,10 +55,13 @@ case class TestImg(file: String) extends BufferedImage(640,480,Image.SCALE_DEFAU
     }
 
     
-    for (y <- 0 until 480; x <- 0 until 640) {
-      val colour = new Color(image.getRGB(x,y))
+    for (y <- 320 until 480; x <- 0 until 640) {
+      val colour = new Color(getRGB(x,y))
       if (is(green, colour)) image.setRGB(x,y,new Color(0,255,0).getRGB)
       else if (is(orange, colour)) image.setRGB(x,y,new Color(255,255,0).getRGB)
+      else if (is(blue, colour)) image.setRGB(x,y,new Color(0,0,255).getRGB)
+      else if (is(pink, colour)) image.setRGB(x,y,new Color(255,0,255).getRGB)
+      else if (is(black, colour)) image.setRGB(x,y,new Color(255,255,255).getRGB)
       else image.setRGB(x,y,new Color(0,0,0).getRGB)
     }
 
