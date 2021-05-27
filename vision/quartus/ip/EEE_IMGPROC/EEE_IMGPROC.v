@@ -108,9 +108,10 @@ edge_detect e_d (
 	.y(y),
 	.line_sync(line_complete & in_valid),
 	.clk(clk & in_valid),
-	.px_out0(im_1),
-	.px_out1(im_2)
+	.px_out0(im_1)
 );
+
+assign im_2 = {red,green,blue};
 
 // Switch output pixels depending on mode switch
 // Don't modify the start-of-packet word - it's a packet discriptor

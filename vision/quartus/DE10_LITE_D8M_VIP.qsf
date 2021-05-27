@@ -430,4 +430,7 @@ set_global_assignment -name VERILOG_FILE ip/EEE_IMGPROC/long_assign.v
 set_global_assignment -name VERILOG_FILE ip/EEE_IMGPROC/EdgeDetect.v
 set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/PX_AVG.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/LINE_AVG.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/COLOUR_DETECT.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/px_scale.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/diff_detect.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

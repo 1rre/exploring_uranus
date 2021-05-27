@@ -4396,3 +4396,195 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 16:40:42.250
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:48:46.061
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:48:47.552
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 22:53:45.754
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:56:00.099
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:56:00.848
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:56:01.265
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 22:56:02.012
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 23:00:53.773
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:02:20.209
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:02:20.210
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:02:20.364
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:02:21.851
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:06:13.132
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:06:14.622
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 23:07:14.592
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:12:27.962
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:12:29.125
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 23:17:17.210
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:08.358
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:09.505
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:11.656
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=0x410e0] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:11.665
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:13.323
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-5]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x410e0, --reset-target, /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:13.323
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:18.345
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:20.496
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-5]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=0x410e0] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:20.501
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:22.156
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [1-5]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x410e0, --reset-target, /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 23:23:22.156
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:33.978
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:23:35.142
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 23:28:02.060
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:55:06.947
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:55:07.099
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 23:55:08.591
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-27 23:59:59.898
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-28 00:03:44.475
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-28 00:03:45.638
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]

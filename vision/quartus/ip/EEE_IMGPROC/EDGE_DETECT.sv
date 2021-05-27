@@ -8,7 +8,7 @@ input unsigned [10:0]
 input
   clk,line_sync,
 output logic [23:0]
-  px_out0, px_out1
+  px_out0
 );
 
 wire in_range;
@@ -17,11 +17,20 @@ assign in_range = x >= 1 && y >= 1;
 wire [7:0] red, green, blue;
 
 wire [23:0] edge_px;
-assign edge_px = {red,green,blue};
+assign edge_px = {r_out,g_out,b_out};
+
+wire [23:0] col_out;
+
+colour_detect c1 (
+  .clk(clk),
+  .x(x),
+  .y(y),
+  .px_in(edge_px),
+  .px_out(col_out)
+);
 
 
-assign px_out0 = in_range? edge_px : px_in;
-assign px_out1 = in_range? {r_out,b_out,g_out} : px_in;
+assign px_out0 = in_range? col_out : px_in;
 
 reg unsigned [7:0] px_buffer[640][3];
 reg unsigned [7:0] last_px[3];
