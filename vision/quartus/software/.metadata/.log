@@ -4108,3 +4108,291 @@ java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.meta
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-24 14:46:49.840
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 14:48:19.590
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 14:48:20.919
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:25:07.165
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:25:08.333
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-24 15:30:00.408
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:34:15.114
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:34:15.361
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:34:16.849
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-24 15:39:05.256
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:43:57.318
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-24 15:43:58.805
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/clones/EEE2Rover/DE10_LITE_D8M_VIP_16/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-05-24 15:48:50.518
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2021-05-27 16:38:58.361 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/tm/.quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/tm/.quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-05-27 16:39:05.679
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.rse.core 4 0 2021-05-27 16:39:10.100
+!MESSAGE Unexpected Exception
+!STACK 0
+java.net.UnknownHostException: tmoores: tmoores: unknown error
+	at java.net.InetAddress.getLocalHost(Unknown Source)
+	at org.eclipse.rse.core.RSECorePlugin.getLocalMachineName(RSECorePlugin.java:265)
+	at org.eclipse.rse.core.RSEPreferencesManager.getDefaultPrivateSystemProfileName(RSEPreferencesManager.java:358)
+	at org.eclipse.rse.core.RSEPreferencesManager.initDefaults(RSEPreferencesManager.java:337)
+	at org.eclipse.rse.internal.core.RSEPreferenceInitializer.initializeDefaultPreferences(RSEPreferenceInitializer.java:23)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper$1.run(PreferenceServiceRegistryHelper.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.runInitializer(PreferenceServiceRegistryHelper.java:303)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:131)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.node(DefaultPreferences.java:147)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.getDefaultPreferences(PreferenceForwarder.java:134)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.getInt(PreferenceForwarder.java:488)
+	at org.eclipse.rse.logging.Logger.initialize(Logger.java:249)
+	at org.eclipse.rse.logging.Logger.<init>(Logger.java:135)
+	at org.eclipse.rse.logging.LoggerFactory.getLogger(LoggerFactory.java:45)
+	at org.eclipse.rse.core.RSECorePlugin.getLogger(RSECorePlugin.java:392)
+	at org.eclipse.rse.internal.core.RSEInitJob.<init>(RSEInitJob.java:133)
+	at org.eclipse.rse.internal.core.RSEInitJob.<clinit>(RSEInitJob.java:65)
+	at org.eclipse.rse.internal.ui.RSEUIStartup.earlyStartup(RSEUIStartup.java:20)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2852)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.UnknownHostException: tmoores: unknown error
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	... 29 more
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-05-27 16:39:10.487
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 16:39:39.847
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 16:39:39.850
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.ide 4 4 2021-05-27 16:40:19.579
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2021-05-27 16:40:19.589
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2021-05-27 16:40:19.589
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1658)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1740)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1197)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2021-05-27 16:40:23.851 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/tm/.quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/tm/.quartus/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.rse.core 4 0 2021-05-27 16:40:28.888
+!MESSAGE Unexpected Exception
+!STACK 0
+java.net.UnknownHostException: tmoores: tmoores: unknown error
+	at java.net.InetAddress.getLocalHost(Unknown Source)
+	at org.eclipse.rse.core.RSECorePlugin.getLocalMachineName(RSECorePlugin.java:265)
+	at org.eclipse.rse.core.RSEPreferencesManager.getDefaultPrivateSystemProfileName(RSEPreferencesManager.java:358)
+	at org.eclipse.rse.core.RSEPreferencesManager.initDefaults(RSEPreferencesManager.java:337)
+	at org.eclipse.rse.internal.core.RSEPreferenceInitializer.initializeDefaultPreferences(RSEPreferenceInitializer.java:23)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper$1.run(PreferenceServiceRegistryHelper.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.runInitializer(PreferenceServiceRegistryHelper.java:303)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:131)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.node(DefaultPreferences.java:147)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.getDefaultPreferences(PreferenceForwarder.java:134)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.getInt(PreferenceForwarder.java:488)
+	at org.eclipse.rse.logging.Logger.initialize(Logger.java:249)
+	at org.eclipse.rse.logging.Logger.<init>(Logger.java:135)
+	at org.eclipse.rse.logging.LoggerFactory.getLogger(LoggerFactory.java:45)
+	at org.eclipse.rse.core.RSECorePlugin.getLogger(RSECorePlugin.java:392)
+	at org.eclipse.rse.internal.core.RSEInitJob.<init>(RSEInitJob.java:133)
+	at org.eclipse.rse.internal.core.RSEInitJob.<clinit>(RSEInitJob.java:65)
+	at org.eclipse.rse.core.RSECorePlugin.waitForInitCompletion(RSECorePlugin.java:142)
+	at org.eclipse.rse.internal.ui.RSEUIInitJob.run(RSEUIInitJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.UnknownHostException: tmoores: unknown error
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	... 26 more
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2021-05-27 16:40:29.958
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 16:40:31.796
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=' --instance=-1 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 16:40:32.825
+!MESSAGE Failed Executing: [nios2-download, '--cable=', --instance=-1, --stop, --accept-bad-sysid, --sidp=0x410e0] return code: 16
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 16:40:32.832
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=' --instance=-1 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 16:40:33.867
+!MESSAGE Failed Executing: [nios2-download, '--cable=', --instance=-1, --go, --accept-bad-sysid, --sidp=0x410e0, --reset-target, /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf] return code: 16
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-05-27 16:40:33.869
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 16:40:40.916
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x410e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-05-27 16:40:42.250
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x410e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]

@@ -139,25 +139,6 @@ always@(posedge clk) begin
 	end
 end
 
-//Find first and last red pixels
-/*
-reg [10:0] x_min, y_min, x_max, y_max;
-always@(posedge clk) begin
-	if (red_detect & in_valid) begin	//Update bounds when the pixel is red
-		if (x < x_min) x_min <= x;
-		if (x > x_max) x_max <= x;
-		if (y < y_min) y_min <= y;
-		y_max <= y;
-	end
-	if (sop & in_valid) begin	//Reset bounds on start of packet
-		x_min <= IMAGE_W-11'h1;
-		x_max <= 0;
-		y_min <= IMAGE_H-11'h1;
-		y_max <= 0;
-	end
-end
-*/
-
 //Process bounding box at the end of the frame.
 reg [1:0] msg_state;
 reg [10:0] left, right, top, bottom;
