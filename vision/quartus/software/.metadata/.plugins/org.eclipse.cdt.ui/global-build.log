@@ -6284,3 +6284,15 @@ Info:                       5188 Bytes free for stack + heap.
 Info: Creating D8M_Camera_Test.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source D8M_Camera_Test.elf >D8M_Camera_Test.objdump
 [D8M_Camera_Test build complete]
+11:51:21 **** Build of configuration Nios II for project D8M_Camera_Test ****
+make all 
+Info: Building ../D8M_Camera_Test_bsp/
+make --no-print-directory -C ../D8M_Camera_Test_bsp/
+[BSP build complete]
+[D8M_Camera_Test build complete]
+11:51:22 **** Incremental Build of configuration Nios II for project D8M_Camera_Test ****
+make all 
+Info: Building ../D8M_Camera_Test_bsp/
+make --no-print-directory -C ../D8M_Camera_Test_bsp/
+[BSP build complete]
+[D8M_Camera_Test build complete]
