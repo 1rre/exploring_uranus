@@ -1,9 +1,9 @@
-11:51:22 **** Incremental Build of configuration Nios II for project D8M_Camera_Test ****
+20:38:11 **** Incremental Build of configuration Nios II for project D8M_Camera_Test ****
 make all 
 Info: Building ../D8M_Camera_Test_bsp/
 make --no-print-directory -C ../D8M_Camera_Test_bsp/
 [BSP build complete]
 [D8M_Camera_Test build complete]
 
-11:51:22 Build Finished (took 59ms)
+20:38:11 Build Finished (took 59ms)
 

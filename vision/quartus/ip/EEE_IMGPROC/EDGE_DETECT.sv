@@ -58,8 +58,8 @@ wire signed [8:0] rq, gq, bq;
 wire unsigned [8:0] rm, gm, bm;
 
 assign r_out = (abs_d[0]>8'hff)? 8'hff : abs_d[0][7:0];
-assign b_out = (abs_d[1]>8'hff)? 8'hff : abs_d[1][7:0];
-assign g_out = (abs_d[2]>8'hff)? 8'hff : abs_d[2][7:0];
+assign g_out = (abs_d[1]>8'hff)? 8'hff : abs_d[1][7:0];
+assign b_out = (abs_d[2]>8'hff)? 8'hff : abs_d[2][7:0];
 
 assign rq = `MK_SIGN(r_out)-`MK_SIGN(avg_px[0]);
 assign gq = `MK_SIGN(g_out)-`MK_SIGN(avg_px[1]);

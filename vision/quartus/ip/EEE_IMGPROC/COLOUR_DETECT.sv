@@ -34,7 +34,7 @@ wire [23:0] SET_NO;
 assign SET_NO = {8'd000,8'd000,8'd000};
 
 localparam unsigned T_DIF = 9'd32;
-localparam unsigned T_MIN = 9'd56;
+localparam unsigned T_MIN = 9'd32;
 
 wire unsigned [7:0] r_in,g_in,b_in;
 
@@ -96,11 +96,52 @@ assign sum_bk = {1'b0,diff_bk[23:16]} + {1'b0,diff_bk[15:8]} + {1'b0,diff_bk[7:0
 
 // maximums
 wire gn_ismax, or_ismax, bl_ismax, pk_ismax, bk_ismax;
-assign gn_ismax = (sum_gn >= sum_or) && (sum_gn >= sum_bl) && (sum_gn >= sum_pk) && (sum_gn >= sum_bk) && bright_px;
-assign or_ismax = (sum_or >= sum_gn) && (sum_or >= sum_bl) && (sum_or >= sum_pk) && (sum_or >= sum_bk) && bright_px;
-assign bl_ismax = (sum_bl >= sum_or) && (sum_bl >= sum_or) && (sum_bl >= sum_pk) && (sum_bl >= sum_bk) && bright_px;
-assign pk_ismax = (sum_pk >= sum_or) && (sum_pk >= sum_or) && (sum_pk >= sum_bl) && (sum_pk >= sum_bk) && bright_px;
-assign bk_ismax = (sum_bk >= sum_or) && (sum_bk >= sum_or) && (sum_bk >= sum_bl) && (sum_bk >= sum_pk) && bright_px;
+wire gn_isvalid, or_isvalid, bl_isvalid, pk_isvalid, bk_isvalid;
+
+assign gn_isvalid = (diff_gn[23:16] <= T_DIF) &&
+                    (diff_gn[15:8]  <= T_DIF) &&
+                    (diff_gn[7:0]   <= T_DIF) && bright_px;
+
+assign or_isvalid = (diff_or[23:16] <= T_DIF) &&
+                    (diff_or[15:8]  <= T_DIF) &&
+                    (diff_or[7:0]   <= T_DIF) && bright_px;
+
+assign bl_isvalid = (diff_bl[23:16] <= T_DIF) &&
+                    (diff_bl[15:8]  <= T_DIF) &&
+                    (diff_bl[7:0]   <= T_DIF) && bright_px;
+
+assign pk_isvalid = (diff_pk[23:16] <= T_DIF) &&
+                    (diff_pk[15:8]  <= T_DIF) &&
+                    (diff_pk[7:0]   <= T_DIF) && bright_px;
+
+assign bk_isvalid = (diff_bk[23:16] <= T_DIF) &&
+                    (diff_bk[15:8]  <= T_DIF) &&
+                    (diff_bk[7:0]   <= T_DIF) && bright_px;
+
+assign gn_ismax = ((sum_gn <= sum_or)||!or_isvalid) && 
+                  ((sum_gn <= sum_bl)||!bl_isvalid) &&
+                  ((sum_gn <= sum_pk)||!pk_isvalid) &&
+                  ((sum_gn <= sum_bk)||!bk_isvalid) && gn_isvalid;
+                  
+assign or_ismax = ((sum_or <= sum_gn)||!gn_isvalid) &&
+                  ((sum_or <= sum_bl)||!bl_isvalid) && 
+                  ((sum_or <= sum_pk)||!pk_isvalid) &&
+                  ((sum_or <= sum_bk)||!bk_isvalid) && or_isvalid;
+
+assign bl_ismax = ((sum_bl <= sum_or)||!or_isvalid) &&
+                  ((sum_bl <= sum_gn)||!gn_isvalid) &&
+                  ((sum_bl <= sum_pk)||!pk_isvalid) &&
+                  ((sum_bl <= sum_bk)||!bk_isvalid) && bl_isvalid;
+
+assign pk_ismax = ((sum_pk <= sum_or)||!or_isvalid) &&
+                  ((sum_pk <= sum_gn)||!gn_isvalid) &&
+                  ((sum_pk <= sum_bl)||!bl_isvalid) && 
+                  ((sum_pk <= sum_bk)||!bk_isvalid) && pk_isvalid;
+
+assign bk_ismax = ((sum_bk <= sum_or)||!or_isvalid) && 
+                  ((sum_bk <= sum_gn)||!gn_isvalid) &&
+                  ((sum_bk <= sum_bl)||!bl_isvalid) &&
+                  ((sum_bk <= sum_pk)||!pk_isvalid) && bk_isvalid;
 
 reg unsigned [23:0] last;
 
@@ -108,7 +149,7 @@ wire [23:0] c_px;
 assign c_px = gn_ismax? SET_GN : or_ismax? SET_OR : bl_ismax? SET_BL : pk_ismax? SET_PK : bk_ismax? SET_BK : SET_NO;
 
 always_ff @ (posedge clk) begin
-  px_out = (last==c_px)? c_px : SET_NO;
+  px_out = (bright_px && last==c_px)? c_px : SET_NO;
   last = c_px;
 end
 

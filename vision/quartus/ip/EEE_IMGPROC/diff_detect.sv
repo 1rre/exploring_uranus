@@ -4,8 +4,7 @@ module diff_detect (
   input [23:0] px1, px2,
   output[23:0] px_out
 );
-  wire [8:0] r1,r2,g1,g2,b1,b2;
-  wire signed [8:0] ar,ag,ab;
+  wire signed [8:0] r1,r2,g1,g2,b1,b2,ar,ag,ab;
   assign r1 = `MK_SIGN(px1[23:16]);
   assign r2 = `MK_SIGN(px2[23:16]);
   assign g1 = `MK_SIGN(px1[15:8]);
