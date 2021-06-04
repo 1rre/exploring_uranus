@@ -27,8 +27,7 @@ module EEE_IMGPROC(
 	
 	// conduit
 	mode,
-	led
-	
+	led,	
 );
 
 
@@ -101,17 +100,19 @@ assign b_in = b_mul[15:8];
 
 wire [23:0] im_1, im_2;
 
-assign im_1 = {r_in,g_in,b_in};
 
 edge_detect e_d (
 	.px_in({r_in,g_in,b_in}),
 	.x(x),
 	.y(y),
 	.line_sync(line_complete & in_valid),
-	//.colour_select(colour_select),
 	.clk(clk & in_valid),
-	.px_out(im_2)
+	.px_out0(im_1),
+  .T_MIN(T_MIN),
+  .T_DIF(T_DIF)
 );
+
+assign im_2 = {red,green,blue};
 
 // Switch output pixels depending on mode switch
 // Don't modify the start-of-packet word - it's a packet discriptor
@@ -128,9 +129,6 @@ always@(posedge clk) begin
 		packet_video <= (blue[3:0] == 3'h0);
 	end
 	else if (in_valid) begin
-		if (x == 320 && y == 240) begin
-			cross_val = {red,green,blue};
-		end
 		if (x == IMAGE_W-1) begin
 			line_complete <= 1;
 			x <= 11'h0;
@@ -142,25 +140,6 @@ always@(posedge clk) begin
 		end
 	end
 end
-
-//Find first and last red pixels
-/*
-reg [10:0] x_min, y_min, x_max, y_max;
-always@(posedge clk) begin
-	if (red_detect & in_valid) begin	//Update bounds when the pixel is red
-		if (x < x_min) x_min <= x;
-		if (x > x_max) x_max <= x;
-		if (y < y_min) y_min <= y;
-		y_max <= y;
-	end
-	if (sop & in_valid) begin	//Reset bounds on start of packet
-		x_min <= IMAGE_W-11'h1;
-		x_max <= 0;
-		y_min <= IMAGE_H-11'h1;
-		y_max <= 0;
-	end
-end
-*/
 
 //Process bounding box at the end of the frame.
 reg [1:0] msg_state;
@@ -265,11 +244,12 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 /////////////////////////////////
 
 // Addresses
-`define REG_STATUS    			0
-`define READ_MSG    				1
-`define READ_ID    				2
-`define REG_BBCOL					3
-`define READ_CROSS				4
+`define REG_STATUS 0
+`define READ_MSG 1
+`define READ_ID 2
+`define REG_BBCOL 3
+`define REG_TMIN 4
+`define REG_TDIF 5
 
 //Status register bits
 // 31:16 - unimplemented
@@ -283,7 +263,7 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 
 reg  [7:0]   reg_status;
 reg	[23:0]	bb_col;
-reg [23:0] cross_val;
+reg[9:0] T_MIN, T_DIF;
 
 always @ (posedge clk)
 begin
@@ -294,8 +274,10 @@ begin
 	end
 	else begin
 		if(s_chipselect & s_write) begin
-		   if      (s_address == `REG_STATUS)	reg_status <= s_writedata[7:0];
-		   if      (s_address == `REG_BBCOL)	bb_col <= s_writedata[23:0];
+		   if (s_address == `REG_STATUS) reg_status <= s_writedata[7:0];
+		   if (s_address == `REG_BBCOL)  bb_col <= s_writedata[23:0];
+		   if (s_address == `REG_T_MIN)  T_MIN <= s_writedata[23:0];
+		   if (s_address == `REG_T_DIF)  T_DIF <= s_writedata[23:0];
 		end
 	end
 end
@@ -321,7 +303,6 @@ begin
 		if   (s_address == `READ_MSG) s_readdata <= {msg_buf_out};
 		if   (s_address == `READ_ID) s_readdata <= 32'h1234EEE2;
 		if   (s_address == `REG_BBCOL) s_readdata <= {8'h0, bb_col};
-		if   (s_address == `READ_CROSS) s_readdata <= {8'h0, cross_val};
 	end
 	
 	read_d <= s_read;

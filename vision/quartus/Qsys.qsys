@@ -17,11 +17,51 @@
          type = "int";
       }
    }
+   element EEE_IMGPROC_0.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
    element Qsys
    {
       datum _originalDeviceFamily
       {
-         value = "Cyclone V";
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "MAX 10";
          type = "String";
       }
    }
@@ -38,6 +78,14 @@
       datum _originalDeviceFamily
       {
          value = "MAX 10";
+         type = "String";
+      }
+   }
+   element Qsys
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone V";
          type = "String";
       }
    }
@@ -401,6 +449,8 @@
    internal="EEE_IMGPROC_0.img_sw"
    type="conduit"
    dir="end" />
+ <interface name="eee_imgproc_0_img_t_dif" internal="EEE_IMGPROC_0.img_t_dif" />
+ <interface name="eee_imgproc_0_img_t_min" internal="EEE_IMGPROC_0.img_t_min" />
  <interface
    name="i2c_opencores_camera_export"
    internal="i2c_opencores_camera.export"

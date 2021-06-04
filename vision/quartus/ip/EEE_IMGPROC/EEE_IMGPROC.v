@@ -27,8 +27,7 @@ module EEE_IMGPROC(
 	
 	// conduit
 	mode,
-	led
-	
+	led,	
 );
 
 
@@ -108,7 +107,9 @@ edge_detect e_d (
 	.y(y),
 	.line_sync(line_complete & in_valid),
 	.clk(clk & in_valid),
-	.px_out0(im_1)
+	.px_out0(im_1),
+  .T_MIN(T_MIN),
+  .T_DIF(T_DIF)
 );
 
 assign im_2 = {red,green,blue};
@@ -243,11 +244,12 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 /////////////////////////////////
 
 // Addresses
-`define REG_STATUS    			0
-`define READ_MSG    				1
-`define READ_ID    				2
-`define REG_BBCOL					3
-`define READ_CROSS				4
+`define REG_STATUS 0
+`define READ_MSG 1
+`define READ_ID 2
+`define REG_BBCOL 3
+`define REG_TMIN 4
+`define REG_TDIF 5
 
 //Status register bits
 // 31:16 - unimplemented
@@ -261,7 +263,7 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 
 reg  [7:0]   reg_status;
 reg	[23:0]	bb_col;
-reg [23:0] cross_val;
+reg[9:0] T_MIN, T_DIF;
 
 always @ (posedge clk)
 begin
@@ -272,8 +274,10 @@ begin
 	end
 	else begin
 		if(s_chipselect & s_write) begin
-		   if      (s_address == `REG_STATUS)	reg_status <= s_writedata[7:0];
-		   if      (s_address == `REG_BBCOL)	bb_col <= s_writedata[23:0];
+		   if (s_address == `REG_STATUS) reg_status <= s_writedata[7:0];
+		   if (s_address == `REG_BBCOL)  bb_col <= s_writedata[23:0];
+		   if (s_address == `REG_TMIN)  T_MIN <= s_writedata[23:0];
+		   if (s_address == `REG_TDIF)  T_DIF <= s_writedata[23:0];
 		end
 	end
 end

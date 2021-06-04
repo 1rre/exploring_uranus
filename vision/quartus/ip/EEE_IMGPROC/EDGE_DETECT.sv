@@ -5,6 +5,8 @@ input [23:0]
   px_in,
 input unsigned [10:0]
   x,y,
+input unsigned [9:0]
+  T_MIN,T_DIF,
 input
   clk,line_sync,
 output logic [23:0]
@@ -26,7 +28,9 @@ colour_detect c1 (
   .x(x),
   .y(y),
   .px_in(edge_px),
-  .px_out(col_out)
+  .px_out(col_out),
+  .T_DIF(T_MIN),
+  .T_MIN(T_DIF)
 );
 
 

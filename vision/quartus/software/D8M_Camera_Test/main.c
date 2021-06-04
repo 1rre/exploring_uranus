@@ -19,7 +19,8 @@
 #define EEE_IMGPROC_MSG 1
 #define EEE_IMGPROC_ID 2
 #define EEE_IMGPROC_BBCOL 3
-#define EEE_IMGPROC_CROSS 4
+#define EEE_IMGPROC_TMIN 4
+#define EEE_IMGPROC_TDIF 5
 
 #define EXPOSURE_INIT 0x002000
 #define EXPOSURE_STEP 0x100
@@ -189,6 +190,8 @@ int main()
     	int boundingBoxColour = 0;
     	alt_u32 exposureTime = EXPOSURE_INIT;
     	alt_u16 gain = GAIN_INIT;
+    	alt_u8 t_min = 32;
+    	alt_u8 t_dif = 32;
 
         OV8865SetExposure(exposureTime);
         OV8865SetGain(gain);
@@ -296,6 +299,26 @@ int main()
         	   OV8865_FOCUS_Move_to(current_focus);
         	   printf("\nFocus = %x ",current_focus);
        	   	   break;}
+       	   case 'o': {
+       		   t_min++;
+       		   printf("\nT_MIN = %x ", t_min);
+       		   IOWR(0x42000,EEE_IMGPROC_TMIN,t_min);
+       	   	   break;}
+       	   case 'l': {
+       	       t_min--;
+       	       printf("\nT_MIN = %x ", t_min);
+       		   IOWR(0x42000,EEE_IMGPROC_TMIN,t_min);
+       	       break;}
+       	   case 'i': {
+       		   t_dif++;
+       		   printf("\nT_DIF = %x ", t_dif);
+       		   IOWR(0x42000,EEE_IMGPROC_TDIF,t_dif);
+       	   	   break;}
+       	   case 'k': {
+       		   t_dif--;
+       	       printf("\nT_MIN = %x ", t_dif);
+       		   IOWR(0x42000,EEE_IMGPROC_TDIF,t_dif);
+       	       break;}
        }
 
 

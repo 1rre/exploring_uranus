@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Jun 2, 2021 8:38:08 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1622662688077</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 4, 2021 6:04:00 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1622826240214</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../Qsys.sopcinfo</SopcDesignFile>

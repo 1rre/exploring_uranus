@@ -1,12 +1,14 @@
 module colour_detect (
-  input
-    clk,
-  input unsigned [10:0]
-    x, y,
-  input [23:0]
-    px_in,
-  output logic [23:0]
-    px_out
+input
+  clk,
+input unsigned [9:0]
+  T_DIF,T_MIN,
+input unsigned [10:0]
+  x, y,
+input [23:0]
+  px_in,
+output logic [23:0]
+  px_out
 );
 
 wire [23:0] GREEN;
@@ -32,9 +34,6 @@ wire [23:0] SET_BK;
 assign SET_BK = {8'd255,8'd255,8'd255};
 wire [23:0] SET_NO;
 assign SET_NO = {8'd000,8'd000,8'd000};
-
-localparam unsigned T_DIF = 9'd32;
-localparam unsigned T_MIN = 9'd32;
 
 wire unsigned [7:0] r_in,g_in,b_in;
 
@@ -128,19 +127,19 @@ assign or_ismax = ((sum_or <= sum_gn)||!gn_isvalid) &&
                   ((sum_or <= sum_pk)||!pk_isvalid) &&
                   ((sum_or <= sum_bk)||!bk_isvalid) && or_isvalid;
 
+// No comparison to black for blue
 assign bl_ismax = ((sum_bl <= sum_or)||!or_isvalid) &&
                   ((sum_bl <= sum_gn)||!gn_isvalid) &&
-                  ((sum_bl <= sum_pk)||!pk_isvalid) &&
-                  ((sum_bl <= sum_bk)||!bk_isvalid) && bl_isvalid;
+                  ((sum_bl <= sum_pk)||!pk_isvalid) && bl_isvalid;
 
 assign pk_ismax = ((sum_pk <= sum_or)||!or_isvalid) &&
                   ((sum_pk <= sum_gn)||!gn_isvalid) &&
                   ((sum_pk <= sum_bl)||!bl_isvalid) && 
                   ((sum_pk <= sum_bk)||!bk_isvalid) && pk_isvalid;
 
+// No comparison to blue for black
 assign bk_ismax = ((sum_bk <= sum_or)||!or_isvalid) && 
                   ((sum_bk <= sum_gn)||!gn_isvalid) &&
-                  ((sum_bk <= sum_bl)||!bl_isvalid) &&
                   ((sum_bk <= sum_pk)||!pk_isvalid) && bk_isvalid;
 
 reg unsigned [23:0] last;
@@ -149,7 +148,7 @@ wire [23:0] c_px;
 assign c_px = gn_ismax? SET_GN : or_ismax? SET_OR : bl_ismax? SET_BL : pk_ismax? SET_PK : bk_ismax? SET_BK : SET_NO;
 
 always_ff @ (posedge clk) begin
-  px_out = (bright_px && last==c_px)? c_px : SET_NO;
+  px_out = c_px;
   last = c_px;
 end
 
