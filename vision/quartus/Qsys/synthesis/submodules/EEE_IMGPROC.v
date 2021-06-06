@@ -276,8 +276,8 @@ begin
 		if(s_chipselect & s_write) begin
 		   if (s_address == `REG_STATUS) reg_status <= s_writedata[7:0];
 		   if (s_address == `REG_BBCOL)  bb_col <= s_writedata[23:0];
-		   if (s_address == `REG_T_MIN)  T_MIN <= s_writedata[23:0];
-		   if (s_address == `REG_T_DIF)  T_DIF <= s_writedata[23:0];
+		   if (s_address == `REG_TMIN)  T_MIN <= s_writedata[23:0];
+		   if (s_address == `REG_TDIF)  T_DIF <= s_writedata[23:0];
 		end
 	end
 end

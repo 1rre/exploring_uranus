@@ -406,7 +406,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
-set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE AREA"
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
 set_global_assignment -name VERILOG_FILE FpsMonitor.v
 set_global_assignment -name QSYS_FILE Qsys.qsys
 set_global_assignment -name SDC_FILE DE10_LITE_D8M_VIP.SDC
@@ -433,4 +433,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/LINE_AVG.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/COLOUR_DETECT.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/px_scale.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/diff_detect.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/EEE_IMGPROC/LOOKUP_COLOUR.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -10,7 +10,7 @@ input unsigned [9:0]
 input
   clk,line_sync,
 output logic [23:0]
-  px_out0
+  px_out0, px_out1, px_out2, px_out3, px_out4, px_out5
 );
 
 wire in_range;
@@ -19,79 +19,120 @@ assign in_range = x >= 1 && y >= 1;
 wire [7:0] red, green, blue;
 
 wire [23:0] edge_px;
+wire [23:0] edge_px_1;
 assign edge_px = {r_out,g_out,b_out};
+assign edge_px_1 = {r_out_1,g_out_1,b_out_1};
 
 wire [23:0] col_out;
+wire [23:0] col_out_1;
 
+wire [23:0] t_out;
+wire [23:0] t_out_1;
+
+wire [7:0] red_t, green_t, blue_t;
+assign red_t = (r_out>T_MIN)? r_out : 0;
+assign green_t = (g_out>T_MIN)? g_out : 0;
+assign blue_t = (b_out>T_MIN)? b_out : 0;
+
+wire [7:0] red_t_1, green_t_1, blue_t_1;
+assign red_t_1 = (r_out_1>T_MIN)? r_out_1 : 0;
+assign green_t_1 = (g_out_1>T_MIN)? g_out_1 : 0;
+assign blue_t_1 = (b_out_1>T_MIN)? b_out_1 : 0;
+
+assign t_out = (red_t || green_t || blue_t)? edge_px : 24'h0;
+assign t_out_1 = (red_t_1 || green_t_1 || blue_t_1)? edge_px_1 : 24'h0;
+
+/*
 colour_detect c1 (
   .clk(clk),
   .x(x),
   .y(y),
-  .px_in(edge_px),
+  .px_in(t_out),
   .px_out(col_out),
   .T_DIF(T_MIN),
   .T_MIN(T_DIF)
 );
 
 
+colour_detect c2 (
+  .clk(clk),
+  .x(x),
+  .y(y),
+  .px_in(t_out_1),
+  .px_out(col_out_1),
+  .T_DIF(T_MIN),
+  .T_MIN(T_DIF)
+);
+*/
+
+lookup_colour c1 (
+  .px_in(t_out),
+  .px_lookup(px_in),
+  .px_out(col_out)
+);
+
+lookup_colour c2 (
+  .px_in(t_out_1),
+  .px_lookup(px_in),
+  .px_out(col_out_1)
+);
+
 assign px_out0 = in_range? col_out : px_in;
+assign px_out1 = in_range? edge_px : px_in;
+assign px_out2 = in_range? t_out : px_in;
+assign px_out3 = in_range? col_out_1 : px_in;
+assign px_out4 = in_range? edge_px_1 : px_in;
+assign px_out5 = in_range? t_out_1 : px_in;
 
 reg unsigned [7:0] px_buffer[640][3];
 reg unsigned [7:0] last_px[3];
 wire unsigned [7:0] c_px[3];
 
+assign c_px[0] = px_in[23:16];
+assign c_px[1] = px_in[15:8];
+assign c_px[2] = px_in[7:0];
+
 reg signed [15:0] dh[3], dv[3];
 
 wire unsigned [15:0] abs_dh[3], abs_dv[3];
+wire unsigned [15:0] abs_dh_1[3], abs_dv_1[3];
 wire unsigned [15:0] abs_d[3];
+wire unsigned [15:0] abs_d_1[3];
 
-assign abs_dh[0] = $unsigned((dh[0]<16'sh0)? -dh[0] : dh[0]);
-assign abs_dh[1] = $unsigned((dh[1]<16'sh0)? -dh[1] : dh[1]);
-assign abs_dh[2] = $unsigned((dh[2]<16'sh0)? -dh[2] : dh[2]);
-assign abs_dv[0] = $unsigned((dv[0]<16'sh0)? -dv[0] : dv[0]);
-assign abs_dv[1] = $unsigned((dv[1]<16'sh0)? -dv[1] : dv[1]);
-assign abs_dv[2] = $unsigned((dv[2]<16'sh0)? -dv[2] : dv[2]);
+
+assign abs_dh[0] = (dh[0]<16'sh0)? 0 : dh[0]; // -dh[0]
+assign abs_dh[1] = (dh[1]<16'sh0)? 0 : dh[1]; // -dh[1]
+assign abs_dh[2] = (dh[2]<16'sh0)? 0 : dh[2]; // -dh[2]
+assign abs_dv[0] = (dv[0]<16'sh0)? 0 : dv[0]; // -dv[0]
+assign abs_dv[1] = (dv[1]<16'sh0)? 0 : dv[1]; // -dv[1]
+assign abs_dv[2] = (dv[2]<16'sh0)? 0 : dv[2]; // -dv[2]
+
+assign abs_dh_1[0] = (dh[0]<16'sh0)? -dh[0] : dh[0]; // 
+assign abs_dh_1[1] = (dh[1]<16'sh0)? -dh[1] : dh[1]; // 
+assign abs_dh_1[2] = (dh[2]<16'sh0)? -dh[2] : dh[2]; // 
+assign abs_dv_1[0] = (dv[0]<16'sh0)? -dv[0] : dv[0]; // 
+assign abs_dv_1[1] = (dv[1]<16'sh0)? -dv[1] : dv[1]; // 
+assign abs_dv_1[2] = (dv[2]<16'sh0)? -dv[2] : dv[2]; // 
 
 assign abs_d[0] = ({1'b0,abs_dh[0]} + {1'b0,abs_dv[0]})>>1;
 assign abs_d[1] = ({1'b0,abs_dh[1]} + {1'b0,abs_dv[1]})>>1;
 assign abs_d[2] = ({1'b0,abs_dh[2]} + {1'b0,abs_dv[2]})>>1;
 
+assign abs_d_1[0] = ({1'b0,abs_dh_1[0]} + {1'b0,abs_dv_1[0]})>>1;
+assign abs_d_1[1] = ({1'b0,abs_dh_1[1]} + {1'b0,abs_dv_1[1]})>>1;
+assign abs_d_1[2] = ({1'b0,abs_dh_1[2]} + {1'b0,abs_dv_1[2]})>>1;
+
 
 wire unsigned [7:0] r_out, g_out, b_out;
-wire signed [8:0] rq, gq, bq;
-wire unsigned [8:0] rm, gm, bm;
+wire unsigned [7:0] r_out_1, g_out_1, b_out_1;
 
 assign r_out = (abs_d[0]>8'hff)? 8'hff : abs_d[0][7:0];
 assign g_out = (abs_d[1]>8'hff)? 8'hff : abs_d[1][7:0];
 assign b_out = (abs_d[2]>8'hff)? 8'hff : abs_d[2][7:0];
 
-assign rq = `MK_SIGN(r_out)-`MK_SIGN(avg_px[0]);
-assign gq = `MK_SIGN(g_out)-`MK_SIGN(avg_px[1]);
-assign bq = `MK_SIGN(b_out)-`MK_SIGN(avg_px[2]);
-
-assign rm = ((rq<9'sh0)?8'b0:$unsigned(rq[7:0]));
-assign gm = ((gq<9'sh0)?8'b0:$unsigned(gq[7:0]));
-assign bm = ((bq<9'sh0)?8'b0:$unsigned(bq[7:0]));
-
-assign red = (rm>9'hff)?8'hff:rm[7:0];
-assign green = (gm>9'hff)?8'hff:gm[7:0];
-assign blue = (bm>9'hff)?8'hff:bm[7:0];
-
-assign c_px[0] = px_in[23:16];
-assign c_px[1] = px_in[15:8];
-assign c_px[2] = px_in[7:0];
-
-reg [7:0] avg_px[3];
-
-wire[7:0] avg_r, avg_g, avg_b;
-
-line_avg avg (
-	.clk(clk),
-	.c_px(px_in),
-	.r_out(avg_r),
-	.g_out(avg_g),
-	.b_out(avg_b)
-);
+assign r_out_1 = (abs_d_1[0]>8'hff)? 8'hff : abs_d_1[0][7:0];
+assign g_out_1 = (abs_d_1[1]>8'hff)? 8'hff : abs_d_1[1][7:0];
+assign b_out_1 = (abs_d_1[2]>8'hff)? 8'hff : abs_d_1[2][7:0];
 
 always @(posedge clk) begin
   // Horizontal Differential
@@ -105,12 +146,6 @@ always @(posedge clk) begin
 	 // Blue
     dh[2] = (`MK_SIGN(px_buffer[x-1][2]) - `MK_SIGN(c_px[2]))<<<3;
     dv[2] = (`MK_SIGN(px_buffer[x][2]) - `MK_SIGN(last_px[2]))<<<3;
-  end
-  
-  if (x == 576) begin
-	avg_px[0] = avg_r;
-	avg_px[1] = avg_g;
-	avg_px[2] = avg_b;
   end
   
   px_buffer[x][0] = last_px[0];

@@ -145,10 +145,12 @@ assign bk_ismax = ((sum_bk <= sum_or)||!or_isvalid) &&
 reg unsigned [23:0] last;
 
 wire [23:0] c_px;
+wire [23:0] px_choice;
 assign c_px = gn_ismax? SET_GN : or_ismax? SET_OR : bl_ismax? SET_BL : pk_ismax? SET_PK : bk_ismax? SET_BK : SET_NO;
 
 always_ff @ (posedge clk) begin
-  px_out = c_px;
+  px_choice = (last==c_px)?c_px:SET_NO;
+  px_out = (y >= 160)?c_px:SET_NO;
   last = c_px;
 end
 

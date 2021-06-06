@@ -57,7 +57,7 @@ module Qsys_alt_vip_cl_gamma_corrector_0_gamma_core
       .PIXELS_IN_PARALLEL              (1),
       .ENABLE_TWO_BANKS                (0),
       .RUNTIME_CONTROL                 (1),
-      .PIPELINE_READY                  (0),
+      .PIPELINE_READY                  (1),
       .SRC_WIDTH                       (8),
       .DST_WIDTH                       (8),
       .TASK_WIDTH                      (8),
