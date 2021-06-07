@@ -7056,3 +7056,28 @@ java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.meta
 
 !ENTRY com.altera.sbtgui.launch 1 0 2021-06-06 16:26:52.774
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x418e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY org.eclipse.core.resources 4 568 2021-06-06 16:31:46.142
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.metadata/.plugins/org.eclipse.core.resources/.projects/RemoteSystemsTempFiles/.markers.snap (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 11:19:24.311
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-5]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 11:19:24.468
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x418e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 11:19:25.949
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x418e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
