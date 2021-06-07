@@ -7081,3 +7081,9 @@ java.io.FileNotFoundException: /home/tm/EIE2/Rover/vision/quartus/software/.meta
 
 !ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 11:19:25.949
 !MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x418e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 12:40:14.291
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x418e0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-06-07 12:40:15.462
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-5]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x418e0 --reset-target /home/tm/EIE2/Rover/vision/quartus/software/D8M_Camera_Test/D8M_Camera_Test.elf]

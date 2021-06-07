@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Jun  6 16:20:51 2021
+Analysis & Synthesis Status : Successful - Mon Jun  7 12:31:09 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : DE10_LITE_D8M_VIP
 Top-level Entity Name : DE10_LITE_D8M_VIP
 Family : MAX 10
-Total logic elements : 38,209
-    Total combinational functions : 20,448
-    Dedicated logic registers : 21,956
-Total registers : 21956
+Total logic elements : 38,161
+    Total combinational functions : 20,400
+    Dedicated logic registers : 21,959
+Total registers : 21959
 Total pins : 171
 Total virtual pins : 0
 Total memory bits : 1,093,048

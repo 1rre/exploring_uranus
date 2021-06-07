@@ -10,7 +10,7 @@ input unsigned [9:0]
 input
   clk,line_sync,
 output logic [23:0]
-  px_out0, px_out1, px_out2, px_out3, px_out4, px_out5
+  px_out0, px_out1, px_out2, px_out3
 );
 
 wire in_range;
@@ -42,29 +42,6 @@ assign blue_t_1 = (b_out_1>T_MIN)? b_out_1 : 0;
 assign t_out = (red_t || green_t || blue_t)? edge_px : 24'h0;
 assign t_out_1 = (red_t_1 || green_t_1 || blue_t_1)? edge_px_1 : 24'h0;
 
-/*
-colour_detect c1 (
-  .clk(clk),
-  .x(x),
-  .y(y),
-  .px_in(t_out),
-  .px_out(col_out),
-  .T_DIF(T_MIN),
-  .T_MIN(T_DIF)
-);
-
-
-colour_detect c2 (
-  .clk(clk),
-  .x(x),
-  .y(y),
-  .px_in(t_out_1),
-  .px_out(col_out_1),
-  .T_DIF(T_MIN),
-  .T_MIN(T_DIF)
-);
-*/
-
 lookup_colour c1 (
   .px_in(t_out),
   .px_lookup(px_in),
@@ -79,10 +56,8 @@ lookup_colour c2 (
 
 assign px_out0 = in_range? col_out : px_in;
 assign px_out1 = in_range? edge_px : px_in;
-assign px_out2 = in_range? t_out : px_in;
-assign px_out3 = in_range? col_out_1 : px_in;
-assign px_out4 = in_range? edge_px_1 : px_in;
-assign px_out5 = in_range? t_out_1 : px_in;
+assign px_out2 = in_range? col_out_1 : px_in;
+assign px_out3 = in_range? edge_px_1 : px_in;
 
 reg unsigned [7:0] px_buffer[640][3];
 reg unsigned [7:0] last_px[3];

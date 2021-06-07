@@ -94,8 +94,6 @@ edge_detect e_d (
 	.px_out1(im_1),
 	.px_out2(im_2),
 	.px_out3(im_3),
-	.px_out4(im_4),
-	.px_out5(im_5),
   .T_MIN(T_MIN),
   .T_DIF(T_DIF)
 );
