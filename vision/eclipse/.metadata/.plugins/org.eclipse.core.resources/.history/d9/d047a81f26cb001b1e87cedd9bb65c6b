@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <string.h>
+
+#include "alt_types.h"
+#include "sys/alt_stdio.h"
+#include "io.h"
+#include "system.h"
+#include "sys/alt_cache.h"
+#include "altera_avalon_spi.h"
+#include "altera_avalon_spi_regs.h"
+#include "sys/alt_irq.h"
+
+typedef struct {
+  char rx_data[8],
+      *tx_data;
+} TransData;
+
+void __handle_handshake_irq(TransData* context) {
+  printf("Handshake Received\n");
+  int ret;
+  memset(context->rx_data,0,8);
+  context->tx_data = "Hello!";
+  ret = alt_avalon_spi_command(SPI_0_BASE, 0, 1, context->tx_data, 0, context->rx_data, 0);
+  if(ret < 0) printf("ERROR SPI TX RET = %x \n" , ret);
+
+  printf("Transmit done. RET = %x spi_rx =  %s\n",ret, context->rx_data);
+}
+
+int main() {
+  printf("Hello from Nios II!\n");
+  TransData msg;
+  alt_irq_init(HANDSHAKE_BASE);
+  alt_irq_register(HANDSHAKE_IRQ,
+                   __handle_handshake_irq,
+                  &msg);
+  printf("Registered\n");
+loop: // Is this necessary - interrupt registered?
+  goto loop;
+}

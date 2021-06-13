@@ -11,6 +11,9 @@
 			alt_vip_itc_0_clocked_video_vid_v         : out   std_logic;                                        -- vid_v
 			altpll_0_areset_conduit_export            : in    std_logic                     := 'X';             -- export
 			altpll_0_locked_conduit_export            : out   std_logic;                                        -- export
+			arduino_ball_external_connection_export   : out   std_logic_vector(2 downto 0);                     -- export
+			arduino_ctrl_external_connection_export   : out   std_logic_vector(1 downto 0);                     -- export
+			arduino_val_external_connection_export    : out   std_logic_vector(4 downto 0);                     -- export
 			clk_clk                                   : in    std_logic                     := 'X';             -- clk
 			clk_sdram_clk                             : out   std_logic;                                        -- clk
 			clk_vga_clk                               : out   std_logic;                                        -- clk
@@ -59,6 +62,9 @@
 			alt_vip_itc_0_clocked_video_vid_v         => CONNECTED_TO_alt_vip_itc_0_clocked_video_vid_v,         --                                 .vid_v
 			altpll_0_areset_conduit_export            => CONNECTED_TO_altpll_0_areset_conduit_export,            --          altpll_0_areset_conduit.export
 			altpll_0_locked_conduit_export            => CONNECTED_TO_altpll_0_locked_conduit_export,            --          altpll_0_locked_conduit.export
+			arduino_ball_external_connection_export   => CONNECTED_TO_arduino_ball_external_connection_export,   -- arduino_ball_external_connection.export
+			arduino_ctrl_external_connection_export   => CONNECTED_TO_arduino_ctrl_external_connection_export,   -- arduino_ctrl_external_connection.export
+			arduino_val_external_connection_export    => CONNECTED_TO_arduino_val_external_connection_export,    --  arduino_val_external_connection.export
 			clk_clk                                   => CONNECTED_TO_clk_clk,                                   --                              clk.clk
 			clk_sdram_clk                             => CONNECTED_TO_clk_sdram_clk,                             --                        clk_sdram.clk
 			clk_vga_clk                               => CONNECTED_TO_clk_vga_clk,                               --                          clk_vga.clk

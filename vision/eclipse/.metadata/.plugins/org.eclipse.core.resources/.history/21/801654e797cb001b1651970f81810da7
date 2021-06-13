@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_spi_regs.h"
+#include "system.h"
+
+inline void send(int ball, int pos) {
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_BALL_BASE, ball);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_VAL_BASE, pos & 0b11111);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b10);
+  usleep(250);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b00);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_VAL_BASE, (pos>>5) & 0b11111);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b11);
+  usleep(250);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b00);
+}
+
+static void __spi_callback(void*);
+int* slp;
+int main() {
+  printf("Hello from Nios II!\n");
+  int x1 = 611;
+  int y1 = 34+640;
+  int x2 = 233;
+  int y2 = 211+640;
+  alt_u8 ball = 0;
+loop:
+  printf("Sending ball: %d, x1: %x", x1);
+  send(ball, x1);
+  printf("Sending ball: %d, y1: %x", y1);
+  send(ball, y1);
+  printf("Sending ball: %d, x2: %x", x2);
+  send(ball, x2);
+  printf("Sending ball: %d, y2: %x", y2);
+  send(ball, y2);
+  usleep(2500000);
+  ball++;
+  ball %= 5;
+  goto loop;
+}
+

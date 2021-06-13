@@ -178,7 +178,11 @@ Qsys u0 (
 		
 		
 		.eee_imgproc_0_img_sw_new_signal           (SW),           //             eee_imgproc_0_img_sw.new_signal
-		.eee_imgproc_0_img_led_led_out             (LEDR)              //            eee_imgproc_0_img_led.led_out
+		.eee_imgproc_0_img_led_led_out             (LEDR),              //            eee_imgproc_0_img_led.led_out
+		.arduino_ctrl_external_connection_export   (ARDUINO_IO[15:14]),   // arduino_ctrl_external_connection.export
+		.arduino_ball_external_connection_export   (ARDUINO_IO[4:2]),   // arduino_ball_external_connection.export
+		.arduino_val_external_connection_export    ({ARDUINO_IO[13:12],ARDUINO_IO[7:5]})     //  arduino_val_external_connection.export
+		
 	);
 
 FpsMonitor uFps(

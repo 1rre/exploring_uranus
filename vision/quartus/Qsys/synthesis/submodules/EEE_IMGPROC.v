@@ -41,7 +41,7 @@ input							s_read;
 input							s_write;
 output	reg	[31:0]	s_readdata;
 input	[31:0]				s_writedata;
-input	[2:0]					s_address;
+input	[3:0]					s_address;
 
 
 // streaming sink
@@ -79,45 +79,38 @@ wire         sop, eop, in_valid, out_ready;
 
 reg line_complete;
 
-wire [7:0] r_sel, g_sel, b_sel;
-
-assign r_sel = {mode[3],mode[2],mode[1],mode[1],mode[1],mode[1],mode[1],mode[1]};
-assign g_sel = {mode[6],mode[5],mode[4],mode[4],mode[4],mode[4],mode[4],mode[4]};
-assign b_sel = {mode[9],mode[8],mode[7],mode[7],mode[7],mode[7],mode[7],mode[7]};
-
-wire [15:0] r_mul, g_mul, b_mul;
-wire [7:0] r_in,g_in,b_in;
-
-assign r_mul = red * r_sel;
-assign g_mul = green * g_sel;
-assign b_mul = blue * b_sel;
-
-assign r_in = r_mul[15:8];
-assign g_in = g_mul[15:8];
-assign b_in = b_mul[15:8];
-
 // Find boundary of cursor box
 
-wire [23:0] im_1, im_2;
+wire [23:0] im_0, im_1, im_2, im_3, im_4, im_5,im_nil;
 
 
 edge_detect e_d (
-	.px_in({r_in,g_in,b_in}),
+	.px_in(im_nil),
 	.x(x),
 	.y(y),
 	.line_sync(line_complete & in_valid),
 	.clk(clk & in_valid),
-	.px_out0(im_1),
+	.px_out0(im_0),
+	.px_out1(im_1),
+	.px_out2(im_2),
+	.px_out3(im_3),
+	.px_out4(im_4),
+	.px_out5(im_5),
   .T_MIN(T_MIN),
   .T_DIF(T_DIF)
 );
 
-assign im_2 = {red,green,blue};
+assign im_nil = {red,green,blue};
 
 // Switch output pixels depending on mode switch
 // Don't modify the start-of-packet word - it's a packet discriptor
 // Don't modify data in non-video packets
-assign {red_out, green_out, blue_out} = (mode & ~sop & packet_video) ? im_2 : im_1;
+assign {red_out, green_out, blue_out} = (mode[0] & ~sop & packet_video) ? im_0 : 
+                                        (mode[1] & ~sop & packet_video) ? im_1 : 
+                                        (mode[2] & ~sop & packet_video) ? im_2 : 
+                                        (mode[3] & ~sop & packet_video) ? im_3 : 
+                                        (mode[4] & ~sop & packet_video) ? im_4 :
+                                        (mode[5] & ~sop & packet_video) ? im_5 : im_nil;
 
 //Count valid pixels to tget the image coordinates. Reset and detect packet type on Start of Packet.
 reg [10:0] x, y;
@@ -143,18 +136,46 @@ end
 
 //Process bounding box at the end of the frame.
 reg [1:0] msg_state;
-reg [10:0] left, right, top, bottom;
+
+// bounding boxes for each ball
+reg unsigned [9:0]
+  or_x1, or_y1, or_x2, or_y2,
+  gn_x1, gn_y1, gn_x2, gn_y2,
+  bl_x1, bl_y1, bl_x2, bl_y2,
+  pk_x1, pk_y1, pk_x2, pk_y2,
+  bk_x1, bk_y1, bk_x2, bk_y2;
+
+wire [63:0]
+  or_bb, gn_bb, bl_bb, pk_bb, bk_bb;
+  
+assign or_bb = {6'h0, or_y2,
+                6'h0, or_x2,
+                6'h0, gn_y1,
+                6'h0, gn_x1};
+                
+assign gn_bb = {6'h0, or_y2,
+                6'h0, or_x2,
+                6'h0, gn_y1,
+                6'h0, gn_x1};
+                
+assign bl_bb = {6'h0, bl_y2,
+                6'h0, bl_x2,
+                6'h0, bl_y1,
+                6'h0, bl_x1};
+                
+assign pk_bb = {6'h0, pk_y2,
+                6'h0, pk_x2,
+                6'h0, pk_y1,
+                6'h0, pk_x1};
+                
+assign bk_bb = {6'h0, bk_y2,
+                6'h0, bk_x2,
+                6'h0, bk_y1,
+                6'h0, bk_x1};
+                
 reg [7:0] frame_count;
 always@(posedge clk) begin
 	if (eop & in_valid & packet_video) begin  //Ignore non-video packets
-		
-		/*
-		//Latch edges for display overlay on next frame
-		left <= x_min;
-		right <= x_max;
-		top <= y_min;
-		bottom <= y_max;
-		*/
 		
 		//Start message writer FSM once every MSG_INTERVAL frames, if there is room in the FIFO
 		frame_count <= frame_count - 1;
@@ -250,6 +271,7 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 `define REG_BBCOL 3
 `define REG_TMIN 4
 `define REG_TDIF 5
+`define REG_BALL_TL 6
 
 //Status register bits
 // 31:16 - unimplemented
@@ -261,9 +283,9 @@ STREAM_REG #(.DATA_WIDTH(26)) out_reg (
 
 // Process write
 
-reg  [7:0]   reg_status;
-reg	[23:0]	bb_col;
-reg[9:0] T_MIN, T_DIF;
+reg [7:0] reg_status;
+reg[23:0] bb_col;
+reg [9:0] T_MIN, T_DIF;
 
 always @ (posedge clk)
 begin
@@ -303,6 +325,7 @@ begin
 		if   (s_address == `READ_MSG) s_readdata <= {msg_buf_out};
 		if   (s_address == `READ_ID) s_readdata <= 32'h1234EEE2;
 		if   (s_address == `REG_BBCOL) s_readdata <= {8'h0, bb_col};
+    if   (s_address == `REG_OR_BB) s_readdata <= {6'h0, }
 	end
 	
 	read_d <= s_read;

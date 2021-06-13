@@ -11,6 +11,9 @@ module Qsys (
 	alt_vip_itc_0_clocked_video_vid_v,
 	altpll_0_areset_conduit_export,
 	altpll_0_locked_conduit_export,
+	arduino_ball_external_connection_export,
+	arduino_ctrl_external_connection_export,
+	arduino_val_external_connection_export,
 	clk_clk,
 	clk_sdram_clk,
 	clk_vga_clk,
@@ -55,6 +58,9 @@ module Qsys (
 	output		alt_vip_itc_0_clocked_video_vid_v;
 	input		altpll_0_areset_conduit_export;
 	output		altpll_0_locked_conduit_export;
+	output	[2:0]	arduino_ball_external_connection_export;
+	output	[1:0]	arduino_ctrl_external_connection_export;
+	output	[4:0]	arduino_val_external_connection_export;
 	input		clk_clk;
 	output		clk_sdram_clk;
 	output		clk_vga_clk;

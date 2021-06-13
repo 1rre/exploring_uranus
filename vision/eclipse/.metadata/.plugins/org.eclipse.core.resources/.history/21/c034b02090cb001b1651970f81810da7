@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_spi_regs.h"
+#include "system.h"
+
+void __spi_callback(void*);
+
+int _slp  = 0, *slp = &_slp;
+
+int main() {
+  printf("Hello from Nios II!\n");
+  int ret;
+  char msg[] = "Hello World!", *it = msg;
+  ret = alt_ic_isr_register(ARDUINO_IRQ_INTERRUPT_CONTROLLER_ID,
+                            ARDUINO_IRQ,
+                            __spi_callback,
+                    (void *)it,
+                            0x0);
+  printf("IRQ register return %x \n", ret);
+  IOWR_ALTERA_AVALON_SPI_CONTROL(ARDUINO_BASE,
+                                 ALTERA_AVALON_SPI_CONTROL_SSO_MSK |
+                                  ALTERA_AVALON_SPI_CONTROL_IRRDY_MSK);
+
+loop:
+  IOWR_ALTERA_AVALON_SPI_TXDATA(ARDUINO_BASE, 'a');
+  printf("Loop Init, data: %c\n", 'H');
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_INTERRUPT_BASE, 1);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_INTERRUPT_BASE, 0);
+  while (*slp);
+  it++;
+  if (!*it) it = msg;
+  goto loop;
+}
+
+void __spi_callback(void* _msg) {
+  *slp = 1;
+  //char msg = *(char*)_msg;
+  while (!(IORD_ALTERA_AVALON_SPI_STATUS(ARDUINO_BASE) & ALTERA_AVALON_SPI_STATUS_RRDY_MSK)) usleep(100);
+  int recv = IORD_ALTERA_AVALON_SPI_RXDATA(ARDUINO_BASE);
+
+  IOWR_ALTERA_AVALON_SPI_STATUS(ARDUINO_BASE, 0x0);
+
+  printf("recv: %x\n", recv);
+  *slp = 0;
+}

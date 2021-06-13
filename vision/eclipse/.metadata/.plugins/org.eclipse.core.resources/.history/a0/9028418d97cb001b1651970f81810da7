@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_spi_regs.h"
+#include "system.h"
+
+inline void send(int ball, int pos) {
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_BALL_BASE, BALL);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_VAL_BASE, pos & 0b11111);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b10);
+  usleep(250);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b00);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_VAL_BASE, (x1>>5) & 0b11111);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b11);
+  usleep(250);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_CTRL_BASE, 0b00);
+}
+
+static void __spi_callback(void*);
+int* slp;
+int main() {
+  printf("Hello from Nios II!\n");
+  int x1 = 611;
+  int y1 = 34+640;
+  int x2 = 233;
+  int y2 = 211+640;
+loop:
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_INTERRUPT_BASE, 0);
+  while (*slp) usleep(100);
+  usleep(250000);
+  it++;
+  if (!*it) it = msg;
+  goto loop;
+}
+
+static void __spi_callback(void* _msg) {
+  *slp = 1;
+  //char msg = *(char*)_msg;
+  while (!(IORD_ALTERA_AVALON_SPI_STATUS(ARDUINO_BASE) & ALTERA_AVALON_SPI_STATUS_RRDY_MSK)) usleep(100);
+  int recv = IORD_ALTERA_AVALON_SPI_RXDATA(ARDUINO_BASE);
+
+  IOWR_ALTERA_AVALON_SPI_STATUS(ARDUINO_BASE, 0x0);
+
+  printf("recv: %x\n", recv);
+  *slp = 0;
+}

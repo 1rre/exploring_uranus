@@ -1,0 +1,40 @@
+#include "alt_types.h"
+#include "sys/alt_stdio.h"
+#include "io.h"
+#include "system.h"
+#include <stdio.h>
+#include "sys/alt_cache.h"
+#include "altera_avalon_spi.h"
+#include "altera_avalon_spi_regs.h"
+#include "sys/alt_irq.h"
+//This is the ISR that runs when the SPI Slave receives data
+static void spi_rx_isr(void* isr_context) {
+  printf("Writing data\n");
+  IOWR_ALTERA_AVALON_SPI_TXDATA(SPI_0_BASE, "abc");
+  int recv = IORD_ALTERA_AVALON_SPI_RXDATA(SPI_0_BASE);
+  printf("Received: %x\n", recv);
+  //This resets the IRQ flag. Otherwise the IRQ will continuously run.
+  IOWR_ALTERA_AVALON_SPI_STATUS(SPI_0_BASE,0x0);
+  printf("Written data\n");
+}
+
+int main() {
+  printf("Hello from Nios II!\n");
+  int return_code,ret;
+  char spi_command_string_tx[10] = "$HELLOABC*";
+  char spi_command_string_rx[10] = "$HELLOABC*";
+  //This registers the Slave IRQ with NIOS
+  return_code = alt_avalon_spi_command(SPI_MASTER_BASE, 0, 1, spi_command_string_tx, 0,spi_command_string_rx,0);
+  return_code = alt_avalon_spi_command(SPI_MASTER_BASE, 0, 1, spi_command_string_tx+1, 0,spi_command_string_rx,0);
+  return_code = alt_avalon_spi_command(SPI_MASTER_BASE, 0, 1, spi_command_string_tx+2, 0,spi_command_string_rx,0);
+  return_code = alt_avalon_spi_command(SPI_MASTER_BASE, 0, 1, spi_command_string_tx+3, 0,spi_command_string_rx,0);
+  return_code = alt_avalon_spi_command(SPI_MASTER_BASE, 0, 1, spi_command_string_tx+4, 0,spi_command_string_rx,0);
+  if(return_code < 0) printf("ERROR SPI TX RET = %x \n" , return_code);
+  //You need to enable the IRQ in the IP core control register as well.
+  //Just calling the ISR to see if the function is OK.
+  spi_rx_isr(NULL);
+  //RX is done via interrupts.
+  printf("Rx done \n");
+  while(1);
+  return 0;
+}

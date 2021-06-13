@@ -39,7 +39,7 @@ add_fileset QUARTUS_SYNTH QUARTUS_SYNTH "" ""
 set_fileset_property QUARTUS_SYNTH TOP_LEVEL EEE_IMGPROC
 set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
 set_fileset_property QUARTUS_SYNTH ENABLE_FILE_OVERWRITE_MODE false
-add_fileset_file EEE_IMGPROC.v VERILOG PATH ip/EEE_IMGPROC/EEE_IMGPROC.v TOP_LEVEL_FILE
+add_fileset_file EEE_IMGPROC.sv VERILOG PATH ip/EEE_IMGPROC/EEE_IMGPROC.sv TOP_LEVEL_FILE
 
 
 # 
@@ -160,7 +160,7 @@ add_interface_port s1 s_read read Input 1
 add_interface_port s1 s_write write Input 1
 add_interface_port s1 s_readdata readdata Output 32
 add_interface_port s1 s_writedata writedata Input 32
-add_interface_port s1 s_address address Input 3
+add_interface_port s1 s_address address Input 4
 set_interface_assignment s1 embeddedsw.configuration.isFlash 0
 set_interface_assignment s1 embeddedsw.configuration.isMemoryDevice 0
 set_interface_assignment s1 embeddedsw.configuration.isNonVolatileStorage 0

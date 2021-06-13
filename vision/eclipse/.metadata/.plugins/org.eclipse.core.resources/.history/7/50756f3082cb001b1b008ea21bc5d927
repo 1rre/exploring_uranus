@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#include "alt_types.h"
+#include "io.h"
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+
+int main() {
+  printf("Hello from Nios II!\n");
+loop: // Is this necessary - interrupt registered?
+  printf("Loop Begin\n");
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_INTERRUPT_BASE, 1);
+  usleep(250);
+  IOWR_ALTERA_AVALON_PIO_DATA(ARDUINO_INTERRUPT_BASE, 0);
+  usleep(2500000);
+  goto loop;
+}

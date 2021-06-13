@@ -15,6 +15,9 @@ module Qsys (
 		output wire        alt_vip_itc_0_clocked_video_vid_v,         //                                 .vid_v
 		input  wire        altpll_0_areset_conduit_export,            //          altpll_0_areset_conduit.export
 		output wire        altpll_0_locked_conduit_export,            //          altpll_0_locked_conduit.export
+		output wire [2:0]  arduino_ball_external_connection_export,   // arduino_ball_external_connection.export
+		output wire [1:0]  arduino_ctrl_external_connection_export,   // arduino_ctrl_external_connection.export
+		output wire [4:0]  arduino_val_external_connection_export,    //  arduino_val_external_connection.export
 		input  wire        clk_clk,                                   //                              clk.clk
 		output wire        clk_sdram_clk,                             //                        clk_sdram.clk
 		output wire        clk_vga_clk,                               //                          clk_vga.clk
@@ -157,10 +160,25 @@ module Qsys (
 	wire  [31:0] mm_interconnect_0_mipi_pwdn_n_s1_writedata;                        // mm_interconnect_0:mipi_pwdn_n_s1_writedata -> mipi_pwdn_n:writedata
 	wire         mm_interconnect_0_eee_imgproc_0_s1_chipselect;                     // mm_interconnect_0:EEE_IMGPROC_0_s1_chipselect -> EEE_IMGPROC_0:s_chipselect
 	wire  [31:0] mm_interconnect_0_eee_imgproc_0_s1_readdata;                       // EEE_IMGPROC_0:s_readdata -> mm_interconnect_0:EEE_IMGPROC_0_s1_readdata
-	wire   [2:0] mm_interconnect_0_eee_imgproc_0_s1_address;                        // mm_interconnect_0:EEE_IMGPROC_0_s1_address -> EEE_IMGPROC_0:s_address
+	wire   [3:0] mm_interconnect_0_eee_imgproc_0_s1_address;                        // mm_interconnect_0:EEE_IMGPROC_0_s1_address -> EEE_IMGPROC_0:s_address
 	wire         mm_interconnect_0_eee_imgproc_0_s1_read;                           // mm_interconnect_0:EEE_IMGPROC_0_s1_read -> EEE_IMGPROC_0:s_read
 	wire         mm_interconnect_0_eee_imgproc_0_s1_write;                          // mm_interconnect_0:EEE_IMGPROC_0_s1_write -> EEE_IMGPROC_0:s_write
 	wire  [31:0] mm_interconnect_0_eee_imgproc_0_s1_writedata;                      // mm_interconnect_0:EEE_IMGPROC_0_s1_writedata -> EEE_IMGPROC_0:s_writedata
+	wire         mm_interconnect_0_arduino_ctrl_s1_chipselect;                      // mm_interconnect_0:arduino_ctrl_s1_chipselect -> arduino_ctrl:chipselect
+	wire  [31:0] mm_interconnect_0_arduino_ctrl_s1_readdata;                        // arduino_ctrl:readdata -> mm_interconnect_0:arduino_ctrl_s1_readdata
+	wire   [1:0] mm_interconnect_0_arduino_ctrl_s1_address;                         // mm_interconnect_0:arduino_ctrl_s1_address -> arduino_ctrl:address
+	wire         mm_interconnect_0_arduino_ctrl_s1_write;                           // mm_interconnect_0:arduino_ctrl_s1_write -> arduino_ctrl:write_n
+	wire  [31:0] mm_interconnect_0_arduino_ctrl_s1_writedata;                       // mm_interconnect_0:arduino_ctrl_s1_writedata -> arduino_ctrl:writedata
+	wire         mm_interconnect_0_arduino_ball_s1_chipselect;                      // mm_interconnect_0:arduino_ball_s1_chipselect -> arduino_ball:chipselect
+	wire  [31:0] mm_interconnect_0_arduino_ball_s1_readdata;                        // arduino_ball:readdata -> mm_interconnect_0:arduino_ball_s1_readdata
+	wire   [1:0] mm_interconnect_0_arduino_ball_s1_address;                         // mm_interconnect_0:arduino_ball_s1_address -> arduino_ball:address
+	wire         mm_interconnect_0_arduino_ball_s1_write;                           // mm_interconnect_0:arduino_ball_s1_write -> arduino_ball:write_n
+	wire  [31:0] mm_interconnect_0_arduino_ball_s1_writedata;                       // mm_interconnect_0:arduino_ball_s1_writedata -> arduino_ball:writedata
+	wire         mm_interconnect_0_arduino_val_s1_chipselect;                       // mm_interconnect_0:arduino_val_s1_chipselect -> arduino_val:chipselect
+	wire  [31:0] mm_interconnect_0_arduino_val_s1_readdata;                         // arduino_val:readdata -> mm_interconnect_0:arduino_val_s1_readdata
+	wire   [1:0] mm_interconnect_0_arduino_val_s1_address;                          // mm_interconnect_0:arduino_val_s1_address -> arduino_val:address
+	wire         mm_interconnect_0_arduino_val_s1_write;                            // mm_interconnect_0:arduino_val_s1_write -> arduino_val:write_n
+	wire  [31:0] mm_interconnect_0_arduino_val_s1_writedata;                        // mm_interconnect_0:arduino_val_s1_writedata -> arduino_val:writedata
 	wire         alt_vip_vfb_0_read_master_waitrequest;                             // mm_interconnect_1:alt_vip_vfb_0_read_master_waitrequest -> alt_vip_vfb_0:read_master_av_waitrequest
 	wire  [31:0] alt_vip_vfb_0_read_master_readdata;                                // mm_interconnect_1:alt_vip_vfb_0_read_master_readdata -> alt_vip_vfb_0:read_master_av_readdata
 	wire  [31:0] alt_vip_vfb_0_read_master_address;                                 // alt_vip_vfb_0:read_master_av_address -> mm_interconnect_1:alt_vip_vfb_0_read_master_address
@@ -188,7 +206,7 @@ module Qsys (
 	wire  [31:0] nios2_gen2_irq_irq;                                                // irq_mapper:sender_irq -> nios2_gen2:irq
 	wire         rst_controller_reset_out_reset;                                    // rst_controller:reset_out -> [EEE_IMGPROC_0:reset_n, TERASIC_AUTO_FOCUS_0:reset_n, TERASIC_CAMERA_0:reset_n, alt_vip_itc_0:rst, alt_vip_vfb_0:reset, mm_interconnect_0:TERASIC_AUTO_FOCUS_0_reset_reset_bridge_in_reset_reset, mm_interconnect_1:alt_vip_vfb_0_reset_reset_bridge_in_reset_reset, sdram:reset_n]
 	wire         nios2_gen2_debug_reset_request_reset;                              // nios2_gen2:debug_reset_request -> [rst_controller:reset_in1, rst_controller_002:reset_in1]
-	wire         rst_controller_001_reset_out_reset;                                // rst_controller_001:reset_out -> [altpll_0:reset, mm_interconnect_0:altpll_0_inclk_interface_reset_reset_bridge_in_reset_reset]
+	wire         rst_controller_001_reset_out_reset;                                // rst_controller_001:reset_out -> [altpll_0:reset, arduino_ball:reset_n, arduino_ctrl:reset_n, arduino_val:reset_n, mm_interconnect_0:altpll_0_inclk_interface_reset_reset_bridge_in_reset_reset]
 	wire         rst_controller_002_reset_out_reset;                                // rst_controller_002:reset_out -> [i2c_opencores_camera:wb_rst_i, i2c_opencores_mipi:wb_rst_i, irq_mapper:reset, jtag_uart:rst_n, key:reset_n, led:reset_n, mipi_pwdn_n:reset_n, mipi_reset_n:reset_n, mm_interconnect_0:nios2_gen2_reset_reset_bridge_in_reset_reset, nios2_gen2:reset_n, onchip_memory2_0:reset, rst_translator:in_reset, sw:reset_n, sysid_qsys:reset_n, timer:reset_n]
 	wire         rst_controller_002_reset_out_reset_req;                            // rst_controller_002:reset_req -> [nios2_gen2:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 
@@ -363,6 +381,39 @@ module Qsys (
 		.scanclkena         (1'b0),                                           //           (terminated)
 		.scandata           (1'b0),                                           //           (terminated)
 		.configupdate       (1'b0)                                            //           (terminated)
+	);
+
+	Qsys_arduino_ball arduino_ball (
+		.clk        (clk_clk),                                      //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),          //               reset.reset_n
+		.address    (mm_interconnect_0_arduino_ball_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_arduino_ball_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_arduino_ball_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_arduino_ball_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_arduino_ball_s1_readdata),   //                    .readdata
+		.out_port   (arduino_ball_external_connection_export)       // external_connection.export
+	);
+
+	Qsys_arduino_ctrl arduino_ctrl (
+		.clk        (clk_clk),                                      //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),          //               reset.reset_n
+		.address    (mm_interconnect_0_arduino_ctrl_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_arduino_ctrl_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_arduino_ctrl_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_arduino_ctrl_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_arduino_ctrl_s1_readdata),   //                    .readdata
+		.out_port   (arduino_ctrl_external_connection_export)       // external_connection.export
+	);
+
+	Qsys_arduino_val arduino_val (
+		.clk        (clk_clk),                                     //                 clk.clk
+		.reset_n    (~rst_controller_001_reset_out_reset),         //               reset.reset_n
+		.address    (mm_interconnect_0_arduino_val_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_arduino_val_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_arduino_val_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_arduino_val_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_arduino_val_s1_readdata),   //                    .readdata
+		.out_port   (arduino_val_external_connection_export)       // external_connection.export
 	);
 
 	i2c_opencores i2c_opencores_camera (
@@ -566,6 +617,21 @@ module Qsys (
 		.altpll_0_pll_slave_read                                    (mm_interconnect_0_altpll_0_pll_slave_read),                          //                                                     .read
 		.altpll_0_pll_slave_readdata                                (mm_interconnect_0_altpll_0_pll_slave_readdata),                      //                                                     .readdata
 		.altpll_0_pll_slave_writedata                               (mm_interconnect_0_altpll_0_pll_slave_writedata),                     //                                                     .writedata
+		.arduino_ball_s1_address                                    (mm_interconnect_0_arduino_ball_s1_address),                          //                                      arduino_ball_s1.address
+		.arduino_ball_s1_write                                      (mm_interconnect_0_arduino_ball_s1_write),                            //                                                     .write
+		.arduino_ball_s1_readdata                                   (mm_interconnect_0_arduino_ball_s1_readdata),                         //                                                     .readdata
+		.arduino_ball_s1_writedata                                  (mm_interconnect_0_arduino_ball_s1_writedata),                        //                                                     .writedata
+		.arduino_ball_s1_chipselect                                 (mm_interconnect_0_arduino_ball_s1_chipselect),                       //                                                     .chipselect
+		.arduino_ctrl_s1_address                                    (mm_interconnect_0_arduino_ctrl_s1_address),                          //                                      arduino_ctrl_s1.address
+		.arduino_ctrl_s1_write                                      (mm_interconnect_0_arduino_ctrl_s1_write),                            //                                                     .write
+		.arduino_ctrl_s1_readdata                                   (mm_interconnect_0_arduino_ctrl_s1_readdata),                         //                                                     .readdata
+		.arduino_ctrl_s1_writedata                                  (mm_interconnect_0_arduino_ctrl_s1_writedata),                        //                                                     .writedata
+		.arduino_ctrl_s1_chipselect                                 (mm_interconnect_0_arduino_ctrl_s1_chipselect),                       //                                                     .chipselect
+		.arduino_val_s1_address                                     (mm_interconnect_0_arduino_val_s1_address),                           //                                       arduino_val_s1.address
+		.arduino_val_s1_write                                       (mm_interconnect_0_arduino_val_s1_write),                             //                                                     .write
+		.arduino_val_s1_readdata                                    (mm_interconnect_0_arduino_val_s1_readdata),                          //                                                     .readdata
+		.arduino_val_s1_writedata                                   (mm_interconnect_0_arduino_val_s1_writedata),                         //                                                     .writedata
+		.arduino_val_s1_chipselect                                  (mm_interconnect_0_arduino_val_s1_chipselect),                        //                                                     .chipselect
 		.EEE_IMGPROC_0_s1_address                                   (mm_interconnect_0_eee_imgproc_0_s1_address),                         //                                     EEE_IMGPROC_0_s1.address
 		.EEE_IMGPROC_0_s1_write                                     (mm_interconnect_0_eee_imgproc_0_s1_write),                           //                                                     .write
 		.EEE_IMGPROC_0_s1_read                                      (mm_interconnect_0_eee_imgproc_0_s1_read),                            //                                                     .read

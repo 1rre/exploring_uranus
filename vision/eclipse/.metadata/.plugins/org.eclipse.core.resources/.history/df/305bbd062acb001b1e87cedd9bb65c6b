@@ -1,0 +1,47 @@
+
+#include <stdio.h>
+#include <string.h>
+
+#include "alt_types.h"
+#include "sys/alt_stdio.h"
+#include "io.h"
+#include "system.h"
+#include "sys/alt_cache.h"
+#include "altera_avalon_spi.h"
+#include "altera_avalon_spi_regs.h"
+#include "sys/alt_irq.h"
+
+typedef struct {
+  char rx_data[8],
+      *tx_data;
+} TransData;
+
+void __handle_handshake_irq(TransData* context) {
+  printf("Handshake Received\n");
+  int ret;
+  memset(context->rx_data,0,8);
+  context->tx_data[0] = 'a';
+  context->tx_data[1] = 'b';
+  context->tx_data[2] = 'c';
+  context->tx_data[3] = 'd';
+  context->tx_data[4] = 'e';
+  context->tx_data[5] = 'f';
+  context->tx_data[6] = 'g';
+  context->tx_data[7] = 0;
+  ret = alt_avalon_spi_command(SPI_0_BASE, 0, 1, context->tx_data, 1, context->rx_data, 0);
+  if(ret < 0) printf("ERROR SPI TX RET = %x \n" , ret);
+
+  printf("Transmit done.\nRET = %x\nrecv = %s\nsent = %s\n", ret, context->rx_data, context->tx_data);
+}
+
+int main() {
+  printf("Hello from Nios II!\n");
+  TransData msg;
+  int ret;
+  printf("Interrupt registered with status: %d\n", ret);
+loop: // Is this necessary - interrupt registered?
+  while (!IORD(HANDSHAKE_BASE, 0));
+  __handle_handshake_irq(&msg);
+  while (IORD(HANDSHAKE_BASE, 0));
+  goto loop;
+}

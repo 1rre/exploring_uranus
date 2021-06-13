@@ -10,6 +10,9 @@
 		.alt_vip_itc_0_clocked_video_vid_v         (<connected-to-alt_vip_itc_0_clocked_video_vid_v>),         //                                 .vid_v
 		.altpll_0_areset_conduit_export            (<connected-to-altpll_0_areset_conduit_export>),            //          altpll_0_areset_conduit.export
 		.altpll_0_locked_conduit_export            (<connected-to-altpll_0_locked_conduit_export>),            //          altpll_0_locked_conduit.export
+		.arduino_ball_external_connection_export   (<connected-to-arduino_ball_external_connection_export>),   // arduino_ball_external_connection.export
+		.arduino_ctrl_external_connection_export   (<connected-to-arduino_ctrl_external_connection_export>),   // arduino_ctrl_external_connection.export
+		.arduino_val_external_connection_export    (<connected-to-arduino_val_external_connection_export>),    //  arduino_val_external_connection.export
 		.clk_clk                                   (<connected-to-clk_clk>),                                   //                              clk.clk
 		.clk_sdram_clk                             (<connected-to-clk_sdram_clk>),                             //                        clk_sdram.clk
 		.clk_vga_clk                               (<connected-to-clk_vga_clk>),                               //                          clk_vga.clk
