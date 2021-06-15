@@ -1,5 +1,8 @@
 import mill._, scalalib._
 
+object imgproc extends ScalaModule {
+  def scalaVersion = "3.0.0"
+}
 object detect extends ScalaModule {
-  def scalaVersion = "2.13.6"
+  def scalaVersion = "3.0.0"
 }

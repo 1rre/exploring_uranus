@@ -1,14 +1,14 @@
 int D[8];
-int err = 0;    //with placeholder value
+int err = 0; // with placeholder value
 struct batt {
   int s_state, SOC, SOH;
 };
-int s_state = 45, l_state = 3;   //with placeholder value
-int drive[3] = {10, 50, 200}; // {x, y, total_distance} with placeholder values
-String DATA = "";  //concatenate D[7] - D[0]
-char temp [6];
+int s_state = 45, l_state = 3; // with placeholder value
+int drive[3] = {10, 50, 200};  // {x, y, total_distance} with placeholder values
+String DATA = "";              // concatenate D[7] - D[0]
+char temp[6];
 
-//assign placeholder values
+// assign placeholder values
 batt batt1 = {0, 100, 99};
 batt batt2 = {1, 98, 97};
 batt batt3 = {2, 96, 95};
@@ -30,9 +30,9 @@ void loop() {
 void compute() {
   String a0 = "", a1 = "", a2 = "";
   itoa(s_state, temp, 2);
-  a0 = temp[0] + temp[1];   //batt1.s_state
-  a1 = temp[2] + temp[3];   //batt2.s_state
-  a2 = temp[4] + temp[5];   //batt3.s_state
+  a0 = temp[0] + temp[1]; // batt1.s_state
+  a1 = temp[2] + temp[3]; // batt2.s_state
+  a2 = temp[4] + temp[5]; // batt3.s_state
   batt1.s_state = bin_to_dec(a0);
   batt2.s_state = bin_to_dec(a1);
   batt3.s_state = bin_to_dec(a2);
@@ -65,5 +65,6 @@ void concatenate() {
   for (int i = 7; i >= 0; i--) {
     DATA += char(D[i]);
   }
-  //  DATA = char(D[7])+char(D[6])+char(D[5])+char(D[4])+char(D[3])+char(D[2])+char(D[1])+char(D[0]);
+  //  DATA =
+  //  char(D[7])+char(D[6])+char(D[5])+char(D[4])+char(D[3])+char(D[2])+char(D[1])+char(D[0]);
 }
