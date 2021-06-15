@@ -318,8 +318,8 @@ void loop() {
       dummy_bit_5 = B00000000;
     }
 
-    char_0 = dummy_bit_0 & dummy_bit_1 & dummy_bit_2 & dummy_bit_3 & dummy_bit_4 &
-             dummy_bit_5; // Bitwise and
+    char_0 = dummy_bit_0 | dummy_bit_1 | dummy_bit_2 | dummy_bit_3 | dummy_bit_4 |
+             dummy_bit_5; // Bitwise or
 
     char_1 = soc_int_1;
 
