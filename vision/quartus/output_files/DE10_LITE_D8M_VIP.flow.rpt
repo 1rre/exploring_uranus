@@ -1,6 +1,6 @@
 Flow report for DE10_LITE_D8M_VIP
-Tue Jun 15 13:07:09 2021
-Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+Tue Jun 15 13:18:29 2021
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -29,29 +29,28 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jun 15 13:06:53 2021       ;
-; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Flow Status                        ; Successful - Tue Jun 15 13:18:17 2021       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DE10_LITE_D8M_VIP                           ;
 ; Top-level Entity Name              ; DE10_LITE_D8M_VIP                           ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 30,679 / 49,760 ( 62 % )                    ;
-;     Total combinational functions  ; 21,522 / 49,760 ( 43 % )                    ;
-;     Dedicated logic registers      ; 22,225 / 49,760 ( 45 % )                    ;
-; Total registers                    ; 22292                                       ;
+; Total logic elements               ; 30,674 / 49,760 ( 62 % )                    ;
+;     Total combinational functions  ; 21,515 / 49,760 ( 43 % )                    ;
+;     Dedicated logic registers      ; 22,226 / 49,760 ( 45 % )                    ;
+; Total registers                    ; 22293                                       ;
 ; Total pins                         ; 171 / 360 ( 48 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,093,048 / 1,677,312 ( 65 % )              ;
@@ -67,7 +66,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/15/2021 12:57:18 ;
+; Start date & time ; 06/15/2021 14:12:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE10_LITE_D8M_VIP   ;
 +-------------------+---------------------+
@@ -78,7 +77,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                ; 39908812339550.162375823710620         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                ; 13432880432021.162376273704466         ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                     ; Off                                    ; --            ; --          ; --         ;
 ; FITTER_EFFORT                        ; Standard Fit                           ; Auto Fit      ; --          ; --         ;
 ; FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS   ; On                                     ; Off           ; --          ; --         ;
@@ -107,26 +106,26 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:04:12     ; 1.0                     ; 5359 MB             ; 00:04:20                           ;
-; I/O Assignment Analysis   ; 00:00:17     ; 1.0                     ; 5055 MB             ; 00:00:15                           ;
-; Fitter                    ; 00:04:45     ; 2.0                     ; 7114 MB             ; 00:13:43                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4795 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:15     ; 4.7                     ; 5286 MB             ; 00:00:53                           ;
-; Total                     ; 00:09:33     ; --                      ; --                  ; 00:19:15                           ;
+; Analysis & Synthesis      ; 00:0-58:0-5  ; 1.0                     ; 1519 MB             ; 00:02:56                           ;
+; I/O Assignment Analysis   ; 00:00:11     ; 1.0                     ; 1332 MB             ; 00:00:11                           ;
+; Fitter                    ; 00:03:40     ; 1.8                     ; 3096 MB             ; 00:11:14                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 913 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 3.9                     ; 1345 MB             ; 00:00:41                           ;
+; Total                     ; 00:04:05     ; --                      ; --                  ; 00:15:05                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-URHBN1R  ; Windows 10 ; 10.0       ; x86_64         ;
-; I/O Assignment Analysis   ; DESKTOP-URHBN1R  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-URHBN1R  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-URHBN1R  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-URHBN1R  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++---------------------------+------------------+---------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name ; OS Version ; Processor type ;
++---------------------------+------------------+---------+------------+----------------+
+; Analysis & Synthesis      ; tmoores          ; Void \r ; Void \r    ; x86_64         ;
+; I/O Assignment Analysis   ; tmoores          ; Void \r ; Void \r    ; x86_64         ;
+; Fitter                    ; tmoores          ; Void \r ; Void \r    ; x86_64         ;
+; Assembler                 ; tmoores          ; Void \r ; Void \r    ; x86_64         ;
+; TimeQuest Timing Analyzer ; tmoores          ; Void \r ; Void \r    ; x86_64         ;
++---------------------------+------------------+---------+------------+----------------+
 
 
 ------------
