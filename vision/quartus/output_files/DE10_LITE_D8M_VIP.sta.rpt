@@ -1,6 +1,6 @@
 TimeQuest Timing Analyzer report for DE10_LITE_D8M_VIP
-Sun Jun 13 10:09:46 2021
-Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Tue Jun 15 13:42:13 2021
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -64,18 +64,19 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-----------------------------------------------------------------------------+
 ; TimeQuest Timing Analyzer Summary                                           ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Quartus Prime Version ; Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Timing Analyzer       ; TimeQuest                                           ;
 ; Revision Name         ; DE10_LITE_D8M_VIP                                   ;
 ; Device Family         ; MAX 10                                              ;
@@ -91,32 +92,31 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 24          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 4.10        ;
-; Maximum used               ; 16          ;
+; Average used               ; 2.53        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  26.2%      ;
-;     Processor 3            ;  23.3%      ;
-;     Processor 4            ;  21.9%      ;
-;     Processors 5-16        ;  19.9%      ;
+;     Processor 2            ;  52.4%      ;
+;     Processor 3            ;  51.1%      ;
+;     Processor 4            ;  49.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; SDC File List                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; SDC File Path                                                                                         ; Status ; Read at                  ;
-+-------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; DE10_LITE_D8M_VIP.SDC                                                                                 ; OK     ; Sun Jun 13 10:09:37 2021 ;
-; /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/Qsys_nios2_gen2_cpu.sdc                      ; OK     ; Sun Jun 13 10:09:37 2021 ;
-; /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc                        ; OK     ; Sun Jun 13 10:09:38 2021 ;
-; /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Sun Jun 13 10:09:38 2021 ;
-; /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/altera_reset_controller.sdc                  ; OK     ; Sun Jun 13 10:09:38 2021 ;
-+-------------------------------------------------------------------------------------------------------+--------+--------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SDC File List                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; SDC File Path                                                                                                                               ; Status ; Read at                  ;
++---------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
+; DE10_LITE_D8M_VIP.SDC                                                                                                                       ; OK     ; Tue Jun 15 13:41:31 2021 ;
+; c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/qsys_nios2_gen2_cpu.sdc                      ; OK     ; Tue Jun 15 13:41:31 2021 ;
+; c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/alt_vipitc131_cvo.sdc                        ; OK     ; Tue Jun 15 13:41:31 2021 ;
+; c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Tue Jun 15 13:41:31 2021 ;
+; c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/altera_reset_controller.sdc                  ; OK     ; Tue Jun 15 13:41:31 2021 ;
++---------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -143,12 +143,12 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 54.23 MHz  ; 54.23 MHz       ; u0|altpll_0|sd1|pll7|clk[2] ;      ;
-; 54.47 MHz  ; 54.47 MHz       ; MIPI_PIXEL_CLK              ;      ;
-; 69.1 MHz   ; 69.1 MHz        ; MAX10_CLK1_50               ;      ;
-; 93.26 MHz  ; 93.26 MHz       ; u0|altpll_0|sd1|pll7|clk[3] ;      ;
-; 105.91 MHz ; 105.91 MHz      ; altera_reserved_tck         ;      ;
-; 177.68 MHz ; 177.68 MHz      ; MAX10_CLK2_50               ;      ;
+; 55.79 MHz  ; 55.79 MHz       ; u0|altpll_0|sd1|pll7|clk[2] ;      ;
+; 74.62 MHz  ; 74.62 MHz       ; MAX10_CLK1_50               ;      ;
+; 90.83 MHz  ; 90.83 MHz       ; altera_reserved_tck         ;      ;
+; 93.51 MHz  ; 93.51 MHz       ; u0|altpll_0|sd1|pll7|clk[3] ;      ;
+; 96.32 MHz  ; 96.32 MHz       ; MIPI_PIXEL_CLK              ;      ;
+; 169.78 MHz ; 169.78 MHz      ; MAX10_CLK2_50               ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -158,13 +158,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; -8.441 ; -1995.039     ;
+; u0|altpll_0|sd1|pll7|clk[2] ; -7.924 ; -1987.927     ;
 ; clk_dram_ext                ; 3.922  ; 0.000         ;
-; MAX10_CLK1_50               ; 5.528  ; 0.000         ;
-; MAX10_CLK2_50               ; 9.050  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 10.820 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 29.277 ; 0.000         ;
-; altera_reserved_tck         ; 45.279 ; 0.000         ;
+; MAX10_CLK1_50               ; 6.599  ; 0.000         ;
+; MAX10_CLK2_50               ; 8.615  ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 12.985 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 29.306 ; 0.000         ;
+; altera_reserved_tck         ; 44.495 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -173,11 +173,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MAX10_CLK1_50               ; 0.247 ; 0.000         ;
-; altera_reserved_tck         ; 0.339 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.228 ; 0.000         ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; 0.339 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.341 ; 0.000         ;
-; MAX10_CLK2_50               ; 0.347 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.339 ; 0.000         ;
+; altera_reserved_tck         ; 0.347 ; 0.000         ;
+; MAX10_CLK2_50               ; 0.348 ; 0.000         ;
 ; MIPI_PIXEL_CLK              ; 0.378 ; 0.000         ;
 ; clk_dram_ext                ; 2.177 ; 0.000         ;
 +-----------------------------+-------+---------------+
@@ -188,11 +188,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; 3.022  ; 0.000         ;
-; MAX10_CLK1_50               ; 3.303  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 4.167  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 37.543 ; 0.000         ;
-; altera_reserved_tck         ; 48.081 ; 0.000         ;
+; MAX10_CLK1_50               ; 3.875  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 4.934  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 6.076  ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 37.433 ; 0.000         ;
+; altera_reserved_tck         ; 47.306 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -201,11 +201,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.983 ; 0.000         ;
-; MAX10_CLK1_50               ; 0.987 ; 0.000         ;
-; altera_reserved_tck         ; 1.316 ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 1.480 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 2.412 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.965 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.968 ; 0.000         ;
+; altera_reserved_tck         ; 1.168 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 1.342 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 2.239 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -214,14 +214,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; 4.663  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 4.674  ; 0.000         ;
 ; u0|altpll_0|sd1|pll7|clk[1] ; 4.853  ; 0.000         ;
 ; clk_dram_ext                ; 5.790  ; 0.000         ;
-; MAX10_CLK1_50               ; 9.443  ; 0.000         ;
+; MAX10_CLK1_50               ; 9.433  ; 0.000         ;
 ; MAX10_CLK2_50               ; 9.659  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 19.540 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 19.702 ; 0.000         ;
-; altera_reserved_tck         ; 49.626 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 19.541 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 19.708 ; 0.000         ;
+; altera_reserved_tck         ; 49.613 ; 0.000         ;
 ; ADC_CLK_10                  ; 96.000 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
@@ -238,12 +238,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-----------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note ;
 +------------+-----------------+-----------------------------+------+
-; 59.06 MHz  ; 59.06 MHz       ; u0|altpll_0|sd1|pll7|clk[2] ;      ;
-; 59.66 MHz  ; 59.66 MHz       ; MIPI_PIXEL_CLK              ;      ;
-; 75.1 MHz   ; 75.1 MHz        ; MAX10_CLK1_50               ;      ;
-; 100.0 MHz  ; 100.0 MHz       ; u0|altpll_0|sd1|pll7|clk[3] ;      ;
-; 116.63 MHz ; 116.63 MHz      ; altera_reserved_tck         ;      ;
-; 193.5 MHz  ; 193.5 MHz       ; MAX10_CLK2_50               ;      ;
+; 60.66 MHz  ; 60.66 MHz       ; u0|altpll_0|sd1|pll7|clk[2] ;      ;
+; 80.88 MHz  ; 80.88 MHz       ; MAX10_CLK1_50               ;      ;
+; 97.96 MHz  ; 97.96 MHz       ; altera_reserved_tck         ;      ;
+; 101.64 MHz ; 101.64 MHz      ; u0|altpll_0|sd1|pll7|clk[3] ;      ;
+; 106.02 MHz ; 106.02 MHz      ; MIPI_PIXEL_CLK              ;      ;
+; 184.43 MHz ; 184.43 MHz      ; MAX10_CLK2_50               ;      ;
 +------------+-----------------+-----------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -253,13 +253,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; -6.933 ; -1526.142     ;
+; u0|altpll_0|sd1|pll7|clk[2] ; -6.484 ; -1548.281     ;
 ; clk_dram_ext                ; 4.040  ; 0.000         ;
-; MAX10_CLK1_50               ; 6.685  ; 0.000         ;
-; MAX10_CLK2_50               ; 9.541  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 11.619 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 30.000 ; 0.000         ;
-; altera_reserved_tck         ; 45.713 ; 0.000         ;
+; MAX10_CLK1_50               ; 7.636  ; 0.000         ;
+; MAX10_CLK2_50               ; 9.155  ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 13.117 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 30.161 ; 0.000         ;
+; altera_reserved_tck         ; 44.896 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -268,10 +268,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MAX10_CLK1_50               ; 0.245 ; 0.000         ;
-; altera_reserved_tck         ; 0.304 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 0.305 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.306 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.236 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.303 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 0.304 ; 0.000         ;
+; altera_reserved_tck         ; 0.311 ; 0.000         ;
 ; MAX10_CLK2_50               ; 0.312 ; 0.000         ;
 ; MIPI_PIXEL_CLK              ; 0.338 ; 0.000         ;
 ; clk_dram_ext                ; 2.124 ; 0.000         ;
@@ -283,11 +283,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MAX10_CLK1_50               ; 3.429  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 3.684  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 4.675  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 37.704 ; 0.000         ;
-; altera_reserved_tck         ; 48.244 ; 0.000         ;
+; MAX10_CLK1_50               ; 4.037  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 5.404  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 6.404  ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 37.599 ; 0.000         ;
+; altera_reserved_tck         ; 47.516 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -296,11 +296,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.906 ; 0.000         ;
-; MAX10_CLK1_50               ; 0.909 ; 0.000         ;
-; altera_reserved_tck         ; 1.218 ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 1.320 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 2.204 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.889 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.893 ; 0.000         ;
+; altera_reserved_tck         ; 1.063 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 1.227 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 2.081 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -309,14 +309,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; 4.649  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 4.686  ; 0.000         ;
 ; u0|altpll_0|sd1|pll7|clk[1] ; 4.876  ; 0.000         ;
 ; clk_dram_ext                ; 5.790  ; 0.000         ;
-; MAX10_CLK1_50               ; 9.453  ; 0.000         ;
+; MAX10_CLK1_50               ; 9.444  ; 0.000         ;
 ; MAX10_CLK2_50               ; 9.669  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 19.608 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 19.611 ; 0.000         ;
 ; u0|altpll_0|sd1|pll7|clk[3] ; 19.700 ; 0.000         ;
-; altera_reserved_tck         ; 49.650 ; 0.000         ;
+; altera_reserved_tck         ; 49.639 ; 0.000         ;
 ; ADC_CLK_10                  ; 96.000 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
@@ -324,7 +324,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+Number of Synchronizer Chains Found: 80
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 0.225
+Worst Case Available Settling Time: 9.847 ns
+
+Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+  - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
+Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+  - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 
 
 
@@ -333,13 +344,13 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; u0|altpll_0|sd1|pll7|clk[2] ; 1.933  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 2.144  ; 0.000         ;
 ; clk_dram_ext                ; 4.001  ; 0.000         ;
-; MAX10_CLK2_50               ; 11.399 ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 13.454 ; 0.000         ;
-; MAX10_CLK1_50               ; 13.561 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 35.145 ; 0.000         ;
-; altera_reserved_tck         ; 48.260 ; 0.000         ;
+; MAX10_CLK2_50               ; 11.185 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 13.519 ; 0.000         ;
+; MAX10_CLK1_50               ; 13.982 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 35.447 ; 0.000         ;
+; altera_reserved_tck         ; 47.882 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -348,12 +359,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; MAX10_CLK1_50               ; 0.099 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 0.112 ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 0.125 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.139 ; 0.000         ;
-; altera_reserved_tck         ; 0.147 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.086 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 0.146 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.146 ; 0.000         ;
 ; MAX10_CLK2_50               ; 0.152 ; 0.000         ;
+; altera_reserved_tck         ; 0.152 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 0.165 ; 0.000         ;
 ; clk_dram_ext                ; 1.838 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
@@ -363,11 +374,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; MAX10_CLK1_50               ; 6.553  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 6.598  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 7.022  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 38.909 ; 0.000         ;
-; altera_reserved_tck         ; 49.380 ; 0.000         ;
+; MAX10_CLK1_50               ; 6.721  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 7.602  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 8.024  ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 38.862 ; 0.000         ;
+; altera_reserved_tck         ; 48.947 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -376,11 +387,11 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; u0|altpll_0|sd1|pll7|clk[3] ; 0.429 ; 0.000         ;
-; MAX10_CLK1_50               ; 0.432 ; 0.000         ;
-; altera_reserved_tck         ; 0.572 ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 0.632 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 1.030 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 0.419 ; 0.000         ;
+; MAX10_CLK1_50               ; 0.422 ; 0.000         ;
+; altera_reserved_tck         ; 0.498 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 0.593 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 0.951 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -391,12 +402,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-----------------------------+--------+---------------+
 ; clk_dram_ext                ; 2.000  ; 0.000         ;
 ; u0|altpll_0|sd1|pll7|clk[1] ; 2.000  ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[2] ; 4.644  ; 0.000         ;
-; MAX10_CLK1_50               ; 9.190  ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[2] ; 4.567  ; 0.000         ;
+; MAX10_CLK1_50               ; 9.263  ; 0.000         ;
 ; MAX10_CLK2_50               ; 9.331  ; 0.000         ;
-; MIPI_PIXEL_CLK              ; 19.166 ; 0.000         ;
-; u0|altpll_0|sd1|pll7|clk[3] ; 19.725 ; 0.000         ;
-; altera_reserved_tck         ; 49.420 ; 0.000         ;
+; MIPI_PIXEL_CLK              ; 19.147 ; 0.000         ;
+; u0|altpll_0|sd1|pll7|clk[3] ; 19.727 ; 0.000         ;
+; altera_reserved_tck         ; 49.408 ; 0.000         ;
 ; ADC_CLK_10                  ; 96.000 ; 0.000         ;
 +-----------------------------+--------+---------------+
 
@@ -410,7 +421,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 80
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.225
-Worst Case Available Settling Time: 14.237 ns
+Worst Case Available Settling Time: 14.900 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -424,17 +435,17 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                        ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack             ; -8.441    ; 0.099 ; 3.022    ; 0.429   ; 2.000               ;
+; Worst-case Slack             ; -7.924    ; 0.086 ; 3.875    ; 0.419   ; 2.000               ;
 ;  ADC_CLK_10                  ; N/A       ; N/A   ; N/A      ; N/A     ; 96.000              ;
-;  MAX10_CLK1_50               ; 5.528     ; 0.099 ; 3.303    ; 0.432   ; 9.190               ;
-;  MAX10_CLK2_50               ; 9.050     ; 0.152 ; N/A      ; N/A     ; 9.331               ;
-;  MIPI_PIXEL_CLK              ; 10.820    ; 0.125 ; 37.543   ; 0.632   ; 19.166              ;
-;  altera_reserved_tck         ; 45.279    ; 0.147 ; 48.081   ; 0.572   ; 49.420              ;
+;  MAX10_CLK1_50               ; 6.599     ; 0.086 ; 3.875    ; 0.422   ; 9.263               ;
+;  MAX10_CLK2_50               ; 8.615     ; 0.152 ; N/A      ; N/A     ; 9.331               ;
+;  MIPI_PIXEL_CLK              ; 12.985    ; 0.165 ; 37.433   ; 0.593   ; 19.147              ;
+;  altera_reserved_tck         ; 44.495    ; 0.152 ; 47.306   ; 0.498   ; 49.408              ;
 ;  clk_dram_ext                ; 3.922     ; 1.838 ; N/A      ; N/A     ; 2.000               ;
 ;  u0|altpll_0|sd1|pll7|clk[1] ; N/A       ; N/A   ; N/A      ; N/A     ; 2.000               ;
-;  u0|altpll_0|sd1|pll7|clk[2] ; -8.441    ; 0.112 ; 3.022    ; 1.030   ; 4.644               ;
-;  u0|altpll_0|sd1|pll7|clk[3] ; 29.277    ; 0.139 ; 4.167    ; 0.429   ; 19.700              ;
-; Design-wide TNS              ; -1995.039 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  u0|altpll_0|sd1|pll7|clk[2] ; -7.924    ; 0.146 ; 4.934    ; 0.951   ; 4.567               ;
+;  u0|altpll_0|sd1|pll7|clk[3] ; 29.306    ; 0.146 ; 6.076    ; 0.419   ; 19.700              ;
+; Design-wide TNS              ; -1987.927 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  ADC_CLK_10                  ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
 ;  MAX10_CLK1_50               ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  MAX10_CLK2_50               ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
@@ -442,7 +453,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ;  altera_reserved_tck         ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  clk_dram_ext                ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 ;  u0|altpll_0|sd1|pll7|clk[1] ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  u0|altpll_0|sd1|pll7|clk[2] ; -1995.039 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|altpll_0|sd1|pll7|clk[2] ; -1987.927 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  u0|altpll_0|sd1|pll7|clk[3] ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 +------------------------------+-----------+-------+----------+---------+---------------------+
 
@@ -558,10 +569,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GSENSOR_SDO         ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[8]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[9]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[10]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_RESET_N     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DRAM_DQ[0]          ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DRAM_DQ[1]          ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -584,7 +595,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[12]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[13]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[14]      ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -609,10 +620,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GSENSOR_SDO         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ARDUINO_IO[7]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[8]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[9]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[10]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; ARDUINO_IO[11]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_RESET_N     ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; DRAM_DQ[0]          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; DRAM_DQ[1]          ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -635,7 +646,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; ARDUINO_IO[7]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ARDUINO_IO[11]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[12]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[13]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[14]      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -647,12 +658,12 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; MAX10_CLK1_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; MAX10_CLK2_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; MIPI_PIXEL_VS       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; SW[4]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; SW[5]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; SW[1]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; SW[2]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; SW[0]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; SW[4]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; SW[3]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; SW[0]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; SW[5]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; MIPI_PIXEL_CLK      ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; KEY[0]              ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; SW[8]               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -792,10 +803,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GSENSOR_SDO         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.117 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.88e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.117 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.88e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
+; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.117 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.88e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.117 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.88e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[8]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[9]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.118 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.9e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.118 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.9e-10 s                  ; No                        ; No                        ;
 ; ARDUINO_IO[10]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_RESET_N     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; DRAM_DQ[0]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; DRAM_DQ[1]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
@@ -818,7 +829,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.118 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.9e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.118 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.9e-10 s                  ; No                        ; No                        ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.118 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.9e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.118 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.9e-10 s                  ; No                        ; No                        ;
-; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.117 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.88e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.117 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.88e-10 s                 ; No                        ; No                        ;
+; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[12]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.118 V            ; 0.262 V                              ; 0.424 V                              ; 4.61e-10 s                  ; 4.9e-10 s                   ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.118 V           ; 0.262 V                             ; 0.424 V                             ; 4.61e-10 s                 ; 4.9e-10 s                  ; No                        ; No                        ;
 ; ARDUINO_IO[13]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[14]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
@@ -827,7 +838,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; CAMERA_I2C_SDA      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; MIPI_I2C_SCL        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.128 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.128 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
 ; MIPI_I2C_SDA        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.73e-08 V                   ; 3.2 V               ; -0.127 V            ; 0.219 V                              ; 0.346 V                              ; 4.45e-10 s                  ; 4.51e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.73e-08 V                  ; 3.2 V              ; -0.127 V           ; 0.219 V                             ; 0.346 V                             ; 4.45e-10 s                 ; 4.51e-10 s                 ; No                        ; No                        ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0407 V           ; 0.211 V                              ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0407 V          ; 0.211 V                             ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -942,10 +953,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GSENSOR_SDO         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0625 V           ; 0.334 V                              ; 0.27 V                               ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0625 V          ; 0.334 V                             ; 0.27 V                              ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
+; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0625 V           ; 0.334 V                              ; 0.27 V                               ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0625 V          ; 0.334 V                             ; 0.27 V                              ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[8]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[9]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0637 V           ; 0.337 V                              ; 0.271 V                              ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0637 V          ; 0.337 V                             ; 0.271 V                             ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[10]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_RESET_N     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; DRAM_DQ[0]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; DRAM_DQ[1]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
@@ -968,7 +979,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0637 V           ; 0.337 V                              ; 0.271 V                              ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0637 V          ; 0.337 V                             ; 0.271 V                             ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0637 V           ; 0.337 V                              ; 0.271 V                              ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0637 V          ; 0.337 V                             ; 0.271 V                             ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
-; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0625 V           ; 0.334 V                              ; 0.27 V                               ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0625 V          ; 0.334 V                             ; 0.27 V                              ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
+; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[12]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.15 V              ; -0.0637 V           ; 0.337 V                              ; 0.271 V                              ; 5.02e-10 s                  ; 6.47e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.15 V             ; -0.0637 V          ; 0.337 V                             ; 0.271 V                             ; 5.02e-10 s                 ; 6.47e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[13]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[14]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
@@ -977,7 +988,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; CAMERA_I2C_SDA      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; MIPI_I2C_SCL        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0694 V           ; 0.259 V                              ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0694 V          ; 0.259 V                             ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
 ; MIPI_I2C_SDA        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.41e-06 V                   ; 3.16 V              ; -0.0688 V           ; 0.26 V                               ; 0.209 V                              ; 4.69e-10 s                  ; 6.21e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 3.41e-06 V                  ; 3.16 V             ; -0.0688 V          ; 0.26 V                              ; 0.209 V                             ; 4.69e-10 s                 ; 6.21e-10 s                 ; No                        ; No                        ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0174 V           ; 0.144 V                              ; 0.094 V                              ; 6.45e-10 s                  ; 7.22e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0174 V          ; 0.144 V                             ; 0.094 V                             ; 6.45e-10 s                 ; 7.22e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -1092,10 +1103,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; GSENSOR_SDO         ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[8]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[9]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[10]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_RESET_N     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[0]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[1]          ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
@@ -1118,7 +1129,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[7]       ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[11]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[12]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[13]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[14]      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
@@ -1127,7 +1138,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; CAMERA_I2C_SDA      ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; MIPI_I2C_SCL        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; MIPI_I2C_SDA        ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
-; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0396 V           ; 0.362 V                              ; 0.108 V                              ; 3.11e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0396 V          ; 0.362 V                             ; 0.108 V                             ; 3.11e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
+; altera_reserved_tdo ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -1136,11 +1147,11 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-----------------------------+-----------------------------+------------+------------+------------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
 +-----------------------------+-----------------------------+------------+------------+------------+----------+
-; altera_reserved_tck         ; altera_reserved_tck         ; 1843       ; 0          ; 58         ; 3        ;
+; altera_reserved_tck         ; altera_reserved_tck         ; 1837       ; 0          ; 58         ; 3        ;
 ; MAX10_CLK1_50               ; altera_reserved_tck         ; false path ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; clk_dram_ext                ; 51         ; 0          ; 0          ; 0        ;
 ; altera_reserved_tck         ; MAX10_CLK1_50               ; false path ; false path ; 0          ; 0        ;
-; MAX10_CLK1_50               ; MAX10_CLK1_50               ; 353232     ; 0          ; 0          ; 0        ;
+; MAX10_CLK1_50               ; MAX10_CLK1_50               ; 373491     ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; MAX10_CLK1_50               ; 49         ; 0          ; 0          ; 0        ;
 ; MAX10_CLK2_50               ; MAX10_CLK2_50               ; 1823       ; 0          ; 0          ; 0        ;
 ; MIPI_PIXEL_CLK_ext          ; MAX10_CLK2_50               ; 9          ; 0          ; 0          ; 0        ;
@@ -1150,7 +1161,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; clk_dram_ext                ; u0|altpll_0|sd1|pll7|clk[2] ; 16         ; 0          ; 0          ; 0        ;
 ; MAX10_CLK1_50               ; u0|altpll_0|sd1|pll7|clk[2] ; 45         ; 0          ; 0          ; 0        ;
 ; MIPI_PIXEL_CLK              ; u0|altpll_0|sd1|pll7|clk[2] ; 0          ; false path ; 0          ; 0        ;
-; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[2] ; 139802750  ; 0          ; 0          ; 0        ;
+; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[2] ; 250318763  ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[3] ; u0|altpll_0|sd1|pll7|clk[2] ; 11         ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[3] ; 11         ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[3] ; u0|altpll_0|sd1|pll7|clk[3] ; 11767      ; 0          ; 0          ; 0        ;
@@ -1163,11 +1174,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+-----------------------------+------------+------------+------------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths   ; FR Paths   ; RF Paths   ; FF Paths ;
 +-----------------------------+-----------------------------+------------+------------+------------+----------+
-; altera_reserved_tck         ; altera_reserved_tck         ; 1843       ; 0          ; 58         ; 3        ;
+; altera_reserved_tck         ; altera_reserved_tck         ; 1837       ; 0          ; 58         ; 3        ;
 ; MAX10_CLK1_50               ; altera_reserved_tck         ; false path ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; clk_dram_ext                ; 51         ; 0          ; 0          ; 0        ;
 ; altera_reserved_tck         ; MAX10_CLK1_50               ; false path ; false path ; 0          ; 0        ;
-; MAX10_CLK1_50               ; MAX10_CLK1_50               ; 353232     ; 0          ; 0          ; 0        ;
+; MAX10_CLK1_50               ; MAX10_CLK1_50               ; 373491     ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; MAX10_CLK1_50               ; 49         ; 0          ; 0          ; 0        ;
 ; MAX10_CLK2_50               ; MAX10_CLK2_50               ; 1823       ; 0          ; 0          ; 0        ;
 ; MIPI_PIXEL_CLK_ext          ; MAX10_CLK2_50               ; 9          ; 0          ; 0          ; 0        ;
@@ -1177,7 +1188,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk_dram_ext                ; u0|altpll_0|sd1|pll7|clk[2] ; 16         ; 0          ; 0          ; 0        ;
 ; MAX10_CLK1_50               ; u0|altpll_0|sd1|pll7|clk[2] ; 45         ; 0          ; 0          ; 0        ;
 ; MIPI_PIXEL_CLK              ; u0|altpll_0|sd1|pll7|clk[2] ; 0          ; false path ; 0          ; 0        ;
-; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[2] ; 139802750  ; 0          ; 0          ; 0        ;
+; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[2] ; 250318763  ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[3] ; u0|altpll_0|sd1|pll7|clk[2] ; 11         ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[2] ; u0|altpll_0|sd1|pll7|clk[3] ; 11         ; 0          ; 0          ; 0        ;
 ; u0|altpll_0|sd1|pll7|clk[3] ; u0|altpll_0|sd1|pll7|clk[3] ; 11767      ; 0          ; 0          ; 0        ;
@@ -1258,7 +1269,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; MAX10_CLK1_50                                                                            ; MAX10_CLK1_50               ; Base      ; Constrained   ;
 ; MAX10_CLK2_50                                                                            ; MAX10_CLK2_50               ; Base      ; Constrained   ;
 ; MIPI_PIXEL_CLK                                                                           ; MIPI_PIXEL_CLK              ; Base      ; Constrained   ;
-; Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket ;                             ; Base      ; Unconstrained ;
+; Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket ;                             ; Base      ; Unconstrained ;
 ; Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK     ;                             ; Base      ; Unconstrained ;
 ; Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C          ;                             ; Base      ; Unconstrained ;
 ; altera_reserved_tck                                                                      ; altera_reserved_tck         ; Base      ; Constrained   ;
@@ -1293,7 +1304,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ARDUINO_IO[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ARDUINO_IO[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ARDUINO_IO[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[12]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[13]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[14]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1347,7 +1358,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ARDUINO_IO[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ARDUINO_IO[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ARDUINO_IO[11]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[12]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[13]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[14]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1382,26 +1393,26 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
-    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Jun 13 10:09:35 2021
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Jun 15 13:41:22 2021
 Info: Command: quartus_sta DE10_LITE_D8M_VIP -c DE10_LITE_D8M_VIP
-Info: qsta_default_script.tcl version: #3
-Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Warning (335093): TimeQuest Timing Analyzer is analyzing 11 combinational loops as latches. For more details, run the Check Timing command in the TimeQuest Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity GHVD5181
-        Info (332166): set_disable_timing [get_cells -hierarchical AMGP4450_0]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_0]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_1]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_2]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_3]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_4]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_5]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_6]
-        Info (332166): set_disable_timing [get_cells -hierarchical TPOO7242_7]
-        Info (332166): set_disable_timing [get_cells -hierarchical ZNXJ5711_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical QXXQ6833_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_0]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_1]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_2]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_3]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_4]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_5]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_6]
+        Info (332166): set_disable_timing [get_cells -hierarchical JEQQ5299_7]
+        Info (332166): set_disable_timing [get_cells -hierarchical BITP7563_0]
     Info (332165): Entity alt_jtag_atlantic
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|jupdate}] -to [get_registers {*|alt_jtag_atlantic:*|jupdate1*}] 
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|rdata[*]}] -to [get_registers {*|alt_jtag_atlantic*|td_shift[*]}]
@@ -1452,137 +1463,137 @@ Info (332110): Deriving PLL clocks
     Info (332110): create_generated_clock -source {u0|altpll_0|sd1|pll7|inclk[0]} -divide_by 2 -duty_cycle 50.00 -name {u0|altpll_0|sd1|pll7|clk[3]} {u0|altpll_0|sd1|pll7|clk[3]}
     Info (332110): create_generated_clock -source {u0|altpll_0|sd1|pll7|inclk[0]} -divide_by 5 -multiply_by 2 -duty_cycle 50.00 -name {u0|altpll_0|sd1|pll7|clk[4]} {u0|altpll_0|sd1|pll7|clk[4]}
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
-Warning (332174): Ignored filter at DE10_LITE_D8M_VIP.SDC(80): clk_vga_ext could not be matched with a clock File: /home/tm/EIE2/Rover/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
-Warning (332049): Ignored set_output_delay at DE10_LITE_D8M_VIP.SDC(80): Argument -clock is not an object ID File: /home/tm/EIE2/Rover/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
-    Info (332050): set_output_delay -max -clock clk_vga_ext  0.3 [get_ports {VGA_R* VGA_G* VGA_B* VGA_HS VGA_VS}] File: /home/tm/EIE2/Rover/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
-Warning (332049): Ignored set_output_delay at DE10_LITE_D8M_VIP.SDC(81): Argument -clock is not an object ID File: /home/tm/EIE2/Rover/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 81
-    Info (332050): set_output_delay -min -clock clk_vga_ext -1.6 [get_ports {VGA_R* VGA_G* VGA_B* VGA_HS VGA_VS}] File: /home/tm/EIE2/Rover/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 81
-Info (332104): Reading SDC File: '/home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/Qsys_nios2_gen2_cpu.sdc'
-Info (332104): Reading SDC File: '/home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc'
+Warning (332174): Ignored filter at DE10_LITE_D8M_VIP.SDC(80): clk_vga_ext could not be matched with a clock File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
+Warning (332049): Ignored set_output_delay at DE10_LITE_D8M_VIP.SDC(80): Argument -clock is not an object ID File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
+    Info (332050): set_output_delay -max -clock clk_vga_ext  0.3 [get_ports {VGA_R* VGA_G* VGA_B* VGA_HS VGA_VS}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 80
+Warning (332049): Ignored set_output_delay at DE10_LITE_D8M_VIP.SDC(81): Argument -clock is not an object ID File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 81
+    Info (332050): set_output_delay -min -clock clk_vga_ext -1.6 [get_ports {VGA_R* VGA_G* VGA_B* VGA_HS VGA_VS}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/DE10_LITE_D8M_VIP.SDC Line: 81
+Info (332104): Reading SDC File: 'c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/qsys_nios2_gen2_cpu.sdc'
+Info (332104): Reading SDC File: 'c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/alt_vipitc131_cvo.sdc'
 Info: Adding SDC requirements for alt_vipitc131_IS2Vid instance u0|alt_vip_itc_0
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(64): u0|alt_vip_itc_0|mode_banks|u_calculate_mode_dynamic|* could not be matched with a net File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
-Warning (332049): Ignored set_multicycle_path at alt_vipitc131_cvo.sdc(64): Argument <through> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
-    Info (332050): set_multicycle_path -setup -start -through [get_nets "${inst}|mode_banks|u_calculate_mode_dynamic|*"] 2 File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
-Warning (332049): Ignored set_multicycle_path at alt_vipitc131_cvo.sdc(65): Argument <through> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 65
-    Info (332050): set_multicycle_path -hold -start -through [get_nets "${inst}|mode_banks|u_calculate_mode_dynamic|*"] 1 File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 65
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(68): *alt_vipitc131_IS2Vid:*|is_mode_match[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(68): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_mode_match[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(69): *alt_vipitc131_IS2Vid:*|is_interlaced[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(69): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_interlaced[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(70): *alt_vipitc131_IS2Vid:*|is_serial_output[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(70): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_serial_output[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(71): *alt_vipitc131_IS2Vid:*|is_sample_count[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(71): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sample_count[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(72): *alt_vipitc131_IS2Vid:*|is_line_count_f0[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(72): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_line_count_f0[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(73): *alt_vipitc131_IS2Vid:*|is_line_count_f1[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(73): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_line_count_f1[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(74): *alt_vipitc131_IS2Vid:*|is_h_front_porch[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(74): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_front_porch[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(75): *alt_vipitc131_IS2Vid:*|is_h_sync_length[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(75): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_sync_length[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(76): *alt_vipitc131_IS2Vid:*|is_h_blank[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(76): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_blank[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(77): *alt_vipitc131_IS2Vid:*|is_v_front_porch[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(77): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_front_porch[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(78): *alt_vipitc131_IS2Vid:*|is_v_sync_length[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(78): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_sync_length[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(79): *alt_vipitc131_IS2Vid:*|is_v_blank[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(79): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_blank[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(80): *alt_vipitc131_IS2Vid:*|is_v1_front_porch[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(80): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_front_porch[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(81): *alt_vipitc131_IS2Vid:*|is_v1_sync_length[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(81): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_sync_length[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(82): *alt_vipitc131_IS2Vid:*|is_v1_blank[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(82): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_blank[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(83): *alt_vipitc131_IS2Vid:*|is_ap_line[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(83): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_ap_line[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(84): *alt_vipitc131_IS2Vid:*|is_v1_rising_edge[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(84): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_rising_edge[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(85): *alt_vipitc131_IS2Vid:*|is_f_rising_edge[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(85): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_f_rising_edge[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(86): *alt_vipitc131_IS2Vid:*|is_f_falling_edge[*][*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(86): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_f_falling_edge[*][*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(87): *alt_vipitc131_IS2Vid:*|is_standard[*][* could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(87): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_standard[*][*}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(88): *alt_vipitc131_IS2Vid:*|is_sof_sample[*][* could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(88): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_sample[*][*}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(89): *alt_vipitc131_IS2Vid:*|is_sof_subsample[*][* could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(89): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_subsample[*][*}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(90): *alt_vipitc131_IS2Vid:*|is_sof_line[*][* could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(90): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_line[*][*}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(91): *alt_vipitc131_IS2Vid:*|is_vcoclk_divider_value[*][* could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(91): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_vcoclk_divider_value[*][*}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(92): *alt_vipitc131_IS2Vid:*|is_anc_line[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(92): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_anc_line[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(93): *alt_vipitc131_IS2Vid:*|is_v1_anc_line[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(93): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_anc_line[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(94): *alt_vipitc131_IS2Vid:*|is_valid_mode[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(94): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_valid_mode[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(95): *alt_vipitc131_IS2Vid:*|dirty_mode[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(95): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|dirty_mode[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(98): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:clear_underflow_sticky_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(98): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:clear_underflow_sticky_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(99): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:enable_resync_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(99): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:enable_resync_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(101): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlocked_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(101): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlocked_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(102): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlock_enable_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(102): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlock_enable_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(103): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:underflow_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(103): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:underflow_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(104): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_waitrequest_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(104): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_waitrequest_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(105): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_write_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(105): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_write_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(106): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:mode_change_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(106): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:mode_change_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(107): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_locked_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(107): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_locked_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
-Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(108): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_sync|data_out_sync0[*] could not be matched with a keeper File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
-Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(108): Argument <to> is an empty collection File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
-    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_sync|data_out_sync0[*]}] File: /home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
-Info (332104): Reading SDC File: '/home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/altera_avalon_st_handshake_clock_crosser.sdc'
-Info (332104): Reading SDC File: '/home/tm/EIE2/Rover/vision/quartus/db/ip/Qsys/submodules/altera_reset_controller.sdc'
-Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(64): u0|alt_vip_itc_0|mode_banks|u_calculate_mode_dynamic|* could not be matched with a net File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
+Warning (332049): Ignored set_multicycle_path at alt_vipitc131_cvo.sdc(64): Argument <through> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
+    Info (332050): set_multicycle_path -setup -start -through [get_nets "${inst}|mode_banks|u_calculate_mode_dynamic|*"] 2 File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 64
+Warning (332049): Ignored set_multicycle_path at alt_vipitc131_cvo.sdc(65): Argument <through> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 65
+    Info (332050): set_multicycle_path -hold -start -through [get_nets "${inst}|mode_banks|u_calculate_mode_dynamic|*"] 1 File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 65
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(68): *alt_vipitc131_IS2Vid:*|is_mode_match[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(68): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_mode_match[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 68
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(69): *alt_vipitc131_IS2Vid:*|is_interlaced[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(69): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_interlaced[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 69
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(70): *alt_vipitc131_IS2Vid:*|is_serial_output[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(70): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_serial_output[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 70
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(71): *alt_vipitc131_IS2Vid:*|is_sample_count[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(71): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sample_count[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 71
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(72): *alt_vipitc131_IS2Vid:*|is_line_count_f0[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(72): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_line_count_f0[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 72
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(73): *alt_vipitc131_IS2Vid:*|is_line_count_f1[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(73): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_line_count_f1[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 73
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(74): *alt_vipitc131_IS2Vid:*|is_h_front_porch[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(74): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_front_porch[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 74
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(75): *alt_vipitc131_IS2Vid:*|is_h_sync_length[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(75): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_sync_length[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 75
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(76): *alt_vipitc131_IS2Vid:*|is_h_blank[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(76): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_h_blank[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 76
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(77): *alt_vipitc131_IS2Vid:*|is_v_front_porch[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(77): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_front_porch[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 77
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(78): *alt_vipitc131_IS2Vid:*|is_v_sync_length[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(78): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_sync_length[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 78
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(79): *alt_vipitc131_IS2Vid:*|is_v_blank[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(79): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v_blank[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 79
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(80): *alt_vipitc131_IS2Vid:*|is_v1_front_porch[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(80): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_front_porch[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 80
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(81): *alt_vipitc131_IS2Vid:*|is_v1_sync_length[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(81): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_sync_length[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 81
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(82): *alt_vipitc131_IS2Vid:*|is_v1_blank[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(82): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_blank[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 82
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(83): *alt_vipitc131_IS2Vid:*|is_ap_line[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(83): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_ap_line[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 83
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(84): *alt_vipitc131_IS2Vid:*|is_v1_rising_edge[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(84): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_rising_edge[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 84
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(85): *alt_vipitc131_IS2Vid:*|is_f_rising_edge[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(85): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_f_rising_edge[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 85
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(86): *alt_vipitc131_IS2Vid:*|is_f_falling_edge[*][*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(86): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_f_falling_edge[*][*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 86
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(87): *alt_vipitc131_IS2Vid:*|is_standard[*][* could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(87): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_standard[*][*}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 87
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(88): *alt_vipitc131_IS2Vid:*|is_sof_sample[*][* could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(88): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_sample[*][*}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 88
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(89): *alt_vipitc131_IS2Vid:*|is_sof_subsample[*][* could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(89): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_subsample[*][*}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 89
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(90): *alt_vipitc131_IS2Vid:*|is_sof_line[*][* could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(90): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_sof_line[*][*}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 90
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(91): *alt_vipitc131_IS2Vid:*|is_vcoclk_divider_value[*][* could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(91): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_vcoclk_divider_value[*][*}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 91
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(92): *alt_vipitc131_IS2Vid:*|is_anc_line[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(92): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_anc_line[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 92
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(93): *alt_vipitc131_IS2Vid:*|is_v1_anc_line[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(93): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_v1_anc_line[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 93
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(94): *alt_vipitc131_IS2Vid:*|is_valid_mode[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(94): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|is_valid_mode[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 94
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(95): *alt_vipitc131_IS2Vid:*|dirty_mode[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(95): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|dirty_mode[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 95
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(98): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:clear_underflow_sticky_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(98): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:clear_underflow_sticky_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 98
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(99): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:enable_resync_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(99): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:enable_resync_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 99
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(101): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlocked_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(101): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlocked_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 101
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(102): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlock_enable_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(102): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:genlock_enable_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 102
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(103): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:underflow_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(103): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:underflow_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 103
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(104): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_waitrequest_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(104): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_waitrequest_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 104
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(105): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_write_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(105): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:av_write_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 105
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(106): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:mode_change_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(106): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_trigger_sync:mode_change_trigger_sync|alt_vipitc131_common_sync:toggle_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 106
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(107): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_locked_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(107): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_locked_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 107
+Warning (332174): Ignored filter at alt_vipitc131_cvo.sdc(108): *alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_sync|data_out_sync0[*] could not be matched with a keeper File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
+Warning (332049): Ignored set_false_path at alt_vipitc131_cvo.sdc(108): Argument <to> is an empty collection File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
+    Info (332050): set_false_path -to [get_keepers {*alt_vipitc131_IS2Vid:*|alt_vipitc131_common_sync:sync_generation_generate.sof_cvi_sync|data_out_sync0[*]}] File: C:/Users/giann/Desktop/school/Y2/uranuss/exploring_uranus/vision/quartus/db/ip/Qsys/submodules/alt_vipitc131_cvo.sdc Line: 108
+Info (332104): Reading SDC File: 'c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/altera_avalon_st_handshake_clock_crosser.sdc'
+Info (332104): Reading SDC File: 'c:/users/giann/desktop/school/y2/uranuss/exploring_uranus/vision/quartus/db/ip/qsys/submodules/altera_reset_controller.sdc'
+Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket
 Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP_f[8]~9 is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C
 Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK was determined to be a clock but was found without an associated clock assignment.
@@ -1594,61 +1605,61 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.441
+Info (332146): Worst-case setup slack is -7.924
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.441           -1995.039 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):    -7.924           -1987.927 u0|altpll_0|sd1|pll7|clk[2] 
     Info (332119):     3.922               0.000 clk_dram_ext 
-    Info (332119):     5.528               0.000 MAX10_CLK1_50 
-    Info (332119):     9.050               0.000 MAX10_CLK2_50 
-    Info (332119):    10.820               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    29.277               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    45.279               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.247
+    Info (332119):     6.599               0.000 MAX10_CLK1_50 
+    Info (332119):     8.615               0.000 MAX10_CLK2_50 
+    Info (332119):    12.985               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    29.306               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    44.495               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.228
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.247               0.000 MAX10_CLK1_50 
-    Info (332119):     0.339               0.000 altera_reserved_tck 
+    Info (332119):     0.228               0.000 MAX10_CLK1_50 
     Info (332119):     0.339               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     0.341               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):     0.347               0.000 MAX10_CLK2_50 
+    Info (332119):     0.339               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.347               0.000 altera_reserved_tck 
+    Info (332119):     0.348               0.000 MAX10_CLK2_50 
     Info (332119):     0.378               0.000 MIPI_PIXEL_CLK 
     Info (332119):     2.177               0.000 clk_dram_ext 
-Info (332146): Worst-case recovery slack is 3.022
+Info (332146): Worst-case recovery slack is 3.875
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.022               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     3.303               0.000 MAX10_CLK1_50 
-    Info (332119):     4.167               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    37.543               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    48.081               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.983
+    Info (332119):     3.875               0.000 MAX10_CLK1_50 
+    Info (332119):     4.934               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     6.076               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    37.433               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    47.306               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.965
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.983               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):     0.987               0.000 MAX10_CLK1_50 
-    Info (332119):     1.316               0.000 altera_reserved_tck 
-    Info (332119):     1.480               0.000 MIPI_PIXEL_CLK 
-    Info (332119):     2.412               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-Info (332146): Worst-case minimum pulse width slack is 4.663
+    Info (332119):     0.965               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.968               0.000 MAX10_CLK1_50 
+    Info (332119):     1.168               0.000 altera_reserved_tck 
+    Info (332119):     1.342               0.000 MIPI_PIXEL_CLK 
+    Info (332119):     2.239               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 4.674
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.663               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     4.674               0.000 u0|altpll_0|sd1|pll7|clk[2] 
     Info (332119):     4.853               0.000 u0|altpll_0|sd1|pll7|clk[1] 
     Info (332119):     5.790               0.000 clk_dram_ext 
-    Info (332119):     9.443               0.000 MAX10_CLK1_50 
+    Info (332119):     9.433               0.000 MAX10_CLK1_50 
     Info (332119):     9.659               0.000 MAX10_CLK2_50 
-    Info (332119):    19.540               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    19.702               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    49.626               0.000 altera_reserved_tck 
+    Info (332119):    19.541               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    19.708               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    49.613               0.000 altera_reserved_tck 
     Info (332119):    96.000               0.000 ADC_CLK_10 
 Info (332114): Report Metastability: Found 80 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket
+Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket
 Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Latch Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP_f[8]~9 is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C
 Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK was determined to be a clock but was found without an associated clock assignment.
@@ -1657,113 +1668,53 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.933
+Info (332146): Worst-case setup slack is -6.484
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.933           -1526.142 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):    -6.484           -1548.281 u0|altpll_0|sd1|pll7|clk[2] 
     Info (332119):     4.040               0.000 clk_dram_ext 
-    Info (332119):     6.685               0.000 MAX10_CLK1_50 
-    Info (332119):     9.541               0.000 MAX10_CLK2_50 
-    Info (332119):    11.619               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    30.000               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    45.713               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.245
+    Info (332119):     7.636               0.000 MAX10_CLK1_50 
+    Info (332119):     9.155               0.000 MAX10_CLK2_50 
+    Info (332119):    13.117               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    30.161               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    44.896               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.236
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.245               0.000 MAX10_CLK1_50 
-    Info (332119):     0.304               0.000 altera_reserved_tck 
-    Info (332119):     0.305               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     0.306               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.236               0.000 MAX10_CLK1_50 
+    Info (332119):     0.303               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.304               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     0.311               0.000 altera_reserved_tck 
     Info (332119):     0.312               0.000 MAX10_CLK2_50 
     Info (332119):     0.338               0.000 MIPI_PIXEL_CLK 
     Info (332119):     2.124               0.000 clk_dram_ext 
-Info (332146): Worst-case recovery slack is 3.429
+Info (332146): Worst-case recovery slack is 4.037
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.429               0.000 MAX10_CLK1_50 
-    Info (332119):     3.684               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     4.675               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    37.704               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    48.244               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.906
+    Info (332119):     4.037               0.000 MAX10_CLK1_50 
+    Info (332119):     5.404               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     6.404               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    37.599               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    47.516               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.889
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.906               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):     0.909               0.000 MAX10_CLK1_50 
-    Info (332119):     1.218               0.000 altera_reserved_tck 
-    Info (332119):     1.320               0.000 MIPI_PIXEL_CLK 
-    Info (332119):     2.204               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-Info (332146): Worst-case minimum pulse width slack is 4.649
+    Info (332119):     0.889               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.893               0.000 MAX10_CLK1_50 
+    Info (332119):     1.063               0.000 altera_reserved_tck 
+    Info (332119):     1.227               0.000 MIPI_PIXEL_CLK 
+    Info (332119):     2.081               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 4.686
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     4.649               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     4.686               0.000 u0|altpll_0|sd1|pll7|clk[2] 
     Info (332119):     4.876               0.000 u0|altpll_0|sd1|pll7|clk[1] 
     Info (332119):     5.790               0.000 clk_dram_ext 
-    Info (332119):     9.453               0.000 MAX10_CLK1_50 
+    Info (332119):     9.444               0.000 MAX10_CLK1_50 
     Info (332119):     9.669               0.000 MAX10_CLK2_50 
-    Info (332119):    19.608               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    19.611               0.000 MIPI_PIXEL_CLK 
     Info (332119):    19.700               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    49.650               0.000 altera_reserved_tck 
-    Info (332119):    96.000               0.000 ADC_CLK_10 
-Info (332114): Report Metastability: Found 80 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
-Info: Analyzing Fast 1200mV 0C Model
-Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP171_AVALON_ST_OUTPUT:dout|startofpacket
-Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Latch Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP_f[8]~9 is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C
-Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK was determined to be a clock but was found without an associated clock assignment.
-    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|SD_COUNTER[0] is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK
-Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 1.933
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     1.933               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     4.001               0.000 clk_dram_ext 
-    Info (332119):    11.399               0.000 MAX10_CLK2_50 
-    Info (332119):    13.454               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    13.561               0.000 MAX10_CLK1_50 
-    Info (332119):    35.145               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    48.260               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.099
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.099               0.000 MAX10_CLK1_50 
-    Info (332119):     0.112               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     0.125               0.000 MIPI_PIXEL_CLK 
-    Info (332119):     0.139               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):     0.147               0.000 altera_reserved_tck 
-    Info (332119):     0.152               0.000 MAX10_CLK2_50 
-    Info (332119):     1.838               0.000 clk_dram_ext 
-Info (332146): Worst-case recovery slack is 6.553
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     6.553               0.000 MAX10_CLK1_50 
-    Info (332119):     6.598               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     7.022               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    38.909               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    49.380               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.429
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.429               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):     0.432               0.000 MAX10_CLK1_50 
-    Info (332119):     0.572               0.000 altera_reserved_tck 
-    Info (332119):     0.632               0.000 MIPI_PIXEL_CLK 
-    Info (332119):     1.030               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-Info (332146): Worst-case minimum pulse width slack is 2.000
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     2.000               0.000 clk_dram_ext 
-    Info (332119):     2.000               0.000 u0|altpll_0|sd1|pll7|clk[1] 
-    Info (332119):     4.644               0.000 u0|altpll_0|sd1|pll7|clk[2] 
-    Info (332119):     9.190               0.000 MAX10_CLK1_50 
-    Info (332119):     9.331               0.000 MAX10_CLK2_50 
-    Info (332119):    19.166               0.000 MIPI_PIXEL_CLK 
-    Info (332119):    19.725               0.000 u0|altpll_0|sd1|pll7|clk[3] 
-    Info (332119):    49.420               0.000 altera_reserved_tck 
+    Info (332119):    49.639               0.000 altera_reserved_tck 
     Info (332119):    96.000               0.000 ADC_CLK_10 
 Info (332114): Report Metastability: Found 80 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1772,7 +1723,78 @@ Info (332114): Report Metastability: Found 80 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 80
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.225
-    Info (332114): Worst Case Available Settling Time: 14.237 ns
+    Info (332114): Worst Case Available Settling Time: 9.847 ns
+    Info (332114): 
+    Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
+    Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
+    Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
+    Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
+Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|VCM_END is being clocked by Qsys:u0|Qsys_alt_vip_vfb_0:alt_vip_vfb_0|ALT_CUSP170_AVALON_ST_OUTPUT:dout|startofpacket
+Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Latch Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|STEP_f[8]~9 is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|VCM_CTRL_P:vcm_ctrl|F_VCM:f|V_C
+Warning (332060): Node: Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|I2C_VCM_Controller:u0|SD_COUNTER[0] is being clocked by Qsys:u0|TERASIC_AUTO_FOCUS:terasic_auto_focus_0|I2C_VCM_Config:vcm_i2c|mI2C_CTRL_CLK
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 2.144
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.144               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     4.001               0.000 clk_dram_ext 
+    Info (332119):    11.185               0.000 MAX10_CLK2_50 
+    Info (332119):    13.519               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    13.982               0.000 MAX10_CLK1_50 
+    Info (332119):    35.447               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    47.882               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.086
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.086               0.000 MAX10_CLK1_50 
+    Info (332119):     0.146               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     0.146               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.152               0.000 MAX10_CLK2_50 
+    Info (332119):     0.152               0.000 altera_reserved_tck 
+    Info (332119):     0.165               0.000 MIPI_PIXEL_CLK 
+    Info (332119):     1.838               0.000 clk_dram_ext 
+Info (332146): Worst-case recovery slack is 6.721
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     6.721               0.000 MAX10_CLK1_50 
+    Info (332119):     7.602               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     8.024               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    38.862               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    48.947               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.419
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.419               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):     0.422               0.000 MAX10_CLK1_50 
+    Info (332119):     0.498               0.000 altera_reserved_tck 
+    Info (332119):     0.593               0.000 MIPI_PIXEL_CLK 
+    Info (332119):     0.951               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+Info (332146): Worst-case minimum pulse width slack is 2.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.000               0.000 clk_dram_ext 
+    Info (332119):     2.000               0.000 u0|altpll_0|sd1|pll7|clk[1] 
+    Info (332119):     4.567               0.000 u0|altpll_0|sd1|pll7|clk[2] 
+    Info (332119):     9.263               0.000 MAX10_CLK1_50 
+    Info (332119):     9.331               0.000 MAX10_CLK2_50 
+    Info (332119):    19.147               0.000 MIPI_PIXEL_CLK 
+    Info (332119):    19.727               0.000 u0|altpll_0|sd1|pll7|clk[3] 
+    Info (332119):    49.408               0.000 altera_reserved_tck 
+    Info (332119):    96.000               0.000 ADC_CLK_10 
+Info (332114): Report Metastability: Found 80 synchronizer chains.
+    Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+    Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
+
+    Info (332114): Number of Synchronizer Chains Found: 80
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.225
+    Info (332114): Worst Case Available Settling Time: 14.900 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -1781,9 +1803,9 @@ Info (332114): Report Metastability: Found 80 synchronizer chains.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 1337 megabytes
-    Info: Processing ended: Sun Jun 13 10:09:46 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:41
+    Info: Peak virtual memory: 5172 megabytes
+    Info: Processing ended: Tue Jun 15 13:42:13 2021
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:55
 
 

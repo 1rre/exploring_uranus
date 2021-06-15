@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=/home/tm/EIE2/Rover/vision/quartus/software/exploring_uranus
-newSoftwareExampleWizardPage.sopcinfoFile=/home/tm/EIE2/Rover/vision/quartus/Qsys.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=/home/tm/EIE2/Rover/vision/quartus/software/exploring_uranus_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\giann\\Desktop\\school\\Y2\\uranuss\\exploring_uranus\\vision\\quartus\\software\\newer_software
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\giann\\Desktop\\school\\Y2\\uranuss\\exploring_uranus\\vision\\quartus\\Qsys.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\giann\\Desktop\\school\\Y2\\uranuss\\exploring_uranus\\vision\\quartus\\software\\newer_software_bsp

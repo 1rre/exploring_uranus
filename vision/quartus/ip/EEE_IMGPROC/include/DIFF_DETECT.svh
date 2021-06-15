@@ -29,8 +29,8 @@ module diff_detect (
   assign total = diffs[23:16] + diffs[15:8] + diffs[7:0];
   
   wire [7:0] t1_max;
-  assign t1_max = (diffs[23:16] < diffs[15:8])? diffs[23:16] : diffs[15:8];
-  assign px_max = (diffs[7:0] < t1_max)? diffs[7:0] : t1_max;
+  assign t1_max = (diffs[23:16] > diffs[15:8])? diffs[23:16] : diffs[15:8];
+  assign px_max = (diffs[7:0] > t1_max)? diffs[7:0] : t1_max;
   
 endmodule
 
