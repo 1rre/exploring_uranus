@@ -2,6 +2,11 @@
 
 == EE2 Rover Project
 
+=== Command
+* link:/command/c_server/[TCP Server]
+* link:/command/public/[Webpage]
+* link:/command/README.md[Command ReadMe]
+
 === Control
 * link:/control/test/[Testing File]
 * link:/control/[Arduino Programs]
@@ -16,8 +21,3 @@
 * link:/vision/initial_investigation[Scripts used in design]
 * link:/vision/quartus[Quartus Project]
 * link:/vision/software[Nios II C project]
-
-=== Command
-* command/index.js
-
-To run: node index.js
