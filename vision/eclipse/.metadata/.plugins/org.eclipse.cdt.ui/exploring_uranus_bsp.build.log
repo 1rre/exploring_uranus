@@ -1,6 +1,0 @@
-21:35:00 **** Clean-only build of configuration Nios II for project exploring_uranus_bsp ****
-make clean 
-[BSP clean complete]
-
-21:35:01 Build Finished (took 72ms)
-
