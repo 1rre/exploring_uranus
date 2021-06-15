@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARS Rover</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/style.css"
+      type="text/css"
+      media="all"
+    />
+    <script type="module" src="./components/update.js"></script>
+    <script type="module" src="./components/draw.js"></script>
+  </head>
+  <body>
+    <script>
+      
+    </script>
+    <header class="siteheader">
+      <div class="site-title">Exploring Uranus</div>
+      <div class="site-description">MARS Rover</div>
+    </header>
+    <main class="maincontent">
+      <div class="page-header">
+        <h2 class="page-header__heading">Group 12 - Year Project</h2>
+        <center>
+        <p>
+          Command Module 
+        </p>
+        <p>
+          -
+        </p>
+        <p>
+          <em>
+            Website used for controlling and receiving the
+            status of the MARS Rover designed by Group 12.
+          </em>
+        </p>
+        <h1 class="rover__name">Rover</h1>
+        <div class="rover__features" id="Modes">
+          <h2 class="feature rover__percentage">Charging State Status: <span id="SM-State"></span></h2>
+          <h2 class="feature rover__percentage">MPPT State Status: <span id="MPPT-State"></span></h2>
+        </div>
+        <div class="rover__features" id="Modes">
+          <h2 class="rover__features">Movement</h2>
+          <select class="feature rover__battery" id="modesList" >
+            <option value="10000001">Explore the 1mx1m in front of you, going to the right</option>
+            <option value="10000010">Explore the 1mx1m in front of you, going to the left</option>
+            <option value="10000011">Move 1 m forwards</option>
+            <option value="10000100">Move 1m backwards</option>
+            <option value="10000101">Automatic strip of 1m endless to the right</option>
+            <option value="10000110">Automatic strip of 1m endless to the left</option>
+            <option value="00000000">Manual Control</option>
+            
+          </select>
+        </div>
+        <div class="rover_battery">
+        <ul class="rover__features" id="Battery1">
+          <h2 class="rover__battery">Battery Cell 1</h2>
+          <li class="feature rover__position">Error: <span id="State1-error"></span></li>
+          <li class="feature rover__position">Discharge: <span id="State1-discharge"></span></li>
+          <li class="feature rover__travelledDistance">SOC: <span id="SOC0"></span></li>
+          <li class="feature rover__travelledDistance">SOH: <span id="SOH0"></span></li>
+        </ul>
+        <ul class="rover__features" id="Battery2">
+          <h2 class="rover__battery">Battery Cell 2</h2>
+          <li class="feature rover__position">Error: <span id="State2-error"></span></li>
+          <li class="feature rover__position">Discharge: <span id="State2-discharge"></span></li>
+          <li class="feature rover__travelledDistance">SOC: <span id="SOC1"></span></li>
+          <li class="feature rover__travelledDistance">SOH: <span id="SOH1"></span></li>
+          
+          
+        </ul>
+        <ul class="rover__features" id="Battery3">
+          <h2 class="rover__battery">Battery Cell 3</h2>
+          <li class="feature rover__position">Error: <span id="State3-error"></span></li>
+          <li class="feature rover__position">Discharge: <span id="State3-discharge"></span></li>
+          <li class="feature rover__remainingDistance">SOC: <span id="SOC2"></span></li>
+          <li class="feature rover__remainingDistance">SOH: <span id="SOH2"></span></li>
+        </ul>
+      </div>
+        <ul class="rover__features" id="General">
+          <li class="feature rover__position">Error Code: <span id="ErrorCode"></span></li>
+          <li class="feature rover__percentage">Movement: <span id="Move"></span></li>
+          <li class="feature rover__percentage">Speed: <span id="Speed"></span></li>
+          <select id="speedList" >
+            <option value="1" id="slow">SLOW SPEED</option>
+            <option value="2" id="medium">MEDIUM SPEED</option>
+            <option value="3" id="fast">FAST SPEED</option>
+          </select>
+        </ul>
+        <ul class="rover__features">
+          <button value="00011010" class="up" id="up-button" type="button">Move Forwards</button>
+          <button value="00001010" class="down" id="down-button" type="button">Move Backwards</button>
+          <button value="00010010" class="clockwise" id="clock-button" type="button">Rotate Clockwise</button>
+          <button value="00000011" class="anticlockwise" id="anticlock-button" type="button">Rotate Anticlockwise</button>
+          <button value="00111011" class="left" id="left-button">Steer Left Forwards</button>
+          <button value="00111010" class="right" id="right-button" type="button">Steer Right Forwards</button>
+          <button value="00101010" class="left" id="left-back-button">Steer Left Backwards</button>
+          <button value="00101011" class="right" id="right-back-button" type="button">Steer Right Backwards</button>
+          <button value="00010110" class="stop" id="stop-button" type="button">Stop Movement</button>
+
+        </ul>
+
+        <ul class="rover__features">
+          <canvas id="myCanvas" width="1000" height="1000"></canvas>
+          <img src="./assets/rover.png">
+        </ul>
+
+
+      </center>
+      </div>
+    </main>
+    <footer class="sitefooter">
+      <p>
+        Team Members: Giorgos Vyronos, Vasileios Stylianos Sotiropoulos, Maria Ioanna Tsigkounaki, Giannis-Ioannis Paschos, Timothy Moores, Vajiravidh Pongpaew
+      </p>
+    </footer>
+    
+  </body>
+</html>

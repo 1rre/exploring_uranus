@@ -16,3 +16,8 @@
 * link:/vision/initial_investigation[Scripts used in design]
 * link:/vision/quartus[Quartus Project]
 * link:/vision/software[Nios II C project]
+
+=== Command
+* command/index.js
+
+To run: node index.js
