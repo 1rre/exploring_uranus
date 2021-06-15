@@ -367,7 +367,7 @@ void loop() {
       dummy_bit_1 = B01100000;
     }
 
-    char_7 = dummy_bit_0 & dummy_bit_1; // Bitwise and
+    char_7 = dummy_bit_0 | dummy_bit_1; // Bitwise or
 
     // Sending the data to control
 
