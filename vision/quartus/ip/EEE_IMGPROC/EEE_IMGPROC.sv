@@ -186,11 +186,11 @@ end
 wire
   or_valid, gn_valid, bl_valid, pk_valid, bk_valid;
 
-assign or_valid = total_or < T_DIF;
-assign gn_valid = total_gn < T_DIF;
-assign bl_valid = total_bl < T_DIF;
-assign pk_valid = total_pk < T_DIF;
-assign bk_valid = total_bk < T_DIF;
+assign or_valid = dmax_or < T_DIF;
+assign gn_valid = dmax_gn < T_DIF;
+assign bl_valid = dmax_bl < T_DIF;
+assign pk_valid = dmax_pk < T_DIF;
+assign bk_valid = dmax_bk < T_DIF;
 
 wire
   y_valid, x_valid, col_valid;
@@ -394,10 +394,10 @@ wire [9:0]
   total_or, total_gn, total_bl, total_pk, total_bk;
 
 // Guesses currently
-assign t_or[23:0] = {8'heb,8'hbd,8'h34};
-assign t_gn[23:0] = {8'h52,8'he3,8'h6f};
-assign t_bl[23:0] = {8'h7c,8'hc7,8'hde};
-assign t_pk[23:0] = {8'hf7,8'hbc,8'hdc};
+assign t_or[23:0] = {8'hf7,8'hb3,8'h3c};
+assign t_gn[23:0] = {8'h27,8'h96,8'h45};
+assign t_bl[23:0] = {8'h47,8'h81,8'h88};
+assign t_pk[23:0] = {8'hd8,8'h7e,8'h52};
 assign t_bk[23:0] = {8'h56,8'h57,8'h66};
 
 diff_detect diff_or (
